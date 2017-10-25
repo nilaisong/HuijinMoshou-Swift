@@ -1,0 +1,63 @@
+//
+//  MoShou2-Prefix.pch
+//
+//
+//  Created by Laison on 15/1/20.
+//  Copyright (c) 2015年 . All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreFoundation/CoreFoundation.h>
+
+#import "Tool.h"
+#import "Constant.h"
+#import "Functions.h"
+#import "UIColor+Hex.h"
+#import "BaseViewController.h"
+#import "UIView+YR.h"
+#import "EaseUI.h"
+#import "UserCacheManager.h"
+#import "ChatUIHelper.h"
+#import <HyphenateLite/HyphenateLite.h>
+
+#import "NSArray+NBB.h"
+#import "NSMutableArray+NBB.h"
+#import "NSDictionary+JSON.h"
+#import "NSMutableDictionary+JSON.h"
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+
+#import "UILabel+StringFrame.h"
+//OC调用Swift代码，引入头文件
+#import "MoShou2-Swift.h"
+
+
+#endif
+
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...){}
+#endif

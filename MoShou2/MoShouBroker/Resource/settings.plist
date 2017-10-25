@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>productName</key>
+	<string>moshou</string>
+	<key>storeAppID</key>
+	<string>1035508186</string>
+	<key>isAppTest</key>
+	<true/>
+	<key>itunesURL</key>
+	<string>itms-apps://itunes.apple.com/cn/app/</string>
+	<key>testVersionName</key>
+	<string>4.3.0</string>
+	<key>testVersionCode</key>
+	<string>180</string>
+	<key>urlInformation</key>
+	<dict>
+		<key>baseURL-debug</key>
+		<string>https://ms.51moshou.com</string>
+		<key>baseURL-test</key>
+		<string>http://cont.fangodata.com</string>
+		<key>baseURL-aliyun</key>
+		<string>http://ms.fangodata.com</string>
+		<key>baseURL-ty</key>
+		<string>http://ty.huijinmoshou.com</string>
+		<key>baseURL-fz</key>
+		<string>http://fz.51moshou.com</string>
+		<key>baseURL</key>
+		<string>https://ms.51moshou.com</string>
+	</dict>
+	<key>phpApi</key>
+	<dict>
+		<key>baseURL-debug</key>
+		<string>http://apipub.99yijia.com</string>
+		<key>baseURL-test</key>
+		<string>http://apipub.99yijia.com</string>
+		<key>baseURL-aliyun</key>
+		<string>http://139.129.203.109:8081</string>
+		<key>baseURL-ty</key>
+		<string>http://ty.huijinmoshou.com</string>
+		<key>baseURL-fz</key>
+		<string>http://fz.51moshou.com</string>
+		<key>baseURL</key>
+		<string>https://apipub.51moshou.com</string>
+	</dict>
+</dict>
+</plist>
