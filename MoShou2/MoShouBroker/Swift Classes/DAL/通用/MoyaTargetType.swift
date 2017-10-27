@@ -26,6 +26,7 @@ extension TargetType {
         if let token = userToken as? String
         {
             dic["token"] = token //增、删、改都支持
+            dic["Set-Cookie"] = token
         }
         else
         {

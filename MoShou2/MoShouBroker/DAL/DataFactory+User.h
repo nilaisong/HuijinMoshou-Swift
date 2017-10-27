@@ -89,7 +89,9 @@ typedef void(^HandleGoodsResult)(GoodsResult*result);
  *  修改手机号
  */
 -(void)changMobileWithMobile:(NSString *)mobile andVcode:(NSString *)code andCallback:(HandleActionResult)callback;
+
 -(void)uploadAvatarWith:(UIImage *)avatar userId:(NSString *)userid andCallback:(HandleActionResult)callback;
+
 -(void)submitCommentsWithcontent:(NSString *)content andImagesArr:(NSArray *)imagesArr andCallback:(HandleActionResult)callback;
 
 -(void)changShopCode:(NSString*)shopCode withEmpoyeeNo:(NSString*)empoyeeNo andShopPic:(UIImage *)shopPic andCallback:(HandleActionResult)callback;

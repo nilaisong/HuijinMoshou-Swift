@@ -8,6 +8,36 @@
 
 import Foundation
 
+//可选参数可以省略
+func uniquePicName(_ name:String?=nil,typeName:String?=nil) -> String {
+    let date:Date = Date.init(timeIntervalSinceNow: 0);
+    let a:TimeInterval = date.timeIntervalSince1970 * 1000;
+    var picFullName:String = "" //var和let初始化变量和常量
+    if let picName = name
+    {
+        if let type = typeName
+        {
+            picFullName = "\(picName)\(a).\(type)"
+        }
+        else
+        {
+            picFullName = "\(picName)\(a).jpg"
+        }
+    }
+    else
+    {
+        if let type = typeName
+        {
+            picFullName = "\(a).\(type)"
+        }
+        else
+        {
+            picFullName = "\(a).jpg"
+        }
+    }
+    return picFullName
+}
+
 typealias RequestCompletionClosure = (_ result:ResponseResult) -> Void
 
 func getResultModel(result:Result<Response, MoyaError>)->ResponseResult

@@ -11,7 +11,7 @@ import Foundation
 extension Task
 {
     //增加个静态方法，返回相关值带请求参数的枚举值
-    static func postParameters(params:[String: Any]) -> Task {
+    static func postParameters(_ params:[String: Any]) -> Task {
         return .requestParameters(parameters:params, encoding: URLEncoding.httpBody)
     }
 }

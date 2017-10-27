@@ -645,24 +645,20 @@
 {
     if ([NetworkSingleton sharedNetWork].isNetworkConnection) {
         UIImageView *loading =[self setRotationAnimationWithView];
-        [[DataFactory sharedDataFactory]uploadAvatarWith:croppedImage userId:[UserData sharedUserData].userInfo.userId  andCallback:^(ActionResult *result) {
+        [[AccountServiceProvider sharedInstance] updateAvatar:croppedImage completionClosure:^(ResponseResult * result) {
             if (result.success) {
                 dispatch_async(dispatch_get_main_queue(),^{
-                    
-                    
-                    //                    [_headImage setFrame:CGRectMake(headcell.frame.size.width-25-8-10-30,0, 30, 30)];
+                    [UserData sharedUserData].userInfo.avatar = result.data;
                     
                     [_headImage setImageWithUrlString:[UserData sharedUserData].userInfo.avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
+                    
                     _headImage.layer.masksToBounds = YES;
                     _headImage.layer.cornerRadius = 27.5;
-                    //                    _headImage.contentMode = UIViewContentModeScaleAspectFit;
-                    //                    NSLog(@"iiiiii%@", [UserData sharedUserData].avatar);
-                    
+
                     [[NSNotificationCenter defaultCenter]postNotificationName:@"REFRESHMINEINFO" object:self];
                     
                 });
                 [self removeRotationAnimationView:loading];
-                
             }
             else{
                 [TipsView showTips:@"修改失败" inView:self.view ];
@@ -670,6 +666,10 @@
                 
             }
         }];
+        
+//        [[DataFactory sharedDataFactory]uploadAvatarWith:croppedImage userId:[UserData sharedUserData].userInfo.userId  andCallback:^(ActionResult *result) {
+//
+//        }];
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }

@@ -56,7 +56,7 @@ class AccountServiceProvider:NSObject
         }
         
     }
-    
+    //不专门指定的话，默认内部参数名就是外部参数名，“_”表示第一个外部参数名可省略
     func getUserInfo(_ completionClosure:@escaping RequestCompletionClosure)
     {
         provider.request(.userInfo)
@@ -88,6 +88,39 @@ class AccountServiceProvider:NSObject
             {
                 Tool.removeCache("user_token")
             }
+            completionClosure(resResult)
+        }
+    }
+    
+    func updateAvatar(_ avatar:UIImage,completionClosure:@escaping RequestCompletionClosure)
+    {
+        provider.request(.updateAvatar(avatar))
+        { result in
+            let resResult = getResultModel(result: result);
+            if let dic = resResult.data as? [String:AnyObject]
+            {
+                let avatarUrl = dic["headpicUrl"]
+                resResult.data = avatarUrl
+            }
+            completionClosure(resResult)
+        }
+    }
+    
+    //只有可选类型赋值为nil
+    func submitFeedback(content:String,imgArray:[UIImage]? = nil,completionClosure:@escaping RequestCompletionClosure)
+    {
+        var images:[UIImage]
+        if imgArray != nil
+        {
+            images = imgArray!
+        }
+        else
+        {
+            images = []
+        }
+        provider.request(.submitFeedback(content:content,imgArray:images))
+        { result in
+            let resResult = getResultModel(result: result);
             completionClosure(resResult)
         }
     }
