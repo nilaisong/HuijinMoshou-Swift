@@ -160,12 +160,8 @@
     if (_commentTV.text.length>0) {
         if ([NetworkSingleton sharedNetWork].isNetworkConnection) {
             UIImageView* loadingView = [self setRotationAnimationWithView];
-//            [[AccountServiceProvider sharedInstance] submitFeedbackWithContent:[_commentTV.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] imgArray:_imagesArr completionClosure:^(ResponseResult * result)
-//            {
-//
-//            }];
-          
-            [[DataFactory sharedDataFactory]submitCommentsWithcontent:[_commentTV.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] andImagesArr:_imagesArr andCallback:^(ActionResult *result) {
+            [[AccountServiceProvider sharedInstance] submitFeedbackWithContent:[_commentTV.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] imgArray:_imagesArr completionClosure:^(ResponseResult * result)
+            {
                 if (result.success) {
                     [TipsView showTipsCantClick:@"您的意见我们已收到，感谢您的支持！" inView:self.view];
                     [self updateLayout];
@@ -181,6 +177,23 @@
                 }
                 [self removeRotationAnimationView:loadingView];
             }];
+          
+//            [[DataFactory sharedDataFactory]submitCommentsWithcontent:[_commentTV.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] andImagesArr:_imagesArr andCallback:^(ActionResult *result) {
+//                if (result.success) {
+//                    [TipsView showTipsCantClick:@"您的意见我们已收到，感谢您的支持！" inView:self.view];
+//                    [self updateLayout];
+//                    __weak CommentsViewController *option = self;
+//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                        //防止多次pop发生崩溃闪退
+//                        if ([self.view superview]) {
+//                            [option.navigationController popViewControllerAnimated:YES];
+//                        }
+//                    });
+//                }else{
+//                    [TipsView showTipsCantClick:result.message inView:self.view];
+//                }
+//                [self removeRotationAnimationView:loadingView];
+//            }];
         }
     }else{
         [TipsView showTips:@"请输入0-300字的建议" inView:self.view];

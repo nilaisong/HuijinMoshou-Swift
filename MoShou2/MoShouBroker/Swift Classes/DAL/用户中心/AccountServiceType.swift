@@ -75,6 +75,7 @@ extension AccountServiceType:TargetType
                 }
             case .submitFeedback(let content,let imgArray):
                 var formDataArray:[MoyaMultipartFormData] = []
+                
                 for index in 0..<imgArray.count //1..<
                 {
                     if let imageData = UIImageJPEGRepresentation(imgArray[index], 0.1)
@@ -86,17 +87,15 @@ extension AccountServiceType:TargetType
                         formDataArray.append(multipartImage)
                     }
                 }
-                if formDataArray.count>0
+                //字符串转换到Data-字符串对象提供转换为data的方法
+                if let contentData = content.data(using: String.Encoding.utf8)
                 {
-                    let contentData = Data.init(base64Encoded: content)
-                    let provider = MoyaMultipartFormData.FormDataProvider.data(contentData!)
+                    let provider = MoyaMultipartFormData.FormDataProvider.data(contentData)
                     let multipartContent = MoyaMultipartFormData.init(provider:provider , name: "msg")
                     formDataArray.append(multipartContent)
-                    return .uploadMultipart(formDataArray)
                 }
-                else{
-                    return .postParameters(["msg":content])
-                }
+                
+                return .uploadMultipart(formDataArray)
         }
     }
 }

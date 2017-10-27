@@ -52,27 +52,27 @@ static NetWork* afNetworkManager;
     NSString *deviceId = [Tool getDeviceId];
     if (deviceId) {
         //设备UDID
-        [requestSerializer setValue:deviceId forHTTPHeaderField:@"deviceId"];
+        [requestSerializer setValue:deviceId forHTTPHeaderField:@"DEVICEID"];
         
     }
     NSString *iosVersion = [[UIDevice currentDevice] systemVersion];
     //系统版本号
-    [requestSerializer setValue:iosVersion forHTTPHeaderField:@"osVersion"];
+    [requestSerializer setValue:iosVersion forHTTPHeaderField:@"OSVERSION"];
     
     NSString *deviceType = [Tool getDeviceName];
     //手机设备型号
-    [requestSerializer setValue:deviceType forHTTPHeaderField:@"deviceName"];
+    [requestSerializer setValue:deviceType forHTTPHeaderField:@"DEVICETYPE"];
     
     //代表是安卓还是ios的标识，其实用数字标识  2   IOS ，1   Android
     [requestSerializer setValue:@"2" forHTTPHeaderField:@"deviceSource"];
     //程序版本号
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     
-    [requestSerializer setValue:appVersion forHTTPHeaderField:@"appVersion"];
+    [requestSerializer setValue:appVersion forHTTPHeaderField:@"APPVERSION"];
     
     //程序名称
     NSString*productName = [LocalFileSystem sharedManager].productName;
-    [requestSerializer setValue:productName forHTTPHeaderField:@"appName"];
+    [requestSerializer setValue:productName forHTTPHeaderField:@"APPNAME"];
     
     if([productName isEqualToString:@"moshou"])
         [requestSerializer setValue:@"1" forHTTPHeaderField:@"loginEntry"];
@@ -147,8 +147,8 @@ static NetWork* afNetworkManager;
     @synchronized (self)
     {
         //城市名称，6
-        NSString* cityNameKey = [NSString stringWithFormat:@"userCityName%@",[Tool getCache:@"newUserId"]];
-        NSString* cityName = [Tool getCache:cityNameKey];
+//        NSString* cityNameKey = [NSString stringWithFormat:@"userCityName%@",[Tool getCache:@"newUserId"]];
+        NSString* cityName = [Tool getCache:@"cityName"];
         if (!cityName) {
             NSString* newChooseCityNameKay = [NSString stringWithFormat:@"chooseCityName%@",[Tool getCache:@"newUserId"]];
             cityName = [Tool getCache:newChooseCityNameKay];

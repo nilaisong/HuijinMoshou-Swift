@@ -46,7 +46,9 @@ func getResultModel(result:Result<Response, MoyaError>)->ResponseResult
     
     switch result {
     case let .success(response):
-        let jsonString : String = NSString(data:response.data,encoding:String.Encoding.utf8.rawValue)! as String
+        //把Data转化为字符串-用data构造字符串对象
+        let jsonString : String = String.init(data: response.data, encoding:String.Encoding.utf8)!
+//        NSString(data:response.data,encoding:String.Encoding.utf8.rawValue)! as String
         //可以解析json串、数据字典，也可以指定解析的节点路径
         if let optResult = JSONDeserializer<ResponseResult>.deserializeFrom(json: jsonString)
         {

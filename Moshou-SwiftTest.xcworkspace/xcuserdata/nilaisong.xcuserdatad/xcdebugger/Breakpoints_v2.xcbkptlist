@@ -73,54 +73,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceProvider.swift"
-            timestampString = "530774107.098059"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "updateAvatar(_:completionClosure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceProvider.swift"
-            timestampString = "530774107.098334"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "updateAvatar(_:completionClosure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceType.swift"
-            timestampString = "530776421.183705"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "task"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MoShou2/MoShouBroker/Classes/&#x6211;&#x7684;/Controller/&#x6211;&#x7684;/&#x4e2a;&#x4eba;&#x8d44;&#x6599;/PersonalInfoViewController.m"
             timestampString = "530772780.041117"
             startingColumnNumber = "9223372036854775807"
@@ -137,13 +89,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x901a;&#x7528;/MoyaTargetType.swift"
-            timestampString = "530776421.183829"
+            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceType.swift"
+            timestampString = "530783192.530468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "headers"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "task"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceType.swift"
+            timestampString = "530783192.530661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "task"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>

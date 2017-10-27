@@ -17,7 +17,8 @@ extension TargetType {
     //字典类型
     var headers: [String: String]?
     {
-        var dic:[String: String] = ["deviceSource":"2","loginEntry": "1","osVersion":kIosVersion,"appVersion":kAppVersion!,"deviceName":kDeviceName!,"deviceId":kDeviceId!,"appBundleId":kAppBundleId!]
+        //"APPNAME":"moshou",
+        var dic:[String: String] = ["deviceSource":"2","loginEntry": "1","OSVERSION":kIosVersion,"APPVERSION":kAppVersion!,"DEVICETYPE":kDeviceName!,"DEVICEID":kDeviceId!,"appBundleId":kAppBundleId!,"city":"bj"]
         
 //        dic.updateValue(, forKey: )//增加和修改
 //        dic.removeValue(forKey: ) //移除
@@ -26,7 +27,7 @@ extension TargetType {
         if let token = userToken as? String
         {
             dic["token"] = token //增、删、改都支持
-            dic["Set-Cookie"] = token
+            dic["Cookie"] = token
         }
         else
         {
