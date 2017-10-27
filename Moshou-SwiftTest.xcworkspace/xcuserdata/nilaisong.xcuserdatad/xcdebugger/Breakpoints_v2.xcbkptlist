@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoShou2/MoShouBroker/DAL/DataFactory+User.m"
-            timestampString = "530718032.323224"
+            timestampString = "530797258.151551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -89,14 +89,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceType.swift"
-            timestampString = "530783192.530468"
+            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountDataProvider.swift"
+            timestampString = "530797258.151753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "task"
-            landmarkType = "24">
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getPointsList(pageIndex:completionClosure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -105,14 +105,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountServiceType.swift"
-            timestampString = "530783192.530661"
+            filePath = "MoShou2/MoShouBroker/Classes/&#x6211;&#x7684;/Controller/&#x79ef;&#x5206;/&#x79ef;&#x5206;&#x8be6;&#x60c5;/PointDetailsViewController.m"
+            timestampString = "530797258.152035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "task"
-            landmarkType = "24">
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-refreshFirstPageDate"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountDataProvider.swift"
+            timestampString = "530797258.152087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getPointsList(pageIndex:completionClosure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShou2/MoShouBroker/Classes/&#x6211;&#x7684;/Controller/&#x79ef;&#x5206;/&#x79ef;&#x5206;&#x8be6;&#x60c5;/PointDetailsViewController.m"
+            timestampString = "530797258.152272"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-getfirstDateList"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShou2/MoShouBroker/DAL/DataFactory+User.m"
+            timestampString = "530797258.15232"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "949"
+            endingLineNumber = "949"
+            landmarkName = "-getPointDataWithPage:andCallBack:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DataFactory(User) getPointDataWithPage:andCallBack:]"
+                  moduleName = "MoShou2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nilaisong/Desktop/HuijinMoshou-Swift/MoShou2/MoShouBroker/DAL/DataFactory+User.m"
+                  timestampString = "530797258.354288"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "949"
+                  endingLineNumber = "949"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__54-[DataFactory(User) getPointDataWithPage:andCallBack:]_block_invoke"
+                  moduleName = "MoShou2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nilaisong/Desktop/HuijinMoshou-Swift/MoShou2/MoShouBroker/DAL/DataFactory+User.m"
+                  timestampString = "530797258.355601"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "950"
+                  endingLineNumber = "950"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,7 +1,7 @@
 //
 //  AccountService_APIEnum.swift
 //  MoShou2
-//  提供用户相关的业务接口类型
+//  提供用户相关的登录、注册、修改密码和个人信息等业务接口类型
 //  Created by NiLaisong on 2017/10/23.
 //  Copyright © 2017年 5i5j. All rights reserved.
 //
@@ -54,48 +54,47 @@ extension AccountServiceType:TargetType
     var task: Task {
         switch self
         {
-            case .login(let mobile, let passWord)://使用let从枚举里取出相关值
-                Tool.removeCache("user_token")//清除token
-                return .postParameters(["principal": mobile, "password": passWord,"validepassword":"1"])
-            case .userInfo:
+        case .login(let mobile, let passWord)://使用let从枚举里取出相关值
+            Tool.removeCache("user_token")//清除token
+            return .postParameters(["principal": mobile, "password": passWord,"validepassword":"1"])
+        case .userInfo:
             return .requestPlain
-            case .logout:
+        case .logout:
+            return .requestPlain
+        case .updateAvatar(let avatar):
+            if let imageData = UIImageJPEGRepresentation(avatar, 0.1)
+            {
+                let imageName = uniquePicName(typeName:"jpg")
+                let provider = MoyaMultipartFormData.FormDataProvider.data(imageData)
+                let multipartImages = MoyaMultipartFormData.init(provider:provider , name: "img", fileName: imageName, mimeType: "image/jpeg/png")
+                return .uploadMultipart([multipartImages])
+            }
+            else
+            {
                 return .requestPlain
-            case .updateAvatar(let avatar):
-                if let imageData = UIImageJPEGRepresentation(avatar, 0.1)
+            }
+        case .submitFeedback(let content,let imgArray):
+            var formDataArray:[MoyaMultipartFormData] = []
+            
+            for index in 0..<imgArray.count //1..<
+            {
+                if let imageData = UIImageJPEGRepresentation(imgArray[index], 0.1)
                 {
-                    let imageName = uniquePicName(typeName:"jpg")
+                    let strNum = "\(index)"
+                    let imageName = uniquePicName(strNum,typeName:"jpg")
                     let provider = MoyaMultipartFormData.FormDataProvider.data(imageData)
-                    let multipartImages = MoyaMultipartFormData.init(provider:provider , name: "img", fileName: imageName, mimeType: "image/jpeg/png")
-                    return .uploadMultipart([multipartImages])
+                    let multipartImage = MoyaMultipartFormData.init(provider:provider , name: "img\(index)", fileName: imageName, mimeType: "image/jpeg/png")
+                    formDataArray.append(multipartImage)
                 }
-                else
-                {
-                    return .requestPlain
-                }
-            case .submitFeedback(let content,let imgArray):
-                var formDataArray:[MoyaMultipartFormData] = []
-                
-                for index in 0..<imgArray.count //1..<
-                {
-                    if let imageData = UIImageJPEGRepresentation(imgArray[index], 0.1)
-                    {
-                        let strNum = "\(index)"
-                        let imageName = uniquePicName(strNum,typeName:"jpg")
-                        let provider = MoyaMultipartFormData.FormDataProvider.data(imageData)
-                        let multipartImage = MoyaMultipartFormData.init(provider:provider , name: "img\(index)", fileName: imageName, mimeType: "image/jpeg/png")
-                        formDataArray.append(multipartImage)
-                    }
-                }
-                //字符串转换到Data-字符串对象提供转换为data的方法
-                if let contentData = content.data(using: String.Encoding.utf8)
-                {
-                    let provider = MoyaMultipartFormData.FormDataProvider.data(contentData)
-                    let multipartContent = MoyaMultipartFormData.init(provider:provider , name: "msg")
-                    formDataArray.append(multipartContent)
-                }
-                
-                return .uploadMultipart(formDataArray)
+            }
+            //字符串转换到Data-字符串对象提供转换为data的方法
+            if let contentData = content.data(using: String.Encoding.utf8)
+            {
+                let provider = MoyaMultipartFormData.FormDataProvider.data(contentData)
+                let multipartContent = MoyaMultipartFormData.init(provider:provider , name: "msg")
+                formDataArray.append(multipartContent)
+            }
+            return .uploadMultipart(formDataArray)
         }
     }
 }

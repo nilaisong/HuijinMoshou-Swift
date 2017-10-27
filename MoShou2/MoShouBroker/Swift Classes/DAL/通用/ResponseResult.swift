@@ -14,7 +14,10 @@ class ResponseResult:NSObject,HandyJSON
     var success:Bool = false
     var code:String=""
     var message:String=""
-    var data:AnyObject?
+    
+    var data:Any?//返回的主体数据
+    
+    var page:PageModel?//如果是列表数据，则有页码
     
     required override init()
     {

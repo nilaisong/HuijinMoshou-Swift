@@ -132,9 +132,13 @@ typedef void(^HandleGoodsResult)(GoodsResult*result);
  */
 -(void)getPointMallByPage:(NSString*)page andSequenceType:(NSInteger)sequenceType andWithCallBack:(HandleGoodsResult)callBack;
 -(void)exchangeGoodsWith:(ExchangeGoods *)goods withAddress:(NSString*)addressId andCallback:(HandleActionResult)callback;
+
 -(void)getPointDataWithPage:(NSString *)page andCallBack:(HandleDataListResult)callback;
+
 -(void)getExchangeDataWithPage:(NSString *)page andCallBack:(HandleDataListResult)callback;
+
 -(void)deleteExchangeWithExchangeRecord:(ExchangeRecord *)record andCallBack:(HandleActionResult)callback;
+
 -(void)getPintsRulesDataWithCallBack:(HandleDataListResult)callback;
 
 //跟进信息

@@ -75,7 +75,7 @@
     PointDetailCellTableViewCell *cell = [[PointDetailCellTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
   
     cell.selectionStyle =UITableViewCellSelectionStyleNone;
-    PointData *pointDate =(PointData *)[self.pointDetailList objectForIndex:indexPath.row];
+    PointsModel *pointDate =(PointsModel *)[self.pointDetailList objectForIndex:indexPath.row];
     if (pointDate) {
         [cell.titleLabel setTextColor:NAVIGATIONTITLE];
         [cell.titleLabel setFont:[UIFont systemFontOfSize:14]];
@@ -148,7 +148,36 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)refreshFirstPageDate{
-    if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert) {
+    if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert)
+    {
+        [[AccountDataProvider sharedInstance] getPointsListWithPageIndex:@"1" completionClosure:^(ResponseResult * result)
+        {
+            NSArray * array = result.data;
+            if(array.count>0)
+            {
+                self.pointDetailList = [NSMutableArray arrayWithArray:array];
+                self.morePage = result.page.morePage;
+                if (self.morePage) {
+                    self.table.legendFooter.hidden = NO;
+                    
+                }else{
+                    self.table.legendFooter.hidden = YES;
+                }
+                self.page = 1;
+                [self.table.legendHeader endRefreshing];
+                
+                [self.table reloadData];
+                
+            }else{
+                
+                self.table.legendFooter.hidden = YES;
+                
+                [self tempView];
+                
+            }
+            
+        }];
+        /*
         [[DataFactory sharedDataFactory]getPointDataWithPage:[NSString stringWithFormat:@"%d",1] andCallBack:^(DataListResult *result) {
             if(result.dataArray.count>0){
                 self.pointDetailList = [NSMutableArray arrayWithArray:result.dataArray];
@@ -173,20 +202,21 @@
             }
             
         }];
-
+*/
     }
 
 
 }
 -(void)getfirstDateList{
-    if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert) {
+    if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert)
+    {
         UIImageView *loading = [self setRotationAnimationWithView];
-        [[DataFactory sharedDataFactory]getPointDataWithPage:[NSString stringWithFormat:@"%d",1] andCallBack:^(DataListResult *result) {
+        [[AccountDataProvider sharedInstance] getPointsListWithPageIndex:@"1" completionClosure:^(ResponseResult * result) {
             [self.table setHidden:NO];
-
-            if(result.dataArray.count>0){
-                self.pointDetailList = [NSMutableArray arrayWithArray:result.dataArray];
-                self.morePage = result.morePage;
+            NSArray* array = result.data;
+            if(array.count>0){
+                self.pointDetailList = [NSMutableArray arrayWithArray:array];
+                self.morePage = result.page.morePage;
                 if (self.morePage) {
                     self.table.legendFooter.hidden = NO;
                     
@@ -207,18 +237,50 @@
                 
                 [self tempView];
                 [self removeRotationAnimationView:loading];
-
+                
             }
-            
         }];
+//        [[DataFactory sharedDataFactory]getPointDataWithPage:[NSString stringWithFormat:@"%d",1] andCallBack:^(DataListResult *result) {
+//            [self.table setHidden:NO];
+//
+//            if(result.dataArray.count>0){
+//                self.pointDetailList = [NSMutableArray arrayWithArray:result.dataArray];
+//                self.morePage = result.morePage;
+//                if (self.morePage) {
+//                    self.table.legendFooter.hidden = NO;
+//
+//                }else{
+//                    self.table.legendFooter.hidden = YES;
+//                }
+//                self.page = 1;
+//                //    [self.table.footer endRefreshing];
+//                [self.table.legendHeader endRefreshing];
+//
+//                [self.table reloadData];
+//                [self addHeader];
+//                [self removeRotationAnimationView:loading];
+//            }else{
+//                //        [self.table.footer endRefreshing];
+//
+//                self.table.legendFooter.hidden = YES;
+//
+//                [self tempView];
+//                [self removeRotationAnimationView:loading];
+//
+//            }
+//
+//        }];
 
     }
 }
 -(void)getMorePintDataList{
-    [[DataFactory sharedDataFactory]getPointDataWithPage:[NSString stringWithFormat:@"%d",self.page] andCallBack:^(DataListResult *result) {
-        if(result.dataArray.count>0){
-            [self.pointDetailList  addObjectsFromArray:result.dataArray];
-            self.morePage = result.morePage;
+    
+    [[AccountDataProvider sharedInstance] getPointsListWithPageIndex:[NSString stringWithFormat:@"%d",self.page] completionClosure:^(ResponseResult * result)
+    {
+        NSArray * array = result.data;
+        if(array.count>0){
+            [self.pointDetailList  addObjectsFromArray:array];
+            self.morePage = result.page.morePage;
             if (self.morePage) {
                 self.table.legendFooter.hidden = NO;
                 
@@ -227,16 +289,39 @@
             }
             [self.table.legendFooter endRefreshing];
             [self.table.legendHeader endRefreshing];
-
+            
             [self.table reloadData];
         }else{
             self.table.legendFooter.hidden = YES;
             [self.table.legendFooter endRefreshing];
             [self.table.legendHeader endRefreshing];
-
+            
             [self tempView];
         }
     }];
+    
+//    [[DataFactory sharedDataFactory]getPointDataWithPage:[NSString stringWithFormat:@"%d",self.page] andCallBack:^(DataListResult *result) {
+//        if(result.dataArray.count>0){
+//            [self.pointDetailList  addObjectsFromArray:result.dataArray];
+//            self.morePage = result.morePage;
+//            if (self.morePage) {
+//                self.table.legendFooter.hidden = NO;
+//
+//            }else{
+//                self.table.legendFooter.hidden = YES;
+//            }
+//            [self.table.legendFooter endRefreshing];
+//            [self.table.legendHeader endRefreshing];
+//
+//            [self.table reloadData];
+//        }else{
+//            self.table.legendFooter.hidden = YES;
+//            [self.table.legendFooter endRefreshing];
+//            [self.table.legendHeader endRefreshing];
+//
+//            [self tempView];
+//        }
+//    }];
 }
 // 添加头部
 - (void)addHeader

@@ -8,6 +8,8 @@
 
 import Foundation
 
+let kPageSize = "20"//一页数据大小
+
 //可选参数可以省略
 func uniquePicName(_ name:String?=nil,typeName:String?=nil) -> String {
     let date:Date = Date.init(timeIntervalSinceNow: 0);

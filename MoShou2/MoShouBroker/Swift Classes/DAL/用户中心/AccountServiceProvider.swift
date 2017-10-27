@@ -54,7 +54,6 @@ class AccountServiceProvider:NSObject
                 completionClosure(resResult)
             }
         }
-        
     }
     //不专门指定的话，默认内部参数名就是外部参数名，“_”表示第一个外部参数名可省略
     func getUserInfo(_ completionClosure:@escaping RequestCompletionClosure)
@@ -66,13 +65,12 @@ class AccountServiceProvider:NSObject
             {
                 let data: [String:Any] = resResult.data as! [String:Any]
                 let user: [String:Any] = data["user"] as! [String:Any]
-                guard let userInfo: UserInfo = JSONDeserializer<UserInfo>.deserializeFrom(dict:user)
-                else{
-                    return
+                if let userInfo: UserInfo = JSONDeserializer<UserInfo>.deserializeFrom(dict:user)
+                {
+                    userInfo.initialize()
+                    print("\(userInfo.userName),\(userInfo.storeNum)")
+                    resResult.data = userInfo;
                 }
-                userInfo.initialize()
-                print("\(userInfo.userName),\(userInfo.storeNum)")
-                resResult.data = userInfo;
             }
             completionClosure(resResult)
         }
