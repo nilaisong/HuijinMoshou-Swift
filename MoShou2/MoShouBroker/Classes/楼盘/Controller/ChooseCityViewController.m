@@ -212,7 +212,7 @@
     }
    
 
-    NSLog(@"&&&&&&  %@",userData.cityName);
+//    NSLog(@"&&&&&&  %@",userData.cityName);
     
 }
 

@@ -82,13 +82,13 @@
     [manGou setHidden:YES];
 
    
-        if ([UserData sharedUserData].sex.intValue == 1) {
+        if ([UserData sharedUserData].userInfo.gender.intValue == 1) {
             _pointBtn = manBtn;
             _userSex = @"1";
             [womanGou setHidden:YES];
             [manGou setHidden:NO];
 
-        }else if([UserData sharedUserData].sex.intValue == 0){
+        }else if([UserData sharedUserData].userInfo.gender.intValue == 0){
             [manGou setHidden:YES];
             [womanGou setHidden:NO];
 

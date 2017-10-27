@@ -147,10 +147,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [extDic setValue:userInfo.AvatarUrl forKey:kChatUserPic];
     [extDic setValue:userInfo.NickName forKey:kChatUserNick];
     
-    [extDic setValue:[UserData sharedUserData].mobile forKey:@"agency_mobile"];
-    [extDic setValue:[UserData sharedUserData].employeeNo forKey:@"agency_employeeNo"];
+    [extDic setValue:[UserData sharedUserData].userInfo.mobile forKey:@"agency_mobile"];
+    [extDic setValue:[UserData sharedUserData].userInfo.employeeNo forKey:@"agency_employeeNo"];
 
-    [extDic setValue:[NSString stringWithFormat:@"%@ %@",[UserData sharedUserData].orgnizationName,[UserData sharedUserData].storeName] forKey:@"agency_department"];
+    [extDic setValue:[NSString stringWithFormat:@"%@ %@",[UserData sharedUserData].userInfo.orgnizationName,[UserData sharedUserData].userInfo.storeName] forKey:@"agency_department"];
 
     
     return extDic;

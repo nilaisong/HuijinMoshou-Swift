@@ -176,10 +176,10 @@
     }else if ([[self timeToTimestampWithTimeStr:[self getCurrentTime]] longLongValue]>[[self timeToTimestampWithTimeStr: self.goods.endTime]longLongValue]){
         [getBtn setBackgroundColor:LINECOLOR];
         
-    }else if (self.goods.availableNum.intValue>0&&([UserData sharedUserData].points.intValue < self.goods.convertPoints.intValue)) {
+    }else if (self.goods.availableNum.intValue>0&&([UserData sharedUserData].userInfo.points.intValue < self.goods.convertPoints.intValue)) {
         [getBtn setBackgroundColor:LINECOLOR];
 
-    }else if (self.goods.availableNum.intValue <= 0&&([UserData sharedUserData].points.intValue > self.goods.convertPoints.intValue)){
+    }else if (self.goods.availableNum.intValue <= 0&&([UserData sharedUserData].userInfo.points.intValue > self.goods.convertPoints.intValue)){
         [getBtn setBackgroundColor:LINECOLOR];
 
     }else{
@@ -215,17 +215,17 @@
     }else if ([[self timeToTimestampWithTimeStr:[self getCurrentTime]] longLongValue]>[[self timeToTimestampWithTimeStr:self.goods.endTime]longLongValue]){
         btn.userInteractionEnabled = YES;
         [TipsView showTipsCantClick:@"很抱歉活动已结束" inView:self.view];
-    }else if (self.goods.availableNum.intValue>0&&([UserData sharedUserData].points.integerValue < self.goods.convertPoints.intValue)) {
+    }else if (self.goods.availableNum.intValue>0&&([UserData sharedUserData].userInfo.points.integerValue < self.goods.convertPoints.intValue)) {
         btn.userInteractionEnabled = YES;
         [TipsView showTipsCantClick:@"很抱歉积分不足" inView:self.view];
-    }else if(self.goods.availableNum.intValue<=0&&([UserData sharedUserData].points.integerValue > self.goods.convertPoints.intValue)){
+    }else if(self.goods.availableNum.intValue<=0&&([UserData sharedUserData].userInfo.points.integerValue > self.goods.convertPoints.intValue)){
         btn.userInteractionEnabled = YES;
         [TipsView showTipsCantClick:@"很抱歉库存不足" inView:self.view];
     }else{
         if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert) {
-            if (![[UserData sharedUserData].addressId isEqualToString:@"0"]) {
+            if (![[UserData sharedUserData].userInfo.addressId isEqualToString:@"0"]) {
                 UIImageView *loading = [self setRotationAnimationWithView];
-                [[DataFactory sharedDataFactory]exchangeGoodsWith:self.goods withAddress:[UserData sharedUserData].addressId andCallback:^(ActionResult *result) {
+                [[DataFactory sharedDataFactory]exchangeGoodsWith:self.goods withAddress:[UserData sharedUserData].userInfo.addressId andCallback:^(ActionResult *result) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (result.success) {
                             [self removeRotationAnimationView:loading];

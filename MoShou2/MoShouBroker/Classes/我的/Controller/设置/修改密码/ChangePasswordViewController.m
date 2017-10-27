@@ -8,7 +8,7 @@
 
 #import "ChangePasswordViewController.h"
 #import "BlueLineView.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "DataFactory+User.h"
 #import "NSString+PasswordVertify.h"
 @interface ChangePasswordViewController ()<BlueLineViewDelegate>{

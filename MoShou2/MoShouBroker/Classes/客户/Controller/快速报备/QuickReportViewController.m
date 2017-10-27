@@ -117,14 +117,14 @@
 - (void)reloadView
 {
     UserData *user = [UserData sharedUserData];
-    if (![self isBlankString:user.maxRecommendCount]) {
-        _count = user.maxRecommendCount;
+    if (![self isBlankString:user.userInfo.maxRecommendCount]) {
+        _count = user.userInfo.maxRecommendCount;
     }else
     {
         _count = @"0";
     }
     
-    bIsHiddenNum = user.mobileVisable;
+    bIsHiddenNum = user.userInfo.mobileVisable;
     [self createTableView];
     
     [self initHeaderView];
@@ -337,7 +337,7 @@
     [userInfoView addSubview:[self createLineView:userInfoView.height-0.5 withX:0]];
     
     CGFloat kHeight = userInfoView.bottom;
-    if ([[UserData sharedUserData].customerSource boolValue]) {
+    if ([[UserData sharedUserData].userInfo.customerSource boolValue]) {
         //客户来源
         CustomerBaseBuildView *custView = [[CustomerBaseBuildView alloc] initWithFrame:CGRectMake(0, userInfoView.bottom+10, kMainScreenWidth, 44) Title:@"客户来源" AndImageName:nil AndBtnImgView:@"arrow-right" WithToBeUsed:4];
         custView.backgroundColor = [UIColor whiteColor];
@@ -520,7 +520,7 @@
         weakSelf.custData = cust;
         weakSelf.nameTextField.text = cust.name;
         weakSelf.identityCardField.text = cust.cardId;
-        if ([[UserData sharedUserData].customerSource boolValue]) {
+        if ([[UserData sharedUserData].userInfo.customerSource boolValue]) {
             weakSelf.sourceData.code = cust.custSource;
             weakSelf.sourceData.label = cust.custSourceLabel;
             if (![weakSelf isBlankString:cust.custSource]) {
@@ -640,8 +640,8 @@
         weakSelf.identityCardField.text = @"";
 //        weakSelf.custSourceLabel.text = @"";
         UserData *user = [UserData sharedUserData];
-        if (![weakSelf isBlankString:user.maxRecommendCount]) {
-            weakSelf.count = user.maxRecommendCount;
+        if (![weakSelf isBlankString:user.userInfo.maxRecommendCount]) {
+            weakSelf.count = user.userInfo.maxRecommendCount;
         }else
         {
             weakSelf.count = @"0";
@@ -776,7 +776,7 @@
         [self showTips:@"请输入正确身份证号"];
         return;
     }
-    if ([[UserData sharedUserData].customerSource boolValue]) {
+    if ([[UserData sharedUserData].userInfo.customerSource boolValue]) {
         if (_sourceData == nil || [self isBlankString:_sourceData.code]) {
             [self showTips:@"请选择客户来源"];
             return;

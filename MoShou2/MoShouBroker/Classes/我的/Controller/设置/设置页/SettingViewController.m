@@ -12,7 +12,7 @@
 #import "AboutUsViewController.h"
 #import "DataFactory+User.h"
 #import "ChangePasswordViewController.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "MultipleResourceRequst.h"
 #import "DownloaderManager.h"
 #import "MineTableViewCell.h"
@@ -136,18 +136,24 @@
         if (buttonIndex == 1) {
             if([NetworkSingleton sharedNetWork].isNetworkConnection){
                 UIImageView *loading =[self setRotationAnimationWithView];
-                [[DataFactory sharedDataFactory]logoutWithCallback:^(ActionResult *result) {
+                [[AccountServiceProvider sharedInstance] logout:^(ResponseResult* result){
+                    
+                    [self removeRotationAnimationView:loading];
                     if(result.success){
                         [TipsView showTipsCantClick:result.message inView:self.view];
                         [[UserData sharedUserData] cleareUserData];
+                        
+                        //登出环信
+                        [ChatUIHelper shareHelper].currentChatConversationId = @"";
+                        [[EMClient sharedClient] logout:YES];
+                        
                         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"TouchExit"];//add by wangzz 2016-01-22
-                        [self removeRotationAnimationView:loading];
+                        
                         [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(popToRoot) userInfo:nil repeats:NO];
-                    }else{
-                        [TipsView showTipsCantClick:result.message inView:self.view];
-
                     }
-                    [self removeRotationAnimationView:loading];
+                    else{
+                        [TipsView showTipsCantClick:result.message inView:self.view];
+                    }
                 }];
             }
                }

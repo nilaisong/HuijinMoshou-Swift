@@ -167,7 +167,7 @@ void UncaughtExceptionHandler(NSException * exception) {
     NSString * reason = [exception reason];
     NSString * name = [exception name];
     NSMutableArray *infoArr = [NSMutableArray array];
-    NSString* phone = [UserData sharedUserData].mobile;
+    NSString* phone = [UserData sharedUserData].userInfo.mobile;
     NSString* city =  [UserData sharedUserData].cityName;
     NSString* version = [LocalFileSystem sharedManager].versionName;
     NSString* domain = [LocalFileSystem sharedManager].baseURL;
@@ -226,7 +226,7 @@ void UncaughtExceptionHandler(NSException * exception) {
     NSString * reason = [exception reason];
     NSString * name = [exception name];
     NSMutableArray *infoArr = [NSMutableArray array];
-    NSString* phone = [UserData sharedUserData].mobile;
+    NSString* phone = [UserData sharedUserData].userInfo.mobile;
     NSString* city =  [UserData sharedUserData].cityName;
     NSString* version = [LocalFileSystem sharedManager].versionName;
     NSString* domain = [LocalFileSystem sharedManager].baseURL;

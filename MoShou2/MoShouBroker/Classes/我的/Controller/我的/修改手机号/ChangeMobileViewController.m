@@ -11,7 +11,7 @@
 #import "NSString+Extension.h"
 #import "DataFactory+User.h"
 #import "HMTool.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "UserData.h"
 
 @interface ChangeMobileViewController (){
@@ -42,7 +42,7 @@
     self.navigationBar.titleLabel.text = @"手机修改";
     [self.view setBackgroundColor:[UIColor whiteColor]];
     UILabel *tip = [[UILabel alloc]init];
-    [tip setText:[NSString stringWithFormat:@"您当前手机号为：%@",[UserData sharedUserData].mobile]];
+    [tip setText:[NSString stringWithFormat:@"您当前手机号为：%@",[UserData sharedUserData].userInfo.mobile]];
     CGSize tipsize = [HMTool getTextSizeWithText:tip.text andFontSize:14];
     [tip setFrame: CGRectMake(kMainScreenWidth/2- tipsize.width/2,kFrame_YHeight(self.navigationBar)+15, tipsize.width, tipsize.height)];
     [tip setFont:[UIFont systemFontOfSize:14]];

@@ -25,7 +25,7 @@
     [super viewDidLoad];
 
     
-    NSString *key = [NSString stringWithFormat:@"%@-%@",[UserData sharedUserData].userId,_building.buildingId];
+    NSString *key = [NSString stringWithFormat:@"%@-%@",[UserData sharedUserData].userInfo.userId,_building.buildingId];
     
     NSString *value = [NSString stringWithFormat:@"%zd",self.building.estateDynamicMsgList.count];
     [Tool setCache:key value:value];
@@ -133,9 +133,9 @@
         [extDic setValue:_building.buildingId forKey:@"agency_building_id"];
         [extDic setValue:[NSString stringWithFormat:@"%@-%@",_estateBuildingMo.district,_estateBuildingMo.plate] forKey:@"agency_building_area"];
         [extDic setValue:@"1" forKey:@"agency_building_detail"];
-        [extDic setValue:[UserData sharedUserData].mobile forKey:@"agency_mobile"];
-        [extDic setValue:[UserData sharedUserData].employeeNo forKey:@"agency_employeeNo"];
-        [extDic setValue:[NSString stringWithFormat:@"%@ %@",[UserData sharedUserData].orgnizationName,[UserData sharedUserData].storeName] forKey:@"agency_department"];
+        [extDic setValue:[UserData sharedUserData].userInfo.mobile forKey:@"agency_mobile"];
+        [extDic setValue:[UserData sharedUserData].userInfo.employeeNo forKey:@"agency_employeeNo"];
+        [extDic setValue:[NSString stringWithFormat:@"%@ %@",[UserData sharedUserData].userInfo.orgnizationName,[UserData sharedUserData].userInfo.storeName] forKey:@"agency_department"];
         //对方环信ID
         //    easemobConfirmMo.username
         //@"test_confirm_15344444444"

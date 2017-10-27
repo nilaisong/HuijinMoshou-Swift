@@ -582,7 +582,7 @@
     [remarksView setHeight:remarksTextLabel.bottom+20];
     
     CGFloat kHeight = remarksView.bottom;
-    if ([[UserData sharedUserData].customerSource boolValue]) {
+    if ([[UserData sharedUserData].userInfo.customerSource boolValue]) {
         //客户来源
         CustomerBaseBuildView *custSourceView = [[CustomerBaseBuildView alloc] initWithFrame:CGRectMake(0, remarksView.bottom+10, kMainScreenWidth, 44) Title:@"客户来源" AndImageName:nil AndBtnImgView:@"" WithToBeUsed:4];//arrow-right
         custSourceView.backgroundColor = [UIColor whiteColor];

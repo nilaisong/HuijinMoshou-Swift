@@ -364,7 +364,7 @@
 {
     
     UserData *user = [UserData sharedUserData];
-    if ([self isBlankString:user.storeId])
+    if ([self isBlankString:user.userInfo.storeId])
     {
         //如果门店为空
             if (isShouldJump) //需要跳转

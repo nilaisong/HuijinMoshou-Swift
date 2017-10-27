@@ -227,7 +227,7 @@
 - (void)reloadView
 {
     //手机号是否全部显示 （0全部显示，1部分显示）
-    BOOL mobile = [UserData sharedUserData].mobileVisable;
+    BOOL mobile = [UserData sharedUserData].userInfo.mobileVisable;
 //    if (customerViewCtrlType == kReportNewCustomer) {
 //        if (mobile && ![_customerTelType boolValue]) {
 //            bIsHiddenNum = YES;
@@ -777,7 +777,7 @@
     
     [secondView addSubview:[self createLineView:remarksBgView.bottom+9.5 withX:0]];
     CGFloat kHeight = remarksBgView.bottom;
-    if ([[UserData sharedUserData].customerSource boolValue]) {
+    if ([[UserData sharedUserData].userInfo.customerSource boolValue]) {
         //客户来源
         CustomerBaseBuildView *custView = [[CustomerBaseBuildView alloc] initWithFrame:CGRectMake(0, remarksBgView.bottom+10, kMainScreenWidth, 44) Title:@"客户来源" AndImageName:nil AndBtnImgView:@"arrow-right" WithToBeUsed:4];
         custView.backgroundColor = [UIColor whiteColor];
@@ -1268,7 +1268,7 @@
         [self showTips:@"请输入正确身份证号"];
         return;
     }
-    if ([[UserData sharedUserData].customerSource boolValue]) {
+    if ([[UserData sharedUserData].userInfo.customerSource boolValue]) {
         if (_sourceData == nil || [self isBlankString:_sourceData.code]) {
             [self showTips:@"请选择客户来源"];
             return;

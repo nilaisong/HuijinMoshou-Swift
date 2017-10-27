@@ -134,7 +134,7 @@
     [self addSubview: custTelTypeL];
     
     //手机号是否全部显示 （0全部显示，1部分显示）
-    BOOL bMobileVisable = [UserData sharedUserData].mobileVisable;
+    BOOL bMobileVisable = [UserData sharedUserData].userInfo.mobileVisable;
     if (bMobileVisable && [_buildingListData.customerTelType boolValue]) {
         custTelTypeL.hidden = NO;
     }

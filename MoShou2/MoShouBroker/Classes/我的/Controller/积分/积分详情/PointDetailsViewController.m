@@ -122,7 +122,7 @@
     UIView *l =[HMTool getLineWithFrame:CGRectMake(0, 60, kMainScreenWidth, 0.5) andColor:LINECOLOR];
     [v addSubview:l];
     [v setBackgroundColor:[UIColor whiteColor]];
-    NSString *num =[UserData sharedUserData].points;
+    NSString *num =[UserData sharedUserData].userInfo.points;
     UILabel *title =[[UILabel alloc]init];
     [title setText:@"累计积分"];
     [title setTextColor:POINTMALLGRAYLABELCOLOR];

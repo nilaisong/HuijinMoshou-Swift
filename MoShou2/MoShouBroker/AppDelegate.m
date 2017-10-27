@@ -28,7 +28,7 @@
 #import "InstructionView.h"
 #import "BaseNavigationController.h"
 #import "MoShouTopWindow.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 //create by dingpuyu 2016-1-15 //3d touch事件相关控制器
 #import "XTWorkReportingController.h"
 #import "XTUserScheduleViewController.h"
@@ -67,12 +67,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    NSLog(@"%@",kMainBundlePath);
-    
-    [[AccountServiceProvider sharedInstance] loginWithMobile:@"13730000001" password:@"cs123456" completionClosure:^(ResponseResult* result)
-    {
-        ResponseResult* r = result;
-        NSLog(r.message);
-    }];
+
     
 #ifdef DEVELOP
     Class overlay = NSClassFromString(@"UIDebuggingInformationOverlay");
@@ -961,7 +956,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     [[EMClient sharedClient] applicationDidEnterBackground:application];
 
-    NSInteger allNum = [UserData sharedUserData].newUnreadMsgCount+[self getUnreadMessageCount]+[[UserData sharedUserData].offlineMsgCount integerValue];
+    NSInteger allNum = [UserData sharedUserData].newUnreadMsgCount+[self getUnreadMessageCount]+[[UserData sharedUserData].userInfo.offlineMsgCount integerValue];
     
     [application setApplicationIconBadgeNumber:allNum];
 
@@ -997,7 +992,11 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     //缓存闪屏用数据
     [[DataFactory sharedDataFactory] performSelectorInBackground:@selector(downloadSplashsData) withObject:nil];
     //create by xiaotei
-    [[DataFactory sharedDataFactory] getUserDataWithCallBack:^(ActionResult *result) { }];
+    [[AccountServiceProvider sharedInstance] getUserInfo:^(ResponseResult *result) {
+        if (result.success) {
+            [UserData sharedUserData].userInfo = result.data;
+        }
+    }];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

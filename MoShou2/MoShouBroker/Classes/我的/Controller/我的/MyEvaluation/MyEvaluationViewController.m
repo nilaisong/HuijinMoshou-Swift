@@ -64,7 +64,7 @@
 //    }
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-    NSString *userId = [UserData sharedUserData].userId;
+    NSString *userId = [UserData sharedUserData].userInfo.userId;
     if (![self isBlankString:userId]) {
         [dic setValue:userId forKey:@"agencyUserId"];
     }
@@ -101,7 +101,7 @@
 {
     _page++;
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-    NSString *userId = [UserData sharedUserData].userId;
+    NSString *userId = [UserData sharedUserData].userInfo.userId;
     if (![self isBlankString:userId]) {
         [dic setValue:userId forKey:@"agencyUserId"];
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
- typealias RequestCompletionClosure = (_ result:ResponseResult) -> Void
+typealias RequestCompletionClosure = (_ result:ResponseResult) -> Void
 
 func getResultModel(result:Result<Response, MoyaError>)->ResponseResult
 {
@@ -18,11 +18,9 @@ func getResultModel(result:Result<Response, MoyaError>)->ResponseResult
     case let .success(response):
         let jsonString : String = NSString(data:response.data,encoding:String.Encoding.utf8.rawValue)! as String
         //可以解析json串、数据字典，也可以指定解析的节点路径
-        let optResult = JSONDeserializer<ResponseResult>.deserializeFrom(json: jsonString);
-//        print(response.data);
-        if optResult != nil
+        if let optResult = JSONDeserializer<ResponseResult>.deserializeFrom(json: jsonString)
         {
-            resResult = optResult!
+            resResult = optResult
         }
         else
         {

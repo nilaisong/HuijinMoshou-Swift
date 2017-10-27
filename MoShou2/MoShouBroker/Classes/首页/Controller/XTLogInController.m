@@ -17,7 +17,7 @@
 #import "RegisterViewController.h"
 
 #import "DataFactory+User.h"
-
+#import "UserData.h"
 #import "Tool.h"
 
 #import "ChangePasswordViewController.h"
@@ -256,39 +256,50 @@
         UIImageView *loading = [self setRotationAnimationWithView];
         _loadingView = loading;
         _hasLoginAction = YES;
-        [[DataFactory sharedDataFactory] loginWtihMobile:[phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""] andPassword:passwd andCallback:^(ActionResult *result) {
-            dispatch_async(dispatch_get_main_queue(), ^{//add by wangzz 160809
-                [self removeRotationAnimationView:loading];
-                
-                if (result.success) {
-                    [self.passwdView setEndEditing:YES];
-                    [self.phoneView setEndEditing:YES];
-                    if (_phoneNumber.length > 0) {
-                        [Tool setCache:_phoneNumber value:@"user_account"];
-                    }
-                    
-                    if (result.message.length==0) {
-                        result.message = @"登录成功";
-                    }
-                    [TipsView showTipsCantClick:result.message inView:self.view];
-                    //检测版本升级
-                    [self.appDelegate performSelector:@selector(checkVersionUpdate)];
-                    
-
-                    //[[NSNotificationCenter defaultCenter]postNotificationName:@"REFRESHMINEINFO" object:self];
-                    [self.phoneView setEndEditing:YES];
-                    [self.passwdView setEndEditing:YES];
-                    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(popView) userInfo:nil repeats:NO];
-                }else{
-                    
-                    [TipsView showTipsCantClick:result.message inView:self.view];
-                    [self removeRotationAnimationView:loading];
-                    
-                    self.logInButton.userInteractionEnabled = YES;
-                }
-                
-            });
-        }];
+        
+        [[AccountServiceProvider sharedInstance] loginWithMobile:[phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""] password:passwd completionClosure:^(ResponseResult* result)
+         {
+             dispatch_async(dispatch_get_main_queue(), ^{//add by wangzz 160809
+                 [self removeRotationAnimationView:loading];
+                 
+                 if (result.success)
+                 {
+                     //缓存用户信息
+                     [UserData sharedUserData].userInfo = result.data;
+                     //向激光推送注册用户别名
+                     [[UserData sharedUserData] setJPushAlias];
+                     //环信账号登录
+                     [[DataFactory sharedDataFactory] hxUserLoginWithUserInfo:[UserData sharedUserData].userInfo];
+                     
+                     [self.passwdView setEndEditing:YES];
+                     [self.phoneView setEndEditing:YES];
+                     if (_phoneNumber.length > 0) {
+                         [Tool setCache:_phoneNumber value:@"user_account"];
+                     }
+                     
+                     if (result.message.length==0) {
+                         result.message = @"登录成功";
+                     }
+                     [TipsView showTipsCantClick:result.message inView:self.view];
+                     //检测版本升级
+                     [self.appDelegate performSelector:@selector(checkVersionUpdate)];
+                     
+                     [[NSNotificationCenter defaultCenter]postNotificationName:@"SELECTEDHOMEPAGE" object:self];
+                     
+                     [self.phoneView setEndEditing:YES];
+                     [self.passwdView setEndEditing:YES];
+                     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(popView) userInfo:nil repeats:NO];
+                 }else{
+                     
+                     [TipsView showTipsCantClick:result.message inView:self.view];
+                     [self removeRotationAnimationView:loading];
+                     
+                     self.logInButton.userInteractionEnabled = YES;
+                 }
+                 
+             });
+         }];
+        
         self.logInButton.userInteractionEnabled = NO;
     }
 }

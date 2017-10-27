@@ -693,7 +693,7 @@
 }
 
 - (NSString*)shareTitle{
-    NSString* userName = [UserData sharedUserData].userName;
+    NSString* userName = [UserData sharedUserData].userInfo.userName;
     switch (_intervalType) {
         case XTTimeIntervalArchievementDay:
             return [NSString stringWithFormat:@"%@的工作日报",userName];
@@ -711,8 +711,8 @@
 }
 
 - (NSString*)shareContent{
-    NSString* storeName = [UserData sharedUserData].storeName;
-    NSString* userName = [UserData sharedUserData].userName;
+    NSString* storeName = [UserData sharedUserData].userInfo.storeName;
+    NSString* userName = [UserData sharedUserData].userInfo.userName;
     switch (_intervalType) {
         case XTTimeIntervalArchievementDay:
             return [NSString stringWithFormat:@"工作日报 %@  by %@  经纪人%@（分享自汇金魔售）",_intervalArchievementView.timeInterValString,storeName,userName];

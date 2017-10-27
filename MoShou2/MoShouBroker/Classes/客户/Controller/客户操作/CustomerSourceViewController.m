@@ -59,7 +59,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy年MM月dd日";
     NSString *str = [dateFormatter stringFromDate:nowDate];
-    NSString *keyStr = [NSString stringWithFormat:@"CustomerSourceListData%@",[UserData sharedUserData].userId];
+    NSString *keyStr = [NSString stringWithFormat:@"CustomerSourceListData%@",[UserData sharedUserData].userInfo.userId];
     if (![[[NSUserDefaults standardUserDefaults] valueForKey:keyStr] isEqualToString:str])
     {
         UIImageView* loadingView  = [self setRotationAnimationWithView];

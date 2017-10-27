@@ -18,7 +18,7 @@ class ResponseResult:NSObject,HandyJSON
     
     required override init()
     {
-        
+        super.init()
     }
     //字段映射
     func mapping(mapper: HelpingMapper) {

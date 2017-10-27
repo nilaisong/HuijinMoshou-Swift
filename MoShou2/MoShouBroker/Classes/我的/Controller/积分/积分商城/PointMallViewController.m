@@ -87,7 +87,7 @@
     
     _point = [[UILabel alloc]init];
     [_point setFont:[UIFont systemFontOfSize:14]];
-    [_point setText:[UserData sharedUserData].points];
+    [_point setText:[UserData sharedUserData].userInfo.points];
     _point.textAlignment = NSTextAlignmentLeft;
     CGSize pointS = [HMTool getTextSizeWithText:_point.text andFontSize:14];
     _point.textColor = BLUEBTBCOLOR;
@@ -234,7 +234,7 @@
 }
 #pragma mark - 积分商城
 -(void)refreshPoint{
-    [_point setText:[UserData sharedUserData].points];
+    [_point setText:[UserData sharedUserData].userInfo.points];
     
 }
 -(void)reloadListData
@@ -268,7 +268,7 @@
       
         _signBtn.userInteractionEnabled = NO;
         
-        if (![self isBlankString:[UserData sharedUserData].storeNum]) {
+        if (![self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
             if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert) {
                 [[DataFactory sharedDataFactory]signWithCallback:^(ActionResult *result) {
                     if (result.success) {
@@ -306,7 +306,7 @@
     if (btn.tag == POINTMALLSIGNTAG ) {
         _signBtn.userInteractionEnabled = NO;
 
-        if (![self isBlankString:[UserData sharedUserData].storeNum]) {
+        if (![self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
             if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert) {
                 [[DataFactory sharedDataFactory]signWithCallback:^(ActionResult *result) {
                     if (result.success) {
@@ -342,7 +342,7 @@
                 [[DataFactory sharedDataFactory]exchangeGoodsWith:good withAddress:addressId andCallback:^(ActionResult *result) {
                     if (result.success) {
                         [TipsView showTipsCantClick:@"申请兑换成功，请等待管理员操作。" inView:self.view];
-                        [_point setText:[UserData sharedUserData].points];
+                        [_point setText:[UserData sharedUserData].userInfo.points];
                         [_goodsTableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:_buttonTag inSection:0], nil] withRowAnimation:UITableViewRowAnimationFade];
                         
                     }else{
@@ -419,7 +419,7 @@
                 }
             }
             _signBtn.userInteractionEnabled = NO;
-            [_point setText:[UserData sharedUserData].points];
+            [_point setText:[UserData sharedUserData].userInfo.points];
 
 
         }];
@@ -576,11 +576,11 @@
             }else if ([[self timeToTimestampWithTimeStr:[self getCurrentTime]] longLongValue]>[[self timeToTimestampWithTimeStr:goods.endTime]longLongValue]){
                 [getBtn setBackgroundColor:LINECOLOR];
                 
-            }else if (goods.availableNum.intValue>0&&([UserData sharedUserData].points.integerValue < goods.convertPoints.intValue)) {
+            }else if (goods.availableNum.intValue>0&&([UserData sharedUserData].userInfo.points.integerValue < goods.convertPoints.intValue)) {
                 
                 [getBtn setBackgroundColor:LINECOLOR];
                 
-            }else if(goods.availableNum.intValue<=0&&([UserData sharedUserData].points.integerValue > goods.convertPoints.intValue)){
+            }else if(goods.availableNum.intValue<=0&&([UserData sharedUserData].userInfo.points.integerValue > goods.convertPoints.intValue)){
                 [getBtn setBackgroundColor:LINECOLOR];
                 
             }else{
@@ -660,16 +660,16 @@
     }else if ([[self timeToTimestampWithTimeStr:[self getCurrentTime]] longLongValue]>[[self timeToTimestampWithTimeStr:good.endTime]longLongValue]){
         [TipsView showTipsCantClick:@"很抱歉活动已结束" inView:self.view];
         
-    }else if (good.availableNum.intValue>0&&([UserData sharedUserData].points.intValue < good.convertPoints.intValue)) {
+    }else if (good.availableNum.intValue>0&&([UserData sharedUserData].userInfo.points.intValue < good.convertPoints.intValue)) {
         [TipsView showTipsCantClick:@"很抱歉积分不足" inView:self.view];
         
         
-    }else if(good.availableNum.intValue<=0&&([UserData sharedUserData].points.intValue > good.convertPoints.intValue)){
+    }else if(good.availableNum.intValue<=0&&([UserData sharedUserData].userInfo.points.intValue > good.convertPoints.intValue)){
         [TipsView showTipsCantClick:@"很抱歉库存不足" inView:self.view];
         
     }else {
-        if (![self isBlankString:[UserData sharedUserData].addressId] && ![[UserData sharedUserData].addressId isEqualToString:@"0"]) {
-            addressId = [UserData sharedUserData].addressId;
+        if (![self isBlankString:[UserData sharedUserData].userInfo.addressId] && ![[UserData sharedUserData].userInfo.addressId isEqualToString:@"0"]) {
+            addressId = [UserData sharedUserData].userInfo.addressId;
             UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"兑换提示" message:@"是否确认兑换该商品？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
             alert.tag = 3001;
             [alert show];
@@ -744,7 +744,7 @@
         [title setText:@"兑换记录"];
 
     }else if (tag ==1002 ){
-        if ([UserData sharedUserData].isSignIn) {
+        if ([UserData sharedUserData].userInfo.isSignIn) {
             [title setText:@"今日已签"];
                 }else{
                     [title setText:@"签到"];
@@ -782,7 +782,7 @@
     [btn addTarget:self action:@selector(segmentChange:) forControlEvents:UIControlEventTouchUpInside];
     if (tag ==1002 ){
         
-        if ([UserData sharedUserData].isSignIn) {
+        if ([UserData sharedUserData].userInfo.isSignIn) {
             btn.userInteractionEnabled = NO;
         }else{
             btn.userInteractionEnabled = YES;

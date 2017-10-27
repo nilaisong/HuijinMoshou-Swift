@@ -156,8 +156,8 @@
 {
     //add by wangzz 160808
     if (!bIsPopAlert) {
-        BOOL limit = [UserData sharedUserData].limitEmployeeNo;
-        NSString *employee = [UserData sharedUserData].employeeNo;
+        BOOL limit = [UserData sharedUserData].userInfo.limitEmployeeNo;
+        NSString *employee = [UserData sharedUserData].userInfo.employeeNo;
         if (limit && [self isBlankString:employee]) {
             bIsPopAlert = YES;
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"重要提醒" message:@"应贵公司要求，您需要在“我的—头像—个人资料页”填写您的员工编号，以保证魔售的正常使用。" delegate:self cancelButtonTitle:@"下次再说" otherButtonTitles:@"马上填写", nil];
@@ -841,8 +841,10 @@ static BOOL firstLoad = YES;
     //            [self jumpToChooseCity];
     //        }
     //    }
-    [[DataFactory sharedDataFactory] getUserDataWithCallBack:^(ActionResult *result) {
-        
+    [[AccountServiceProvider sharedInstance] getUserInfo:^(ResponseResult *result) {
+        if (result.success) {
+            [UserData sharedUserData].userInfo = result.data;
+        }
     }];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -1101,7 +1103,7 @@ static int msgNum = 0;
     for (EMConversation *conversation in conversations) {
         unreadCount += conversation.unreadMessagesCount;
      }
-    unreadCount += msgNum + [[UserData sharedUserData].offlineMsgCount integerValue];
+    unreadCount += msgNum + [[UserData sharedUserData].userInfo.offlineMsgCount integerValue];
     NSString* numStr = [NSString stringWithFormat:@"%ld",unreadCount];
 
     if (unreadCount > 0 ){

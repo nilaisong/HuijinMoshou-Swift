@@ -47,7 +47,7 @@
 //闪屏用图片缓存的位置
 #define SplashImageFolder documentFilePathWithFileName(@"image",SplashDownloadFolder)
 
-#define DataCacheFolder [NSString stringWithFormat:@"data%@",[UserData sharedUserData].userId]
+#define DataCacheFolder [NSString stringWithFormat:@"data%@",[UserData sharedUserData].userInfo.userId]
 
 //#define NSUD    [NSUserDefaults standardUserDefaults]
 #define CUSTOMER_LABEL_FONT_SIZE            14.0f

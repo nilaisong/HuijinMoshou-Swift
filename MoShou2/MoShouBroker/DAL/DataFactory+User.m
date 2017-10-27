@@ -15,6 +15,7 @@
 #import "PointRules.h"
 @implementation DataFactory (User)
 #pragma mark 登录
+/*
 -(void)loginWtihMobile:(NSString *)mobile andPassword:(NSString *)password andCallback:(HandleActionResult)callback{
     __block ActionResult *result =[ActionResult alloc];
     result.success = NO;
@@ -22,7 +23,8 @@
 //        [Tool removeCache:@"releaseBaseURL"];//每次登录重新获取数据接口域名
         NSDictionary *dic = @{@"principal":mobile,@"password":password,@"validepassword":@1};
         [[NetWork manager] POST:@"/dologin" parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-            if (responseObject) {
+            if (responseObject)
+            {
                 NSLog(@"*************%@",responseObject);
                 result =[ActionResult objectWithKeyValues:responseObject];
                 if (result.success) {  
@@ -39,29 +41,28 @@
                 }else{
                     callback(result);
                 }
-                
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             callback(result);
         }];
     }
 }
-
+*/
 /**
  *  校验密码是否过于简单
  */
-- (BOOL)verifyPasswdLegal:(NSDictionary *)dict message:(NSString*)msg{
-    BOOL isLegal = YES;
-    for (NSString* key in [dict allKeys]) {
-        if ([key isEqualToString:@"passwordLegal"]) {
-            isLegal = [[dict valueForKey:@"passwordLegal"] boolValue];
-        }
-    }
-    if (!isLegal) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"XTPasswordUnLegalNotification" object:msg];
-    }
-    return isLegal;
-}
+//- (BOOL)verifyPasswdLegal:(NSDictionary *)dict message:(NSString*)msg{
+//    BOOL isLegal = YES;
+//    for (NSString* key in [dict allKeys]) {
+//        if ([key isEqualToString:@"passwordLegal"]) {
+//            isLegal = [[dict valueForKey:@"passwordLegal"] boolValue];
+//        }
+//    }
+//    if (!isLegal) {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"XTPasswordUnLegalNotification" object:msg];
+//    }
+//    return isLegal;
+//}
 
 #pragma mark 注册
 -(void)registerWtihMobile:(NSString*)mobile password:(NSString*)password andVcode:(NSString*)code andCallback:(HandleActionResult)callback{
@@ -84,7 +85,8 @@
 //                    [UserData sharedUserData].mobile = mobile;
 //                    [UserData sharedUserData].changeShopVerifyStatus = -1;
 //                    [self initUserData:dic];
-                    [self loginWtihMobile:mobile andPassword:password andCallback:callback];
+                    
+//                    [self loginWtihMobile:mobile andPassword:password andCallback:callback];
 
 //                    [[UserData sharedUserData] setJPushAlias];
                 }else{
@@ -176,16 +178,19 @@
         }];
     }
 }
-
+/*
 -(void)initUserData:(NSDictionary*)data
 {
     NSDictionary *userData = [data valueForKey:@"user"];
     [UserData sharedUserData].userId = [userData stringValueForKey:@"id"];
+    [UserData sharedUserData].userName = [userData stringValueForKey:@"nickname"];
     [UserData sharedUserData].mobile = [userData stringValueForKey:@"mobile"];
     [UserData sharedUserData].avatar = [userData stringValueForKey:@"headPic"];
     [UserData sharedUserData].sex = [userData stringValueForKey:@"gender"];
     [UserData sharedUserData].employeeNo = [userData stringValueForKey:@"employeeNo"];
     [UserData sharedUserData].isExchangeShop = [[userData valueForKey:@"isExchangeShop"] integerValue];
+    [UserData sharedUserData].offlineMsgCount = [userData stringValueForKey:@"offlineMsgCount"];
+    
     NSDictionary *shopDic =[userData valueForKey:@"org"];
     if (shopDic) {
             
@@ -205,8 +210,8 @@
         NSString* areaLatitude = [shopDic stringValueForKey:@"areaLatitude"];
         
         if (cityId.length>0) {
-            [UserData sharedUserData].cityId = cityId;
-            [UserData sharedUserData].cityName = [shopDic stringValueForKey:@"areaName"];
+//            [UserData sharedUserData].cityId = cityId;
+//            [UserData sharedUserData].cityName = [shopDic stringValueForKey:@"areaName"];
         }
         if (areaLatitude.length > 0 && areaLongitude.length > 0) {
             [UserData sharedUserData].longitude = areaLongitude;
@@ -247,16 +252,18 @@
         [UserData sharedUserData].addressId = [additionaDic stringValueForKey:@"addressId"];
         
         [UserData sharedUserData].maxRecommendCount = [additionaDic stringValueForKey:@"maxRecommendCount"];
-        [UserData sharedUserData].userName = [userData stringValueForKey:@"nickname"];
+
     }
-   
-    [UserData sharedUserData].offlineMsgCount = [userData stringValueForKey:@"offlineMsgCount"];
+}
+*/
 #pragma mark - 后台返回环信信息相关
-    NSDictionary *easemobUserDic = [userData valueForKey:@"easemobUsers"];
-    if (easemobUserDic) {
-        NSString *easemoUserName = [easemobUserDic valueForKey:@"username"];
-        NSString *easemoPassWord = [easemobUserDic valueForKey:@"password"];
-        NSString *easemoNickName = [easemobUserDic valueForKey:@"nickname"];
+-(void)hxUserLoginWithUserInfo:(UserInfo*)userInfo
+{
+    if (userInfo)
+    {
+        NSString *easemoUserName = userInfo.hxUserName;
+        NSString *easemoPassWord = userInfo.hxPassword;
+        NSString *easemoNickName = userInfo.hxNickName;
         // 开启一个线程防止登录失败时造成主线程卡死
         NSOperationQueue *q = [[NSOperationQueue alloc]init];
         [q addOperationWithBlock:^{
@@ -266,7 +273,7 @@
                     //设置自动登录
                     [[EMClient sharedClient].options setIsAutoLogin:YES];
                     //保存下用户信息
-                    [UserCacheManager saveInfo:easemoUserName imgUrl:[UserData sharedUserData].avatar nickName:easemoNickName];
+                    [UserCacheManager saveInfo:easemoUserName imgUrl:[UserData sharedUserData].userInfo.avatar nickName:easemoNickName];
                     //设置推送详情的字段和昵称 类型
                     EMPushOptions *options = [[EMClient sharedClient] pushOptions];
                     options.displayName = easemoNickName.length <= 0?@"":easemoNickName;
@@ -279,12 +286,10 @@
             
             
         }];
-        
-        
-        
-}
+    }
 }
 #pragma mark 获取用户信息
+/*
 -(void)getUserDataWithCallBack:(HandleActionResult)callBack{
 
     __block ActionResult *result =[ActionResult alloc];
@@ -310,9 +315,9 @@
             callBack(result);
         }];
     }
- 
-    
 }
+*/
+
 #pragma mark 修改用户名
 -(void)changeNameWithName:(NSString *)name andCallback:(HandleActionResult)callback{
     __block ActionResult *result =[ActionResult alloc];
@@ -324,7 +329,7 @@
             if (responseObject) {
                 result =[ActionResult objectWithKeyValues:responseObject];
                 if (result.success) {
-                    [UserData sharedUserData].userName = name;
+                    [UserData sharedUserData].userInfo.userName = name;
                 }else{
                     
                 }
@@ -348,7 +353,7 @@
             if (responseObject) {
                 result =[ActionResult objectWithKeyValues:responseObject];
                 if (result.success) {
-                    [UserData sharedUserData].sex = sex;
+                    [UserData sharedUserData].userInfo.gender = sex;
                 }else{
                     
                 }
@@ -399,7 +404,7 @@
             if (responseObject) {
                 result =[ActionResult objectWithKeyValues:responseObject];
                 if (result.success) {
-                    
+                    [UserData sharedUserData].userInfo.mobile = mobile;
                 }else{
                 }
                 callback(result);
@@ -515,8 +520,8 @@
             if (responseObject) {
                 result = [ActionResult objectWithKeyValues:responseObject];
                 NSDictionary* data = [responseObject valueForKey:@"data"];
-                [UserData sharedUserData].avatar = [data valueForKey:@"headpicUrl"];
-                NSLog(@"avatar:%@", [UserData sharedUserData].avatar);
+                [UserData sharedUserData].userInfo.avatar = [data valueForKey:@"headpicUrl"];
+                NSLog(@"avatar:%@", [UserData sharedUserData].userInfo.avatar);
 
                 
             }else{
@@ -543,8 +548,8 @@
                     NSDictionary *data = [responseObject valueForKey:@"data"];
                     NSString *point =[data stringValueForKey:@"after"];
 
-                    [UserData sharedUserData].points = point;
-                    [UserData sharedUserData].isSignIn = YES;
+                    [UserData sharedUserData].userInfo.points = point;
+                    [UserData sharedUserData].userInfo.isSignIn = YES;
                     
                 }else{
                     
@@ -766,6 +771,7 @@
 //    [Tool setCache:@"checkVersionUpdate" value:[NSNumber numberWithBool:YES]];
 }
 #pragma mark 退出登录
+/*
 -(void)logoutWithCallback:(HandleActionResult)callback{
 
     __block ActionResult *result =[ActionResult alloc];
@@ -793,7 +799,7 @@
         }];
     }
 }
-
+*/
 -(void)getAllScheduledRemindList:(HandleArrayResult)callback
 {
     if ([NetworkSingleton sharedNetWork].isNetworkConnection) {
@@ -869,7 +875,7 @@
             dic = @{@"pageNo":page,@"pageSize":PAGESIZE,@"cityId":[UserData sharedUserData].cityId,@"ascFlag":@"0"};
             
         }else if (sequenceType == 3){//我可以兑换的
-            dic = @{@"pageNo":page,@"pageSize":PAGESIZE,@"cityId":[UserData sharedUserData].cityId,@"myPoint":[UserData sharedUserData].points};
+            dic = @{@"pageNo":page,@"pageSize":PAGESIZE,@"cityId":[UserData sharedUserData].cityId,@"myPoint":[UserData sharedUserData].userInfo.points};
             
         }
         [[NetWork manager] POST:@"/api/agency/goods/getGoodsList" parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
@@ -921,7 +927,7 @@
                 if (result.success) {
                     NSDictionary *data =[responseObject valueForKey:@"data"];
                     goods.availableNum = [data stringValueForKey:@"availableNum"];
-                    [UserData sharedUserData].points =[data stringValueForKey:@"point"];
+                    [UserData sharedUserData].userInfo.points =[data stringValueForKey:@"point"];
                     
                 }else{
                     
@@ -1101,7 +1107,7 @@
                 result =[ActionResult objectWithKeyValues:responseObject];
                 if (result.success) {
                     BOOL confirmShowTrack =  [[[responseObject valueForKey:@"data"] valueForKey:@"confirmShowTrack"] boolValue];
-                    [UserData sharedUserData].confirmShowTrack = confirmShowTrack;
+                    [UserData sharedUserData].userInfo.confirmShowTrack = confirmShowTrack;
                 }else{
                     
                 }

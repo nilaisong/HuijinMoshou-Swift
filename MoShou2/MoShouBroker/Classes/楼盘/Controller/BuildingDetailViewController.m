@@ -1280,7 +1280,7 @@ typedef NS_ENUM(NSUInteger,PULLSTATE) {//滑动状态
                 unReadLabel.textAlignment = NSTextAlignmentRight;
                 [cell.contentView addSubview:unReadLabel];
                 
-                NSString *key = [NSString stringWithFormat:@"%@-%@",[UserData sharedUserData].userId,_buildingMo.buildingId];
+                NSString *key = [NSString stringWithFormat:@"%@-%@",[UserData sharedUserData].userInfo.userId,_buildingMo.buildingId];
                 NSString *string = [Tool getCache:key];
                 NSInteger unreadNum = _buildingMo.estateDynamicMsgList.count - [string integerValue];
                 if (unreadNum>0) {
@@ -1811,9 +1811,9 @@ typedef NS_ENUM(NSUInteger,PULLSTATE) {//滑动状态
         [extDic setValue:_buildingMo.buildingId forKey:@"agency_building_id"];
         [extDic setValue:[NSString stringWithFormat:@"%@-%@",_estateBuildingMo.district,_estateBuildingMo.plate] forKey:@"agency_building_area"];
         [extDic setValue:@"1" forKey:@"agency_building_detail"];
-        [extDic setValue:[UserData sharedUserData].mobile forKey:@"agency_mobile"];
-        [extDic setValue:[UserData sharedUserData].employeeNo forKey:@"agency_employeeNo"];
-        [extDic setValue:[NSString stringWithFormat:@"%@ %@",[UserData sharedUserData].orgnizationName,[UserData sharedUserData].storeName] forKey:@"agency_department"];
+        [extDic setValue:[UserData sharedUserData].userInfo.mobile forKey:@"agency_mobile"];
+        [extDic setValue:[UserData sharedUserData].userInfo.employeeNo forKey:@"agency_employeeNo"];
+        [extDic setValue:[NSString stringWithFormat:@"%@ %@",[UserData sharedUserData].userInfo.orgnizationName,[UserData sharedUserData].userInfo.storeName] forKey:@"agency_department"];
         //对方环信ID
         //    easemobConfirmMo.username
         //@"test_confirm_15344444444"

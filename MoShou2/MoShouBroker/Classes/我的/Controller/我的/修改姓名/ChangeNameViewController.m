@@ -44,11 +44,11 @@
     nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     nameTF.textColor=NAVIGATIONTITLE;
     [nameTF setBackgroundColor:[UIColor whiteColor]];
-    if (![self isBlankString:[UserData sharedUserData].userName]) {
+    if (![self isBlankString:[UserData sharedUserData].userInfo.userName]) {
 //        nameTF.placeholder = @"请输入姓名";
 //    }else{
 //        nameTF.placeholder = [UserData sharedUserData].userName;
-        nameTF.text = [UserData sharedUserData].userName;
+        nameTF.text = [UserData sharedUserData].userInfo.userName;
     }
     
     [nameTF addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];

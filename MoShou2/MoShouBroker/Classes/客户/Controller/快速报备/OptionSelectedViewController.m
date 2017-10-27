@@ -688,7 +688,7 @@
                 [weakSelf showTips:[NSString stringWithFormat:@"最多可选择%@个楼盘",weakSelf.count]];
             }else{
                 //手机号是否全部显示 （0全部显示，1部分显示）
-                BOOL mobile = [UserData sharedUserData].mobileVisable;
+                BOOL mobile = [UserData sharedUserData].userInfo.mobileVisable;
                 if (mobile && !optionCell.custTelTypeL.hidden) {
                     [weakSelf showTips:@"该楼盘仅支持全号报备"];
                 }
@@ -999,7 +999,7 @@
             }else{
                 OptionSelectedTableViewCell *optionCell = (OptionSelectedTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
                 //手机号是否全部显示 （0全部显示，1部分显示）
-                BOOL mobile = [UserData sharedUserData].mobileVisable;
+                BOOL mobile = [UserData sharedUserData].userInfo.mobileVisable;
                 if (mobile && !optionCell.custTelTypeL.hidden) {
 //                    [weakSelf showTips:@"该楼盘仅支持全号报备"];
                     

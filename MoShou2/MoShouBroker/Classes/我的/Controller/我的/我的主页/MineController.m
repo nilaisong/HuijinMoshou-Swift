@@ -9,7 +9,7 @@
 #import "MineController.h"
 #import "HMTool.h"
 #import "PointMallViewController.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "CommentsViewController.h"
 #import "MessageListViewController.h"
 #import "PersonalInfoViewController.h"
@@ -132,20 +132,19 @@
 #pragma mark 刷新用户数据
 -(void)getUserData{
     if([NetworkSingleton sharedNetWork].isNetworkConnection){
-//        UIImageView *loadImage = [self setRotationAnimationWithView];
-        [[DataFactory sharedDataFactory]getUserDataWithCallBack:^(ActionResult *result) {
-            if (result.success) {
-//                [self removeRotationAnimationView:loadImage];
+        [[AccountServiceProvider sharedInstance] getUserInfo:^(ResponseResult *result) {
+            if (result.success)
+            {
+                [UserData sharedUserData].userInfo = result.data;
                 [self checkUpdate];
                 [self refreshUI];
-
-
-            }else{
-//                [self removeRotationAnimationView:loadImage];
-
+            }
+            else
+            {
                 [TipsView showTips:result.message inView:self.view];
             }
         }];
+
     }
 }
 
@@ -218,27 +217,27 @@
 }
 #pragma mark 刷新ui
 -(void)refreshUI{
-    if ([UserData sharedUserData].avatar.length>0) {
-        [_headImage setImageWithUrlString:[UserData sharedUserData].avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
+    if ([UserData sharedUserData].userInfo.avatar.length>0) {
+        [_headImage setImageWithUrlString:[UserData sharedUserData].userInfo.avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
     }else{
      [_headImage setImage:[UIImage imageNamed:@"icon_header"]];//我线-拷贝
     }
-    if([self isBlankString:[UserData sharedUserData].userName]){
+    if([self isBlankString:[UserData sharedUserData].userInfo.userName]){
         [_name setText:@"请取一个响亮的名号"];
 
     }else{
-        [_name setText:[UserData sharedUserData].userName];
+        [_name setText:[UserData sharedUserData].userInfo.userName];
 
     }
 
     CGSize nameSize = [HMTool getTextSizeWithText:_name.text andFontSize:16];
     [_name setFrame:CGRectMake(20, _headImage.bottom+17, kMainScreenWidth-40, nameSize.height)];
     
-    if([self isBlankString:[UserData sharedUserData].storeName]){
+    if([self isBlankString:[UserData sharedUserData].userInfo.storeName]){
         [_shop setText:@"请先绑定门店"];
         
     }else{
-        [_shop setText:[UserData sharedUserData].storeName];
+        [_shop setText:[UserData sharedUserData].userInfo.storeName];
     }
 //    CGSize shopSize = [HMTool getTextSizeWithText:_shop.text andFontSize:12];
 //    [_shop setFrame:CGRectMake(105, _name.bottom+10, kMainScreenWidth-210, _headImage.bottom-_name.bottom-10)];//CGRectMake((shopSize.width>(kMainScreenWidth-210))?20:(kMainScreenWidth-shopSize.width)/2, _name.bottom+10,((shopSize.width>(kMainScreenWidth-210))?kMainScreenWidth-125:shopSize.width), shopSize.height)
@@ -254,7 +253,7 @@
     _shop.frame = CGRectMake(MAX(30, (kMainScreenWidth-size.width)/2), _name.bottom+5, MIN(kMainScreenWidth-60, size.width), shopSize.height);
     headArrow.left = _shop.right+10;
     headArrow.centerY = _shop.top + shopSize.height/2;
-    if ([UserData sharedUserData].isSignIn) {
+    if ([UserData sharedUserData].userInfo.isSignIn) {
         [_signedLabel setHidden:NO];
         [_signBtn setHidden:YES];
     }else{
@@ -267,7 +266,7 @@
 #pragma mark 刷新红点
 -(void)refreshRedDot{
     [[DataFactory sharedDataFactory] getUnreadCntWithCallBack:^(NSNumber *num) {
-        NSInteger allNum = [num integerValue]+[self getUnreadMessageCount]+[[UserData sharedUserData].offlineMsgCount integerValue];
+        NSInteger allNum = [num integerValue]+[self getUnreadMessageCount]+[[UserData sharedUserData].userInfo.offlineMsgCount integerValue];
         
         if(allNum > 0)
         {
@@ -357,8 +356,8 @@
     
     _headImage =[[MyImageView alloc]initWithFrame:CGRectMake(kMainScreenWidth/2-(kMainScreenWidth>320?37*scale:37), 50, kMainScreenWidth>320?74*scale:74, kMainScreenWidth>320?74*scale:74)];
     [_headImage setImage:[UIImage imageNamed:@"icon_header"]];//我线-拷贝
-    if ([UserData sharedUserData].avatar.length>0) {
-        [_headImage setImageWithUrlString:[UserData sharedUserData].avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
+    if ([UserData sharedUserData].userInfo.avatar.length>0) {
+        [_headImage setImageWithUrlString:[UserData sharedUserData].userInfo.avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
     }
     _headImage.layer.cornerRadius = kMainScreenWidth>320?37*scale:37;
     _headImage.layer.masksToBounds = YES;
@@ -366,10 +365,10 @@
     
     
     _name = [[UILabel alloc]init];
-    if([self isBlankString:[UserData sharedUserData].userName]){
+    if([self isBlankString:[UserData sharedUserData].userInfo.userName]){
         [_name setText:@"请取一个响亮的名号"];
     }else{
-        [_name setText:[UserData sharedUserData].userName];
+        [_name setText:[UserData sharedUserData].userInfo.userName];
         
     }
     [_name setFont:[UIFont boldSystemFontOfSize:16]];
@@ -381,11 +380,11 @@
     
     _shop = [[UILabel alloc]init];
     
-    if([self isBlankString:[UserData sharedUserData].storeName]){
+    if([self isBlankString:[UserData sharedUserData].userInfo.storeName]){
         [_shop setText:@"请先绑定门店"];
         
     }else{
-        [_shop setText:[UserData sharedUserData].storeName];
+        [_shop setText:[UserData sharedUserData].userInfo.storeName];
     }
     [_shop setFont:[UIFont systemFontOfSize:12]];
     _shop.numberOfLines = 0;
@@ -437,7 +436,7 @@
     _signedLabel = [[UILabel alloc] initWithFrame:_signBtn.frame];
     [_signedLabel setFont:[UIFont systemFontOfSize:12]];
     [_signedLabel setHidden:YES];
-    if ([UserData sharedUserData].isSignIn) {
+    if ([UserData sharedUserData].userInfo.isSignIn) {
         [_signedLabel setHidden:NO];
         [_signBtn setHidden:YES];
     }else{
@@ -494,7 +493,7 @@
     NSInteger rowNum = 2;
     
     if (section==0) {
-        if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+        if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
             rowNum = 2;
         }else{
             rowNum = 3;
@@ -502,7 +501,7 @@
         }
     }
     if (section==1) {
-        if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+        if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
             rowNum = 1;
         }
     }
@@ -553,7 +552,7 @@
         case 0:
         {
             
-            if ([self isBlankString:[UserData sharedUserData].storeNum])
+            if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum])
             {
                 [cell.iconImage setImage:[UIImage imageNamed:[_iconImages objectForIndex:indexPath.row+1]]];
                 [cell.titleLabel setText:[_sectonText objectForIndex:indexPath.row+1]];
@@ -577,7 +576,7 @@
             break;
         case 1:
         {
-            if ([self isBlankString:[UserData sharedUserData].storeNum])
+            if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum])
             {
                 [cell.iconImage setImage:[UIImage imageNamed:[_iconImages objectForIndex:4+indexPath.row]]];
                 [cell.titleLabel setText:[_sectonText objectForIndex:4+indexPath.row]];
@@ -587,7 +586,7 @@
                 [cell.titleLabel setText:[_sectonText objectForIndex:3+indexPath.row]];
                 if (indexPath.row == 0) {
     //                cell.arrowImage.hidden = YES;
-                    [cell.detailLabel setText:[UserData sharedUserData].customerServiceTel];
+                    [cell.detailLabel setText:[UserData sharedUserData].userInfo.customerServiceTel];
                     CGSize detailSize =[HMTool getTextSizeWithText:cell.detailLabel.text andFontSize:12];
                     [cell.detailLabel setFrame:CGRectMake(MAX(cell.titleLabel.right+10, cell.arrowImage.left-10-detailSize.width) , 22-detailSize.height/2, detailSize.width, detailSize.height)];
                 }else if(indexPath.row == 1){
@@ -640,7 +639,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0){
         
-        if ([self isBlankString:[UserData sharedUserData].storeNum])
+        if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum])
         {
         
             switch (indexPath.row) {
@@ -699,7 +698,7 @@
             
                   }
     }else if (indexPath.section == 1){
-        if(![self isBlankString:[UserData sharedUserData].storeNum])
+        if(![self isBlankString:[UserData sharedUserData].userInfo.storeNum])
         {
             switch (indexPath.row) {
                 case 0://咨询问题拨打客户电话
@@ -708,7 +707,7 @@
                     if (_webView == nil) {
                         _webView = [[UIWebView alloc] init];
                     }
-                    NSString *phone = [UserData sharedUserData].customerServiceTel;
+                    NSString *phone = [UserData sharedUserData].userInfo.customerServiceTel;
                     DLog(@"%p,phone is %@", _webView,phone);
                     if (![self isBlankString:phone]) {
                         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",phone]];
@@ -778,7 +777,7 @@
         [[DataFactory sharedDataFactory] addLogWithEventId:@"EVENT_QDGN" andPageId:@"PAGE_WD"];
         _signBtn.userInteractionEnabled = NO;
 
-        if(![self isBlankString:[UserData sharedUserData].storeNum]){
+        if(![self isBlankString:[UserData sharedUserData].userInfo.storeNum]){
             [[DataFactory sharedDataFactory]signWithCallback:^(ActionResult *result) {
                 if (result.success) {
                     
@@ -835,7 +834,7 @@
         {
             //我的业绩
             [[DataFactory sharedDataFactory] addLogWithEventId:@"EVENT_WDYJ" andPageId:@"PAGE_WD"];
-            if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+            if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
                 [self showTips:@"请先绑定门店才能使用功能哦~"];
                 return;
             }
@@ -866,7 +865,7 @@
         {
             //工作报表
             [[DataFactory sharedDataFactory] addLogWithEventId:@"EVENT_GZBB" andPageId:@"PAGE_WD"];
-            if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+            if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
                 [self showTips:@"请先绑定门店才能使用功能哦~"];
                 return;
             }
@@ -888,7 +887,7 @@
         {
             //排行榜
             [[DataFactory sharedDataFactory] addLogWithEventId:@"EVENT_PHB" andPageId:@"PAGE_WD"];
-            if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+            if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
                 [self showTips:@"请先绑定门店才能使用功能哦~"];
                 return;
             }

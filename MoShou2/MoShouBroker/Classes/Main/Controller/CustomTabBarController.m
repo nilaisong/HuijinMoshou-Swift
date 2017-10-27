@@ -16,7 +16,7 @@
 #import "MSTabBar.h"
 
 #import "RecommendRecordController.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "UserData.h"
 #import "ChooseCityViewController.h"
 #import "MyAlertView.h"
@@ -112,7 +112,7 @@
         [[DataFactory sharedDataFactory] addLogWithEventId:@"EVENT_BBJLTAB" andPageId:@"PAGE_SY"];
 
         [MobClick event:@"tab_dksm"];
-        if ([self isBlankString:[UserData sharedUserData].storeName]) {
+        if ([self isBlankString:[UserData sharedUserData].userInfo.storeName]) {
 //            MyAlertView *alert = [[MyAlertView alloc] initWithTitle:nil message:@"绑定门店后功能才可用哦！去绑定门店吧" delegate:self cancelButtonTitle:@"暂不" otherButtonTitles:@"绑门店", nil];
 //            
 ////            alert.delegate = self;
@@ -518,7 +518,7 @@
 {
     
     UserData *user = [UserData sharedUserData];
-    if ([self isBlankString:user.storeId])
+    if ([self isBlankString:user.userInfo.storeId])
     {
         //如果门店为空
     

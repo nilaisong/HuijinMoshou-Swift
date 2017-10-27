@@ -9,7 +9,7 @@
 //#import "ASIHTTPRequest.h"
 #import "UserData.h"
 
-#define MainDownloadFolder [NSString stringWithFormat:@"download%@",[UserData sharedUserData].userId]
+#define MainDownloadFolder [NSString stringWithFormat:@"download%@",[UserData sharedUserData].userInfo.userId]
 
 @protocol MultipleResourceRequestProgressDelegate <NSObject>
 

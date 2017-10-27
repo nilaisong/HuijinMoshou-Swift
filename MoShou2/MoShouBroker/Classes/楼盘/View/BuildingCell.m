@@ -550,7 +550,7 @@
 - (BOOL)verifyTheRulesWithShouldJump:(BOOL)isShouldJump;
 {
     UserData *user = [UserData sharedUserData];
-    if ([self isBlankString:user.storeId])
+    if ([self isBlankString:user.userInfo.storeId])
     {
         
         return NO;

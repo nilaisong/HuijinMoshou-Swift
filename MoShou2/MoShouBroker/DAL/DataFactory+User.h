@@ -39,11 +39,11 @@ typedef void(^HandleGoodsResult)(GoodsResult*result);
  *  @param password 密码
  *  @param callback 回调方法
  */
--(void)loginWtihMobile:(NSString*)mobile andPassword:(NSString*)password andCallback:(HandleActionResult)callback;
+//-(void)loginWtihMobile:(NSString*)mobile andPassword:(NSString*)password andCallback:(HandleActionResult)callback;
 -(void)registerWtihMobile:(NSString*)mobile password:(NSString*)password andVcode:(NSString*)code andCallback:(HandleActionResult)callback;
 -(void)forgetPasswordWtihMobile:(NSString*)mobile andVcode:(NSString*)code andNewPassword:(NSString*)password andCallback:(HandleActionResult)callback;
 //-(void)getRigisterVcodeWithMobile:(NSString*)mobile andCallback:(HandleActionResult)callback;
-
+-(void)hxUserLoginWithUserInfo:(UserInfo*)userInfo;
 /**
  *  获取验证码
  *
@@ -57,7 +57,7 @@ typedef void(^HandleGoodsResult)(GoodsResult*result);
  *
  *  @param callBack
  */
--(void)getUserDataWithCallBack:(HandleActionResult)callBack;
+//-(void)getUserDataWithCallBack:(HandleActionResult)callBack; 
 /**
  *  获取未读消息数量
  *
@@ -117,7 +117,7 @@ typedef void(^HandleGoodsResult)(GoodsResult*result);
 
 -(void)checkVersionUpdateWithCallback:(HandleVersionUpdate)callback;
 -(void)updateVersionWithMessage:(NSString*)message mustUpdate:(BOOL)ismust newVersion:(NSString*)newVersion;
--(void)logoutWithCallback:(HandleActionResult)callback;
+//-(void)logoutWithCallback:(HandleActionResult)callback;
 //获取所有的日程提醒数据，nls，2015-12-31
 -(void)getAllScheduledRemindList:(HandleArrayResult)callback;
 //分享app

@@ -12,7 +12,7 @@
 #import "NSString+Extension.h"
 
 #import "NSString+PasswordVertify.h"
-
+#import "UserData.h"
 
 @interface XTChangePasswordController ()
 
@@ -256,17 +256,39 @@
 
 -(void)findedPopToLoginVC{
     UIImageView* imgV = [self setRotationAnimationWithView];
-    [[DataFactory sharedDataFactory] loginWtihMobile:[_phoneblv.textfield.text stringByReplacingOccurrencesOfString:@" " withString:@""] andPassword:_mimablv.textfield.text andCallback:^(ActionResult *result) {
-        [self removeRotationAnimationView:imgV];
-        if (result.success) {
-            [TipsView showTipsCantClick:@"修改密码成功" inView:self.view];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self.navigationController popToRootViewControllerAnimated:YES];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"SELECTEDHOMEPAGE" object:nil];
-            });
-        }
-    }];
-    
+    [[AccountServiceProvider sharedInstance] loginWithMobile:[_phoneblv.textfield.text stringByReplacingOccurrencesOfString:@" " withString:@""] password:_mimablv.textfield.text completionClosure:^(ResponseResult* result)
+     {
+         [self removeRotationAnimationView:imgV];
+         if (result.success)
+         {
+             [TipsView showTipsCantClick:@"修改密码成功" inView:self.view];
+             //缓存用户信息
+             [UserData sharedUserData].userInfo = result.data;
+             //向激光推送注册用户别名
+             [[UserData sharedUserData] setJPushAlias];
+             //环信账号登录
+             [[DataFactory sharedDataFactory] hxUserLoginWithUserInfo:[UserData sharedUserData].userInfo];
+             
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 [self.navigationController popToRootViewControllerAnimated:YES];
+                 //检测版本升级
+                 [self.appDelegate performSelector:@selector(checkVersionUpdate)];
+                 
+                 [[NSNotificationCenter defaultCenter]postNotificationName:@"REFRESHMINEINFO" object:self];
+                 
+                 [[NSNotificationCenter defaultCenter]postNotificationName:@"reloadMyBuildingList" object:nil];
+                 
+                 [[NSNotificationCenter defaultCenter]postNotificationName:@"REFRESHMINEINFO" object:self];
+             });
+         }
+         else
+         {
+             if ([result.code isEqualToString:@"-100"])
+             {
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"XTPasswordUnLegalNotification" object:result.message];
+             }
+         }
+     }];
 }
 //获取验证码倒计时
 -(void)countDown:(NSTimer *)timer{

@@ -63,7 +63,7 @@
     //end
     
     UILabel *tip =[[UILabel alloc]init];
-    NSString *shopName = [UserData sharedUserData].storeName;
+    NSString *shopName = [UserData sharedUserData].userInfo.storeName;
     [tip setText:[NSString stringWithFormat:@"当前绑定门店为: %@",shopName]];
     CGSize tipSiz = [self textSize:tip.text withConstraintWidth:kMainScreenWidth - 32];
 //    CGSize tipSiz =[HMTool getTextSizeWithText:tip.text andFontSize:14];
@@ -78,7 +78,7 @@
     //end
 //    [self.view addSubview:tip];
     CGFloat tipHeight = tip.bottom+16;
-    if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+    if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
         [tip setHidden:YES];
         tipHeight = 16;
     }
@@ -106,8 +106,8 @@
     _shopStrTF.textColor = NAVIGATIONTITLE;
 //    [_shopStrTF setFrame:CGRectMake(16, kFrame_YHeight(tip)+20, self.view.bounds.size.height-32, 30)];
     [blueBgView addSubview:_shopStrTF];
-    if (![self isBlankString:[UserData sharedUserData].storeNum]) {
-        _shopStrTF.text =[UserData sharedUserData].storeNum;//_shopStrTF.placeholder =[UserData sharedUserData].storeNum;
+    if (![self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
+        _shopStrTF.text =[UserData sharedUserData].userInfo.storeNum;//_shopStrTF.placeholder =[UserData sharedUserData].storeNum;
     }
     [_shopStrTF addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
@@ -133,8 +133,8 @@
     numberTextF.textColor = NAVIGATIONTITLE;
     [numberTextF addTarget:self action:@selector(numberTextFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [blueBgView addSubview:numberTextF];
-    if (![self isBlankString:[UserData sharedUserData].employeeNo]) {
-        numberTextF.text =[UserData sharedUserData].employeeNo;
+    if (![self isBlankString:[UserData sharedUserData].userInfo.employeeNo]) {
+        numberTextF.text =[UserData sharedUserData].userInfo.employeeNo;
     }
     
     blueBgView.height = numberBgView.bottom +16;
@@ -233,8 +233,8 @@
     if (_shopStrTF.text.length<=0) {
         [TipsView showTips:@"请输入门店码" inView:self.view];
         _saveBtn.userInteractionEnabled = YES;
-    }else if (_shopStrTF.text.length>0&&[_shopStrTF.text isEqualToString:[UserData sharedUserData].storeNum]){
-        NSString *employee = [UserData sharedUserData].employeeNo;
+    }else if (_shopStrTF.text.length>0&&[_shopStrTF.text isEqualToString:[UserData sharedUserData].userInfo.storeNum]){
+        NSString *employee = [UserData sharedUserData].userInfo.employeeNo;
         if ((numberTextF.text.length>0 && [numberTextF.text isEqualToString:employee]) || (numberTextF.text.length==0 && [self isBlankString:employee])) {
             [TipsView showTips:@"你没有进行任何修改。" inView:self.view];
             _saveBtn.userInteractionEnabled = YES;
@@ -269,7 +269,7 @@
             }
         }
 
-    }else if (_shopStrTF.text.length>0&&![_shopStrTF.text isEqualToString:[UserData sharedUserData].storeNum]) {
+    }else if (_shopStrTF.text.length>0&&![_shopStrTF.text isEqualToString:[UserData sharedUserData].userInfo.storeNum]) {
        
         
         if ([NetworkSingleton sharedNetWork].isNetworkConnection) {
@@ -285,8 +285,8 @@
                     numberTextF.enabled = NO;
                     [UserData sharedUserData].chooseCityName = @"";
                     [UserData sharedUserData].chooseCityId = @"";
-                    if ([ self isBlankString:[UserData sharedUserData].storeNum]) {
-                        [UserData sharedUserData].storeNum =_shopStrTF.text ;
+                    if ([ self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
+                        [UserData sharedUserData].userInfo.storeNum =_shopStrTF.text ;
                     }
                     [[NSNotificationCenter defaultCenter]postNotificationName:@"REFRESHMINEINFO" object:self];
                     [[NSNotificationCenter defaultCenter]postNotificationName:@"REFRESHPERSONSHOP" object:self];

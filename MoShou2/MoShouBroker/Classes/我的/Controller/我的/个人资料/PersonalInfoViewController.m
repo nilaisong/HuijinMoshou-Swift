@@ -9,7 +9,7 @@
 #import "PersonalInfoViewController.h"
 #import "UserData.h"
 #import "DataFactory+User.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 #import "TipsView.h"
 #import "NetworkSingleton.h"
 #import<AssetsLibrary/AssetsLibrary.h>
@@ -110,8 +110,8 @@
     
     
     _headImage = [[MyImageView alloc]initWithFrame:CGRectMake(headcell.frame.size.width-25-8-10-55,10, 55, 55)];
-    if ([UserData sharedUserData].avatar.length>0) {
-        [_headImage setImageWithUrlString:[UserData sharedUserData].avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];//默认图片75
+    if ([UserData sharedUserData].userInfo.avatar.length>0) {
+        [_headImage setImageWithUrlString:[UserData sharedUserData].userInfo.avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];//默认图片75
         //        [_headImage setImageWithURL:[NSURL URLWithString:[UserData sharedUserData].avatar] placeholderImage:[UIImage imageNamed:@"默认图片75"]];
     }else{
         [_headImage setImage:[UIImage imageNamed:@"icon_header"]];//我线-拷贝
@@ -249,7 +249,7 @@
     //        }
     //    }
     if (section == 1){
-        if ([self isBlankString:[UserData sharedUserData].storeNum])
+        if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum])
         {
             return 1;
         }
@@ -301,11 +301,11 @@
             
             UIView *line2=[HMTool getLineWithFrame:CGRectMake(10, 44.5, kMainScreenWidth-20, 0.5) andColor:LINECOLOR];
             [cell addSubview:line2];
-            if([self isBlankString:[UserData sharedUserData].userName]){
+            if([self isBlankString:[UserData sharedUserData].userInfo.userName]){
                 [detail setText:@"未填写"];
                 
             }else{
-                [detail setText:[UserData sharedUserData].userName];
+                [detail setText:[UserData sharedUserData].userInfo.userName];
                 
             }
             [detail setFrame:CGRectMake(title.right + 10, title.top, arrow.left - title.right - 10 - 10, title.height)];
@@ -315,10 +315,10 @@
             [detail setFont:[UIFont systemFontOfSize:16]];
             [detail setTextColor:TFPLEASEHOLDERCOLOR];
             [detail setFrame:CGRectMake(title.right + 10, title.top, arrow.left - title.right - 10 - 10, title.height)];
-            if ([UserData sharedUserData].sex.intValue == -1) {
+            if ([UserData sharedUserData].userInfo.gender.intValue == -1) {
                 [detail setText:@"未选择"];
             }else{
-                [detail setText:[UserData sharedUserData].sex.intValue == 1 ?@"男":@"女"];
+                [detail setText:[UserData sharedUserData].userInfo.gender.intValue == 1 ?@"男":@"女"];
             }
         }else if (indexPath.row == 2){
             UIView *line1=[HMTool getLineWithFrame:CGRectMake(10, 0, kMainScreenWidth-20, 0.5) andColor:LINECOLOR];
@@ -331,11 +331,11 @@
             [detail setFrame:CGRectMake(title.right + 10, title.top, arrow.left - title.right - 10 - 10, title.height)];
             [detail setFont:[UIFont systemFontOfSize:16]];
             [detail setTextColor:TFPLEASEHOLDERCOLOR];
-            [detail setText:[UserData sharedUserData].mobile];
+            [detail setText:[UserData sharedUserData].userInfo.mobile];
         }
     }else if (indexPath.section == 1){
         //        }else if (tableView.tag == 2001){
-        if (![self isBlankString:[UserData sharedUserData].storeNum]) {
+        if (![self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
             UILabel *title = [[UILabel alloc]initWithPoint:CGPointMake(25, 16) andText:[_textArr objectForIndex:indexPath.row+3] andFontSize:16];
             [title setTextColor:LABELCOLOR];
             [cell addSubview:title];
@@ -361,11 +361,11 @@
                 [arrow setImage:[UIImage imageNamed:@"arrow-right"]];
                 [arrow setFrame:CGRectMake(kMainScreenWidth-16-8, 25-13/2, 8, 13)];
                 [cell addSubview:arrow];
-                if ([UserData sharedUserData].isExchangeShop == 1) {
+                if ([UserData sharedUserData].userInfo.isExchangeShop == 1) {
                     arrow.hidden = YES;
                 }
                 
-                [detail setText:[UserData sharedUserData].storeName];
+                [detail setText:[UserData sharedUserData].userInfo.storeName];
                 [detail setFrame:CGRectMake(title.right + 10, title.top, arrow.left - title.right - 10 - 10, title.height)];
                 [detail setFont:[UIFont systemFontOfSize:16]];
                 [detail setTextColor:TFPLEASEHOLDERCOLOR];
@@ -381,11 +381,11 @@
                 [arrow setImage:[UIImage imageNamed:@"arrow-right"]];
                 [arrow setFrame:CGRectMake(kMainScreenWidth-16-8, 25-13/2, 8, 13)];
                 [cell addSubview:arrow];
-                if ([UserData sharedUserData].isExchangeShop == 1) {
+                if ([UserData sharedUserData].userInfo.isExchangeShop == 1) {
                     arrow.hidden = YES;
                 }
                 
-                [detail setText:[UserData sharedUserData].employeeNo];
+                [detail setText:[UserData sharedUserData].userInfo.employeeNo];
                 //                    CGSize detailsize = [HMTool getTextSizeWithText:detail.text andFontSize:16];
                 [detail setFrame:CGRectMake(title.right + 10, title.top, arrow.left - title.right - 10 - 10, title.height)];
                 [detail setFont:[UIFont systemFontOfSize:16]];
@@ -398,7 +398,7 @@
             }
             
         }
-        else if([self isBlankString:[UserData sharedUserData].storeNum]){
+        else if([self isBlankString:[UserData sharedUserData].userInfo.storeNum]){
             UILabel *title = [[UILabel alloc]initWithPoint:CGPointMake(25, 16) andText:[_textArr objectForIndex:indexPath.row+4] andFontSize:16];
             [title setTextColor:LABELCOLOR];
             [cell addSubview:title];
@@ -414,10 +414,10 @@
             [arrow setImage:[UIImage imageNamed:@"arrow-right"]];
             [arrow setFrame:CGRectMake(kMainScreenWidth-16-8, 25-13/2, 8, 13)];
             [cell addSubview:arrow];
-            if([self isBlankString:[UserData sharedUserData].storeNum]){
+            if([self isBlankString:[UserData sharedUserData].userInfo.storeNum]){
                 [detail setText:@"请先绑定门店"];
             }else{
-                [detail setText:[UserData sharedUserData].storeName];
+                [detail setText:[UserData sharedUserData].userInfo.storeName];
             }
             [detail setFrame:CGRectMake(title.right + 10, title.top, arrow.left - title.right - 10 - 10, title.height)];
             [detail setFont:[UIFont systemFontOfSize:16]];
@@ -463,10 +463,10 @@
         }
     }else if (indexPath.section == 1) {
         //    }else if (tableView.tag == 2001){
-        if ([self isBlankString:[UserData sharedUserData].storeNum]) {
+        if ([self isBlankString:[UserData sharedUserData].userInfo.storeNum]) {
             if(indexPath.row == 0){
-                if(![self isBlankString:[UserData sharedUserData].userName]){
-                    if([UserData sharedUserData].changeShopVerifyStatus == 1){
+                if(![self isBlankString:[UserData sharedUserData].userInfo.userName]){
+                    if([UserData sharedUserData].userInfo.changeShopVerifyStatus == 1){
                         //&&[self isChinese:[UserData sharedUserData].userName]&&![self adjusStrHasNumber:[UserData sharedUserData].userName]
                         UIAlertView *av =[[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"审核中，请耐心等待。。。" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
                         [av show];
@@ -485,12 +485,12 @@
             }
             
         }else{
-            if ([UserData sharedUserData].isExchangeShop == 0) {
+            if ([UserData sharedUserData].userInfo.isExchangeShop == 0) {
                 if(indexPath.row == 0){
                     
                 }else if (indexPath.row == 1){
                     //                [UserData sharedUserData].changeShopVerifyStatus = 1;
-                    if([UserData sharedUserData].changeShopVerifyStatus == 1){
+                    if([UserData sharedUserData].userInfo.changeShopVerifyStatus == 1){
                         UIAlertView *av =[[UIAlertView alloc]initWithTitle:@"温馨提示" message:@"审核中，请耐心等待。。。" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
                         [av show];
                         
@@ -645,14 +645,14 @@
 {
     if ([NetworkSingleton sharedNetWork].isNetworkConnection) {
         UIImageView *loading =[self setRotationAnimationWithView];
-        [[DataFactory sharedDataFactory]uploadAvatarWith:croppedImage userId:[UserData sharedUserData].userId  andCallback:^(ActionResult *result) {
+        [[DataFactory sharedDataFactory]uploadAvatarWith:croppedImage userId:[UserData sharedUserData].userInfo.userId  andCallback:^(ActionResult *result) {
             if (result.success) {
                 dispatch_async(dispatch_get_main_queue(),^{
                     
                     
                     //                    [_headImage setFrame:CGRectMake(headcell.frame.size.width-25-8-10-30,0, 30, 30)];
                     
-                    [_headImage setImageWithUrlString:[UserData sharedUserData].avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
+                    [_headImage setImageWithUrlString:[UserData sharedUserData].userInfo.avatar placeholderImage:[UIImage imageNamed:@"icon_header"]];
                     _headImage.layer.masksToBounds = YES;
                     _headImage.layer.cornerRadius = 27.5;
                     //                    _headImage.contentMode = UIViewContentModeScaleAspectFit;

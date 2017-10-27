@@ -68,7 +68,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //手机号是否全部显示 （0全部显示，1部分显示）
-    _bIsHiddenNum = [UserData sharedUserData].mobileVisable;
+    _bIsHiddenNum = [UserData sharedUserData].userInfo.mobileVisable;
     _isCustomerList = NO;
     // Do any additional setup after loading the view.
 //    [self commonInit];

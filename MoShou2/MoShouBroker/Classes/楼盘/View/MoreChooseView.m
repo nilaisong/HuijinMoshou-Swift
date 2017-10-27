@@ -189,7 +189,7 @@
         [_bedroomView addSubview:[self creatLinelabelWithHeight:bedRoomViewLastBtn.bottom+14]];
 
 #pragma mark - 看房车
-        if ([UserData sharedUserData].trystCarEnable) {
+        if ([UserData sharedUserData].userInfo.trystCarEnable) {
             
             _trystCarView = [[UIView alloc]init];
             [_mainScrollView addSubview:_trystCarView];
@@ -227,7 +227,7 @@
         }
        
         UILabel*lineView;
-        if ([UserData sharedUserData].trystCarEnable)
+        if ([UserData sharedUserData].userInfo.trystCarEnable)
         {
             lineView = [[UILabel alloc]initWithFrame:CGRectMake(0, _trystCarView.bottom, kMainScreenWidth, 0.5)];
  

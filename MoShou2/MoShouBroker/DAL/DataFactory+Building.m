@@ -858,8 +858,8 @@
     shareModel.buildingId = building.buildingId;
     shareModel.buildingName = building.name;
     shareModel.housePrice =tempEstate.price;
-    shareModel.agencyName = [UserData sharedUserData].userName;
-    shareModel.mobile = [UserData sharedUserData].mobile;
+    shareModel.agencyName = [UserData sharedUserData].userInfo.userName;
+    shareModel.mobile = [UserData sharedUserData].userInfo.mobile;
     shareModel.linkUrl = building.shareUrl;
     shareModel.content = tempEstate.estateDescription;
     shareModel.img = tempEstate.thmUrl;

@@ -673,9 +673,9 @@
 }
 
 - (NSString*)extensionUrlWithUrlStr:(NSString*)urlStr{
-    NSString* userID = [NSString encodeBase64String:[UserData sharedUserData].userId];
+    NSString* userID = [NSString encodeBase64String:[UserData sharedUserData].userInfo.userId];
     NSString* cityID = [NSString encodeBase64String:[UserData sharedUserData].cityId];
-    NSString* phone  = [NSString encodeBase64String:[UserData sharedUserData].mobile];
+    NSString* phone  = [NSString encodeBase64String:[UserData sharedUserData].userInfo.mobile];
     if ([urlStr rangeOfString:@"?"].length > 0) {
         urlStr = [urlStr stringByAppendingString:@"&"];
     }else{

@@ -49,11 +49,11 @@
     nameTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     nameTF.textColor=NAVIGATIONTITLE;
     [nameTF setBackgroundColor:[UIColor whiteColor]];
-    if (![self isBlankString:[UserData sharedUserData].employeeNo]) {
+    if (![self isBlankString:[UserData sharedUserData].userInfo.employeeNo]) {
 //        nameTF.placeholder = @"请输入你的员工编号";
 //    }else{
 //        nameTF.placeholder = [UserData sharedUserData].userName;
-        nameTF.text = [UserData sharedUserData].employeeNo;
+        nameTF.text = [UserData sharedUserData].userInfo.employeeNo;
     }
     
     [nameTF addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
@@ -81,7 +81,7 @@
     }
     
     saveBtn.userInteractionEnabled = NO;
-    NSString *employee = [UserData sharedUserData].employeeNo;
+    NSString *employee = [UserData sharedUserData].userInfo.employeeNo;
     if (![self isBlankString:employee] && [nameTF.text isEqualToString:employee]) {
         [TipsView showTips:@"你没有进行任何修改。" inView:self.view];
         saveBtn.userInteractionEnabled = YES;

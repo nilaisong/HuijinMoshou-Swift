@@ -65,7 +65,7 @@
 }
 
 - (void)layoutSubviews{
-    BOOL showCarBtn = [UserData sharedUserData].trystCarEnable;
+    BOOL showCarBtn = [UserData sharedUserData].userInfo.trystCarEnable;
     BOOL showoverseasEasteBtn = [UserData sharedUserData].overseasEstateEnable;
     
     
@@ -75,7 +75,7 @@
     
     NSMutableArray *allBtnArray = [NSMutableArray arrayWithObjects:_quickRecommendBtn,_addCustomerBtn,_workReportBtn,_recommendRecordBtn,_mapFindRoomBtn, nil];
    
-    if ([UserData sharedUserData].storeId.length>0) {
+    if ([UserData sharedUserData].userInfo.storeId.length>0) {
         [allBtnArray addObject:_neighborPropertieBtn];
         _neighborPropertieBtn.hidden = NO;
     }else{

@@ -869,7 +869,7 @@
 		6967D4BA1F9DE1A300BD101C /* PrimitiveSequence+Zip+arity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967D3DD1F9DE1A200BD101C /* PrimitiveSequence+Zip+arity.swift */; };
 		6967D4BB1F9DE1A300BD101C /* PrimitiveSequence+Zip+arity.tt in Resources */ = {isa = PBXBuildFile; fileRef = 6967D3DE1F9DE1A200BD101C /* PrimitiveSequence+Zip+arity.tt */; };
 		6967D4BC1F9DE1A300BD101C /* PrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967D3DF1F9DE1A200BD101C /* PrimitiveSequence.swift */; };
-		6967D4C31F9DE7EA00BD101C /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967D4C21F9DE7EA00BD101C /* AccountService.swift */; };
+		6967D4C31F9DE7EA00BD101C /* AccountServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967D4C21F9DE7EA00BD101C /* AccountServiceType.swift */; };
 		6967D4C51F9DE9C900BD101C /* AccountServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967D4C41F9DE9C900BD101C /* AccountServiceProvider.swift */; };
 		696C58F41D223B6A00BACC52 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696C58F31D223B6A00BACC52 /* UMMobClick.framework */; };
 		696E85C91FA0330B00982DBD /* ResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E85C81FA0330B00982DBD /* ResponseResult.swift */; };
@@ -907,6 +907,7 @@
 		697E98111E5706F100734E2E /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 697E98041E5706F100734E2E /* NSObject+MJKeyValue.m */; };
 		697E98121E5706F100734E2E /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 697E98061E5706F100734E2E /* NSObject+MJProperty.m */; };
 		697E98131E5706F100734E2E /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 697E98081E5706F100734E2E /* NSString+MJExtension.m */; };
+		698E27F81FA16F1400B33872 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698E27F71FA16F1400B33872 /* UserInfo.swift */; };
 		6992DBF71B8AE50400304EC8 /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6992DBF61B8AE50400304EC8 /* TipsView.m */; };
 		69982A251B33B8F600D6320A /* RoomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 69982A241B33B8F600D6320A /* RoomLayout.m */; };
 		69982A281B33BCDE00D6320A /* AlbumData.m in Sources */ = {isa = PBXBuildFile; fileRef = 69982A271B33BCDE00D6320A /* AlbumData.m */; };
@@ -1015,7 +1016,6 @@
 		A73DF93E1C0D91E6004CFD7C /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DF9331C0D91E6004CFD7C /* FindViewController.m */; };
 		A73DF93F1C0D91E6004CFD7C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DF9361C0D91E6004CFD7C /* RegisterViewController.m */; };
 		A73DF9401C0D91E6004CFD7C /* UserAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DF9391C0D91E6004CFD7C /* UserAgreementViewController.m */; };
-		A73DF9411C0D91E6004CFD7C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73DF93C1C0D91E6004CFD7C /* LoginViewController.m */; };
 		A759B44F1C0C442300D6279E /* HMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44C1C0C442300D6279E /* HMActionSheet.m */; };
 		A759B4501C0C442300D6279E /* HMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44E1C0C442300D6279E /* HMTool.m */; };
 		A759B4791C0C44B800D6279E /* iconfont-baobiao-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A759B4591C0C44B800D6279E /* iconfont-baobiao-3@2x.png */; };
@@ -3196,7 +3196,7 @@
 		6967D3DD1F9DE1A200BD101C /* PrimitiveSequence+Zip+arity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Zip+arity.swift"; sourceTree = "<group>"; };
 		6967D3DE1F9DE1A200BD101C /* PrimitiveSequence+Zip+arity.tt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "PrimitiveSequence+Zip+arity.tt"; sourceTree = "<group>"; };
 		6967D3DF1F9DE1A200BD101C /* PrimitiveSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitiveSequence.swift; sourceTree = "<group>"; };
-		6967D4C21F9DE7EA00BD101C /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		6967D4C21F9DE7EA00BD101C /* AccountServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceType.swift; sourceTree = "<group>"; };
 		6967D4C41F9DE9C900BD101C /* AccountServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProvider.swift; sourceTree = "<group>"; };
 		696C58F31D223B6A00BACC52 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		696E85C81FA0330B00982DBD /* ResponseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseResult.swift; sourceTree = "<group>"; };
@@ -3265,6 +3265,7 @@
 		697E98061E5706F100734E2E /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		697E98071E5706F100734E2E /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
 		697E98081E5706F100734E2E /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		698E27F71FA16F1400B33872 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		6992DBF51B8AE50400304EC8 /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
 		6992DBF61B8AE50400304EC8 /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
 		69982A231B33B8F600D6320A /* RoomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomLayout.h; sourceTree = "<group>"; };
@@ -3439,8 +3440,6 @@
 		A73DF9361C0D91E6004CFD7C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		A73DF9381C0D91E6004CFD7C /* UserAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAgreementViewController.h; sourceTree = "<group>"; };
 		A73DF9391C0D91E6004CFD7C /* UserAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAgreementViewController.m; sourceTree = "<group>"; };
-		A73DF93B1C0D91E6004CFD7C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		A73DF93C1C0D91E6004CFD7C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A759B44B1C0C442300D6279E /* HMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMActionSheet.h; sourceTree = "<group>"; };
 		A759B44C1C0C442300D6279E /* HMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMActionSheet.m; sourceTree = "<group>"; };
 		A759B44D1C0C442300D6279E /* HMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMTool.h; sourceTree = "<group>"; };
@@ -6985,8 +6984,9 @@
 		6967D4C11F9DE73C00BD101C /* 用户中心 */ = {
 			isa = PBXGroup;
 			children = (
-				6967D4C21F9DE7EA00BD101C /* AccountService.swift */,
+				6967D4C21F9DE7EA00BD101C /* AccountServiceType.swift */,
 				6967D4C41F9DE9C900BD101C /* AccountServiceProvider.swift */,
+				698E27F71FA16F1400B33872 /* UserInfo.swift */,
 			);
 			path = "用户中心";
 			sourceTree = "<group>";
@@ -7406,16 +7406,6 @@
 			path = "用户协议";
 			sourceTree = "<group>";
 		};
-		A73DF93A1C0D91E6004CFD7C /* 登录(已废弃请用XTLoginVC) */ = {
-			isa = PBXGroup;
-			children = (
-				A73DF93B1C0D91E6004CFD7C /* LoginViewController.h */,
-				A73DF93C1C0D91E6004CFD7C /* LoginViewController.m */,
-			);
-			name = "登录(已废弃请用XTLoginVC)";
-			path = "登录";
-			sourceTree = "<group>";
-		};
 		A73DF9421C0D91ED004CFD7C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -7433,7 +7423,6 @@
 				A73DF9311C0D91E6004CFD7C /* 忘记密码 */,
 				A73DF9341C0D91E6004CFD7C /* 注册 */,
 				A73DF9371C0D91E6004CFD7C /* 用户协议 */,
-				A73DF93A1C0D91E6004CFD7C /* 登录(已废弃请用XTLoginVC) */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -12385,7 +12374,7 @@
 				2A98EA601DF67DE9002E1816 /* XTMapCityAnnotationModel.m in Sources */,
 				64C405E81C113FDF003B4E1A /* CustomerBaseBuildView.m in Sources */,
 				A7FB46301C21515F003F0AE1 /* UsingHelpViewController.m in Sources */,
-				6967D4C31F9DE7EA00BD101C /* AccountService.swift in Sources */,
+				6967D4C31F9DE7EA00BD101C /* AccountServiceType.swift in Sources */,
 				D8C509B91BD8AFB4006F9F3A /* ZXUPCEANExtension2Support.m in Sources */,
 				A7FB46391C21515F003F0AE1 /* UIImage+RSKImageCropper.m in Sources */,
 				D8C509531BD8AFB4006F9F3A /* ZXBitMatrix.m in Sources */,
@@ -12956,7 +12945,6 @@
 				D8C5099B1BD8AFB4006F9F3A /* ZXBitArrayBuilder.m in Sources */,
 				649D30AF1E03C483009F5265 /* HouseTypeListTableViewCell.m in Sources */,
 				6967D3F01F9DE1A300BD101C /* TaskDelegate.swift in Sources */,
-				A73DF9411C0D91E6004CFD7C /* LoginViewController.m in Sources */,
 				6967D4271F9DE1A300BD101C /* URL+Moya.swift in Sources */,
 				6967D3ED1F9DE1A300BD101C /* ServerTrustPolicy.swift in Sources */,
 				041B2B401EF132CF00EB9CAB /* SDImageCache.m in Sources */,
@@ -13009,6 +12997,7 @@
 				D897131E1C46347C007E540B /* HouseAlbumViewController.m in Sources */,
 				6967D46A1F9DE1A300BD101C /* Merge.swift in Sources */,
 				D8C509AF1BD8AFB4006F9F3A /* ZXEAN8Writer.m in Sources */,
+				698E27F81FA16F1400B33872 /* UserInfo.swift in Sources */,
 				D8C509381BD8AFB4006F9F3A /* ZXSMSMMSResultParser.m in Sources */,
 				041B2B481EF132CF00EB9CAB /* UIImage+GIF.m in Sources */,
 				BA4C3E521C18093C00797870 /* XTNoScheduleResultView.m in Sources */,
