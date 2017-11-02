@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Moya
 
 //原始值可以是字符串，字符，或者任何整型值或浮点型值。每个原始值在它的枚举声明中必须是唯一的
 //其他类型可以被枚举继承
@@ -20,21 +21,6 @@ enum AccountServiceType {
 //通过集成协议扩展枚举类型
 extension AccountServiceType:TargetType
 {
-    var method: Method {
-        switch self {
-        case .login(_, _):
-            return .post
-        case .userInfo:
-            return .post
-        case .logout:
-            return .post
-        case .updateAvatar(_):
-             return .post
-        case .submitFeedback(_, _):
-             return .post
-        }
-       
-    }
     //根据自身枚举类型设置对应数据接口path属性
     var path: String {
         switch self {
@@ -65,8 +51,8 @@ extension AccountServiceType:TargetType
             if let imageData = UIImageJPEGRepresentation(avatar, 0.1)
             {
                 let imageName = uniquePicName(typeName:"jpg")
-                let provider = MoyaMultipartFormData.FormDataProvider.data(imageData)
-                let multipartImages = MoyaMultipartFormData.init(provider:provider , name: "img", fileName: imageName, mimeType: "image/jpeg/png")
+                let provider = MultipartFormData.FormDataProvider.data(imageData)
+                let multipartImages = MultipartFormData.init(provider:provider , name: "img", fileName: imageName, mimeType: "image/jpeg/png")
                 return .uploadMultipart([multipartImages])
             }
             else
@@ -74,7 +60,7 @@ extension AccountServiceType:TargetType
                 return .requestPlain
             }
         case .submitFeedback(let content,let imgArray):
-            var formDataArray:[MoyaMultipartFormData] = []
+            var formDataArray:[MultipartFormData] = []
             
             for index in 0..<imgArray.count //1..<
             {
@@ -82,16 +68,16 @@ extension AccountServiceType:TargetType
                 {
                     let strNum = "\(index)"
                     let imageName = uniquePicName(strNum,typeName:"jpg")
-                    let provider = MoyaMultipartFormData.FormDataProvider.data(imageData)
-                    let multipartImage = MoyaMultipartFormData.init(provider:provider , name: "img\(index)", fileName: imageName, mimeType: "image/jpeg/png")
+                    let provider = MultipartFormData.FormDataProvider.data(imageData)
+                    let multipartImage = Moya.MultipartFormData.init(provider:provider , name: "img\(index)", fileName: imageName, mimeType: "image/jpeg/png")
                     formDataArray.append(multipartImage)
                 }
             }
             //字符串转换到Data-字符串对象提供转换为data的方法
             if let contentData = content.data(using: String.Encoding.utf8)
             {
-                let provider = MoyaMultipartFormData.FormDataProvider.data(contentData)
-                let multipartContent = MoyaMultipartFormData.init(provider:provider , name: "msg")
+                let provider = MultipartFormData.FormDataProvider.data(contentData)
+                let multipartContent = MultipartFormData.init(provider:provider , name: "msg")
                 formDataArray.append(multipartContent)
             }
             return .uploadMultipart(formDataArray)

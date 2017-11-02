@@ -4,13 +4,15 @@
 //  设置网络请求相关的一些共用参数
 //  Created by NiLaisong on 2017/10/25.
 //  Copyright © 2017年 5i5j. All rights reserved.
-//
+
 
 import Foundation
+import Moya
+
 //通过扩展协议，实现一些属性和方法可供继承者直接调用
 extension TargetType {
     
-    var method: Method {
+    var method: Moya.Method {
             return .post
     }
     // The headers to be used in the request.

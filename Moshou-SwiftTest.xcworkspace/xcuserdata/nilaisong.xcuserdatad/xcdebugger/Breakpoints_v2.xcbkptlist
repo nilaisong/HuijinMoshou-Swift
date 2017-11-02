@@ -89,22 +89,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountDataProvider.swift"
-            timestampString = "530797258.151753"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "getPointsList(pageIndex:completionClosure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MoShou2/MoShouBroker/Classes/&#x6211;&#x7684;/Controller/&#x79ef;&#x5206;/&#x79ef;&#x5206;&#x8be6;&#x60c5;/PointDetailsViewController.m"
             timestampString = "530797258.152035"
             startingColumnNumber = "9223372036854775807"
@@ -112,38 +96,6 @@
             startingLineNumber = "155"
             endingLineNumber = "155"
             landmarkName = "-refreshFirstPageDate"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x7528;&#x6237;&#x4e2d;&#x5fc3;/AccountDataProvider.swift"
-            timestampString = "530797258.152087"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "getPointsList(pageIndex:completionClosure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoShou2/MoShouBroker/Classes/&#x6211;&#x7684;/Controller/&#x79ef;&#x5206;/&#x79ef;&#x5206;&#x8be6;&#x60c5;/PointDetailsViewController.m"
-            timestampString = "530797258.152272"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "-getfirstDateList"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,12 +122,12 @@
                   moduleName = "MoShou2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nilaisong/Desktop/HuijinMoshou-Swift/MoShou2/MoShouBroker/DAL/DataFactory+User.m"
-                  timestampString = "530797258.354288"
+                  timestampString = "531324931.964885"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "949"
                   endingLineNumber = "949"
-                  offsetFromSymbolStart = "356">
+                  offsetFromSymbolStart = "388">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,14 +137,62 @@
                   moduleName = "MoShou2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nilaisong/Desktop/HuijinMoshou-Swift/MoShou2/MoShouBroker/DAL/DataFactory+User.m"
-                  timestampString = "530797258.355601"
+                  timestampString = "531324931.967516"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "950"
                   endingLineNumber = "950"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "78">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Common/Swift/RxCocoa/RxCocoa/RxCocoa.swift"
+            timestampString = "531127729.4592"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x901a;&#x7528;/CommonProvider.swift"
+            timestampString = "531279303.917329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "downloadFile(urlString:savePath:completionClosure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoShou2/MoShouBroker/Swift Classes/DAL/&#x901a;&#x7528;/CommonProvider.swift"
+            timestampString = "531279303.918655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "downloadFile(urlString:savePath:completionClosure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

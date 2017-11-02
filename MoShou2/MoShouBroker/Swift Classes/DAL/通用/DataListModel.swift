@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HandyJSON
 
 class DataListModel:NSObject,HandyJSON
 {

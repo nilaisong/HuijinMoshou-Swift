@@ -7,7 +7,8 @@
 //
 
 import Foundation
-//import BaiduMapAPI_Base
+import Moya
+import HandyJSON
 
 class AccountServiceProvider:NSObject
 {
@@ -104,7 +105,7 @@ class AccountServiceProvider:NSObject
         }
     }
     
-    //只有可选类型赋值为nil
+    //只有可选类型才能赋值为nil，表示该参数可省略
     func submitFeedback(content:String,imgArray:[UIImage]? = nil,completionClosure:@escaping RequestCompletionClosure)
     {
         var images:[UIImage]

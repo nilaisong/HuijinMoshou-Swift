@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Moya
+import HandyJSON
+
 class AccountDataProvider:NSObject
 {
     static let sharedInstance = AccountDataProvider()

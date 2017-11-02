@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import Moya
+import Result
+import HandyJSON
 
 let kPageSize = "20"//一页数据大小
+//定义请求结束后回调用的闭包类型
+typealias RequestCompletionClosure = (_ result:ResponseResult) -> Void
 
-//可选参数可以省略
+//可选类型的参数，如果给予nil默认值则调用时可省略
+//函数的参数名也默认为外部参数名，但可以明确指定外部参数名或明确省略外部参数名
 func uniquePicName(_ name:String?=nil,typeName:String?=nil) -> String {
     let date:Date = Date.init(timeIntervalSinceNow: 0);
     let a:TimeInterval = date.timeIntervalSince1970 * 1000;
@@ -39,9 +45,7 @@ func uniquePicName(_ name:String?=nil,typeName:String?=nil) -> String {
     }
     return picFullName
 }
-
-typealias RequestCompletionClosure = (_ result:ResponseResult) -> Void
-
+//定义一个函数，初步解析和封装数据接口请求返回结果，参数result是一个范型类型的参数（使用泛型时要指明尖括号中的泛型参数）
 func getResultModel(result:Result<Response, MoyaError>)->ResponseResult
 {
     var resResult:ResponseResult =  ResponseResult()

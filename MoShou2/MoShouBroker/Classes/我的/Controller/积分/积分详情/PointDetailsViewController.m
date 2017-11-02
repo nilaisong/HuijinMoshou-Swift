@@ -204,9 +204,8 @@
         }];
 */
     }
-
-
 }
+
 -(void)getfirstDateList{
     if ([NetworkSingleton sharedNetWork].isNetworkConnectionAndShowAlert)
     {

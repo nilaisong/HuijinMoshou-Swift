@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import Moya
 //扩展枚举类型
 extension Task
 {

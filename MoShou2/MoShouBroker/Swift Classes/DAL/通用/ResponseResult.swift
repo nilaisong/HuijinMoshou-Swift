@@ -7,18 +7,18 @@
 //
 
 import Foundation
-
+import HandyJSON
 //@objc(ResponseResult) //继承自OC的类或被@objc标记的类才能被OC代码调用
 class ResponseResult:NSObject,HandyJSON
 {
     var success:Bool = false
-    var code:String=""
+    var code:String=""//常用以标示失败类型
     var message:String=""
     
     var data:Any?//返回的主体数据
     
     var page:PageModel?//如果是列表数据，则有页码
-    
+    //实现协议的构造函数时，要加上required关键字
     required override init()
     {
         super.init()

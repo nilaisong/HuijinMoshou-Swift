@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 
 /// Used for stubbing responses.
 public enum EndpointSampleResponse {
@@ -69,6 +70,7 @@ extension Endpoint {
         var request = URLRequest(url: requestURL)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = httpHeaderFields
+        return request
 
         switch task {
         case .requestPlain, .uploadFile, .uploadMultipart, .downloadDestination:

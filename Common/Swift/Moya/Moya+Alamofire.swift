@@ -1,5 +1,5 @@
 import Foundation
-//import Alamofire
+import Alamofire
 
 public typealias Manager = SessionManager
 //internal typealias Request = Request

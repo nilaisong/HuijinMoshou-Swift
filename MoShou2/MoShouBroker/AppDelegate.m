@@ -67,8 +67,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    NSLog(@"%@",kMainBundlePath);
-
-    
+//    NSString * url =  @"http://app.huijinmoshou.com/ios/1.jpg";
+//    NSString* path = filePathWithUrl(url,@"", @"swift");
+//    [[CommonProvider sharedInstance] downloadFileWithUrlString:url savePath:path completionClosure:^(ResponseResult * result) {
+//
+//    }];
 #ifdef DEVELOP
     Class overlay = NSClassFromString(@"UIDebuggingInformationOverlay");
     [[overlay class] performSelector:NSSelectorFromString(@"prepareDebuggingOverlay")];

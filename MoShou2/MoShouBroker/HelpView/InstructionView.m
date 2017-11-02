@@ -155,6 +155,7 @@
 //        [button setTitleColor:[UIColor colorWithRed:0.11f green:0.62f blue:0.92f alpha:1.00f] forState:UIControlStateNormal];
 //        [button setBackgroundColor:[UIColor whiteColor]];
 //        button.showsTouchWhenHighlighted = YES;
+        
         button.tag = 911;
         button.frame = buttonFrame;
         [button addTarget:self action:@selector(removeInstruction:) forControlEvents:UIControlEventTouchUpInside];

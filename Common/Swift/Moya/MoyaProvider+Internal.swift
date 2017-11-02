@@ -1,6 +1,6 @@
 import Foundation
 //import Result
-
+import Alamofire
 // MARK: - Method
 
 extension Method {
