@@ -568,6 +568,12 @@
 		64F611E11D59B420002695A4 /* SeeAboutTheCarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F611E01D59B420002695A4 /* SeeAboutTheCarObject.m */; };
 		64F611E41D5B2CC6002695A4 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F611E31D5B2CC6002695A4 /* CarDetailViewController.m */; };
 		690022D71CA12300007E289A /* Info-test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690022D61CA12300007E289A /* Info-test.plist */; };
+		69028BB41FAC166E00153F7B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32E1FAC055600AAA518 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69028BB51FAC166E00153F7B /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32F1FAC055600AAA518 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69028BB61FAC166E00153F7B /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3301FAC055600AAA518 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69028BB71FAC166E00153F7B /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3311FAC055600AAA518 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69028BB81FAC166E00153F7B /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3321FAC055600AAA518 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69028BB91FAC166E00153F7B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3331FAC055600AAA518 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		690B5ACA1D13F38B00DE3CE8 /* Info-ali.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690B5AC91D13F38B00DE3CE8 /* Info-ali.plist */; };
 		6915EE9D1B46333A00F46B54 /* InitialData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915EE9C1B46333A00F46B54 /* InitialData.m */; };
 		691D62F81BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F11BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.m */; };
@@ -575,6 +581,12 @@
 		691D62FA1BB1472F00EB48F5 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F51BB1472F00EB48F5 /* TPKeyboardAvoidingTableView.m */; };
 		691D62FB1BB1472F00EB48F5 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F71BB1472F00EB48F5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		692240541C34C2130071580A /* DataFactory+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 692240531C34C2130071580A /* DataFactory+Main.m */; };
+		692BD33B1FAC055700AAA518 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32E1FAC055600AAA518 /* Alamofire.framework */; };
+		692BD33C1FAC055700AAA518 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32F1FAC055600AAA518 /* HandyJSON.framework */; };
+		692BD33D1FAC055700AAA518 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3301FAC055600AAA518 /* Moya.framework */; };
+		692BD33E1FAC055700AAA518 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3311FAC055600AAA518 /* Result.framework */; };
+		692BD33F1FAC055700AAA518 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3321FAC055600AAA518 /* RxCocoa.framework */; };
+		692BD3401FAC055700AAA518 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3331FAC055600AAA518 /* RxSwift.framework */; };
 		692E1CD71BFDA25700FD6A87 /* AsyncRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1CD61BFDA25700FD6A87 /* AsyncRequestView.m */; };
 		692E1D011BFDA34E00FD6A87 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1CF51BFDA34E00FD6A87 /* AFHTTPSessionManager.m */; };
 		692E1D021BFDA34E00FD6A87 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1CF81BFDA34E00FD6A87 /* AFNetworkReachabilityManager.m */; };
@@ -592,7 +604,6 @@
 		692E1D371BFDA4CA00FD6A87 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1D2D1BFDA4CA00FD6A87 /* UIRefreshControl+AFNetworking.m */; };
 		692E1D381BFDA4CA00FD6A87 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1D2F1BFDA4CA00FD6A87 /* UIWebView+AFNetworking.m */; };
 		692E1D3C1BFDA68C00FD6A87 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 692E1D3B1BFDA68C00FD6A87 /* libstdc++.6.0.9.tbd */; };
-		69341DF11FAAA4940088EF32 /* DataListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69341DEE1FAAA4930088EF32 /* DataListModel.swift */; };
 		693AB6431E487D1C00F0DE9B /* NSMutableArray+NBB.m in Sources */ = {isa = PBXBuildFile; fileRef = 695BAFCE1DC989F600DAC2FC /* NSMutableArray+NBB.m */; };
 		693EA7BE1E768D4000505120 /* XSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 693EA7BD1E768D4000505120 /* XSReachability.m */; };
 		693EA7C41E768D5600505120 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 693EA7C11E768D5600505120 /* NSDictionary+JSON.m */; };
@@ -632,14 +643,6 @@
 		6949B2611DEFD0B600FAE11C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6949B2601DEFD0B600FAE11C /* libresolv.tbd */; };
 		694E925F1B6099CB00176885 /* ProgressStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 694E925E1B6099CB00176885 /* ProgressStatus.m */; };
 		694EBF681C3A494D002CDB74 /* DataFactory+Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 694EBF671C3A494D002CDB74 /* DataFactory+Customer.m */; };
-		6950F5211FAB2AEC009B7B01 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51B1FAB2AEC009B7B01 /* Alamofire.framework */; };
-		6950F5221FAB2AEC009B7B01 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51C1FAB2AEC009B7B01 /* HandyJSON.framework */; };
-		6950F5231FAB2AEC009B7B01 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51D1FAB2AEC009B7B01 /* Moya.framework */; };
-		6950F5241FAB2AEC009B7B01 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51E1FAB2AEC009B7B01 /* Result.framework */; };
-		6950F5271FAB2AF7009B7B01 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51B1FAB2AEC009B7B01 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6950F5281FAB2AF7009B7B01 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51C1FAB2AEC009B7B01 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6950F5291FAB2AF7009B7B01 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51D1FAB2AEC009B7B01 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6950F52A1FAB2AF7009B7B01 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6950F51E1FAB2AEC009B7B01 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		695269EB1BFB3270003EA0A0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 695269EA1BFB3270003EA0A0 /* libsqlite3.0.tbd */; };
 		695269ED1BFB3279003EA0A0 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 695269EC1BFB3279003EA0A0 /* libz.1.2.5.tbd */; };
 		695269EF1BFB328C003EA0A0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 695269EE1BFB328C003EA0A0 /* libicucore.tbd */; };
@@ -755,8 +758,6 @@
 		69D528D61B2ABCF900794964 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D528D11B2ABCF900794964 /* FMResultSet.m */; };
 		69D528DC1B2ABFBB00794964 /* FMDBSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D528DB1B2ABFBB00794964 /* FMDBSource.m */; };
 		69D528DF1B2AC11500794964 /* FMDBSource+Broker.m in Sources */ = {isa = PBXBuildFile; fileRef = 69D528DE1B2AC11500794964 /* FMDBSource+Broker.m */; };
-		69D5C5DB1FAB5E8D003BCDF5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D5C5DA1FAB5E8D003BCDF5 /* RxSwift.framework */; };
-		69D5C5DC1FAB5EA4003BCDF5 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69D5C5DA1FAB5E8D003BCDF5 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69D863641C96AAFB004F1322 /* Info-fz.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D863631C96AAFB004F1322 /* Info-fz.plist */; };
 		69E930E11C9107F100EF0871 /* Info-store.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69E930E01C9107F100EF0871 /* Info-store.plist */; };
 		69EC94151D755D870038DC4A /* FMDBSource+Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EC94141D755D870038DC4A /* FMDBSource+Customer.m */; };
@@ -1850,12 +1851,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				69D5C5DC1FAB5EA4003BCDF5 /* RxSwift.framework in Embed Frameworks */,
-				6950F5271FAB2AF7009B7B01 /* Alamofire.framework in Embed Frameworks */,
-				6950F5281FAB2AF7009B7B01 /* HandyJSON.framework in Embed Frameworks */,
-				6950F5291FAB2AF7009B7B01 /* Moya.framework in Embed Frameworks */,
-				6950F52A1FAB2AF7009B7B01 /* Result.framework in Embed Frameworks */,
 				0420A23E1F5FC5B3008EA925 /* HyphenateLite.framework in Embed Frameworks */,
+				69028BB41FAC166E00153F7B /* Alamofire.framework in Embed Frameworks */,
+				69028BB51FAC166E00153F7B /* HandyJSON.framework in Embed Frameworks */,
+				69028BB61FAC166E00153F7B /* Moya.framework in Embed Frameworks */,
+				69028BB71FAC166E00153F7B /* Result.framework in Embed Frameworks */,
+				69028BB81FAC166E00153F7B /* RxCocoa.framework in Embed Frameworks */,
+				69028BB91FAC166E00153F7B /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2636,6 +2638,12 @@
 		691D62F71BB1472F00EB48F5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		692240521C34C2130071580A /* DataFactory+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DataFactory+Main.h"; sourceTree = "<group>"; };
 		692240531C34C2130071580A /* DataFactory+Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DataFactory+Main.m"; sourceTree = "<group>"; };
+		692BD32E1FAC055600AAA518 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		692BD32F1FAC055600AAA518 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
+		692BD3301FAC055600AAA518 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
+		692BD3311FAC055600AAA518 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		692BD3321FAC055600AAA518 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		692BD3331FAC055600AAA518 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		692E1CD51BFDA25700FD6A87 /* AsyncRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequestView.h; sourceTree = "<group>"; };
 		692E1CD61BFDA25700FD6A87 /* AsyncRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequestView.m; sourceTree = "<group>"; };
 		692E1CF41BFDA34E00FD6A87 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -2672,7 +2680,6 @@
 		692E1D2E1BFDA4CA00FD6A87 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		692E1D2F1BFDA4CA00FD6A87 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		692E1D3B1BFDA68C00FD6A87 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		69341DEE1FAAA4930088EF32 /* DataListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataListModel.swift; sourceTree = "<group>"; };
 		693EA7BC1E768D4000505120 /* XSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSReachability.h; sourceTree = "<group>"; };
 		693EA7BD1E768D4000505120 /* XSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSReachability.m; sourceTree = "<group>"; };
 		693EA7C01E768D5600505120 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON.h"; sourceTree = "<group>"; };
@@ -2748,10 +2755,6 @@
 		694E925E1B6099CB00176885 /* ProgressStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressStatus.m; sourceTree = "<group>"; };
 		694EBF661C3A494D002CDB74 /* DataFactory+Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DataFactory+Customer.h"; sourceTree = "<group>"; };
 		694EBF671C3A494D002CDB74 /* DataFactory+Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DataFactory+Customer.m"; sourceTree = "<group>"; };
-		6950F51B1FAB2AEC009B7B01 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		6950F51C1FAB2AEC009B7B01 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
-		6950F51D1FAB2AEC009B7B01 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
-		6950F51E1FAB2AEC009B7B01 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 		695269EA1BFB3270003EA0A0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		695269EC1BFB3279003EA0A0 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		695269EE1BFB328C003EA0A0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
@@ -2956,7 +2959,6 @@
 		69D528DB1B2ABFBB00794964 /* FMDBSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBSource.m; sourceTree = "<group>"; };
 		69D528DD1B2AC11500794964 /* FMDBSource+Broker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDBSource+Broker.h"; sourceTree = "<group>"; };
 		69D528DE1B2AC11500794964 /* FMDBSource+Broker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDBSource+Broker.m"; sourceTree = "<group>"; };
-		69D5C5DA1FAB5E8D003BCDF5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		69D863631C96AAFB004F1322 /* Info-fz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-fz.plist"; sourceTree = "<group>"; };
 		69E1F0391F9474A7004FD271 /* MoShouBroker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoShouBroker-Bridging-Header.h"; sourceTree = "<group>"; };
 		69E930E01C9107F100EF0871 /* Info-store.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-store.plist"; sourceTree = "<group>"; };
@@ -4699,7 +4701,7 @@
 				D8E709541D7E5EA300629AD7 /* libiconv.tbd in Frameworks */,
 				04EA1DD91E091E1100AFCEB6 /* QQConnector.framework in Frameworks */,
 				D8E709521D7E5E9400629AD7 /* MobileCoreServices.framework in Frameworks */,
-				6950F5241FAB2AEC009B7B01 /* Result.framework in Frameworks */,
+				692BD33E1FAC055700AAA518 /* Result.framework in Frameworks */,
 				D8E709501D7E5E8100629AD7 /* CoreMedia.framework in Frameworks */,
 				04F145FD1ECB002C00E65B32 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D8E7094E1D7E5E7700629AD7 /* AudioToolbox.framework in Frameworks */,
@@ -4717,15 +4719,16 @@
 				04F145F91ECB002C00E65B32 /* BaiduMapAPI_Location.framework in Frameworks */,
 				695269F11BFB32A3003EA0A0 /* libxml2.tbd in Frameworks */,
 				695269EF1BFB328C003EA0A0 /* libicucore.tbd in Frameworks */,
+				692BD3401FAC055700AAA518 /* RxSwift.framework in Frameworks */,
 				04EA1DDB1E091E1100AFCEB6 /* SMSConnector.framework in Frameworks */,
 				695269ED1BFB3279003EA0A0 /* libz.1.2.5.tbd in Frameworks */,
 				695269EB1BFB3270003EA0A0 /* libsqlite3.0.tbd in Frameworks */,
 				04EA1DD71E091E1100AFCEB6 /* ShareSDKUI.framework in Frameworks */,
 				696C58F41D223B6A00BACC52 /* UMMobClick.framework in Frameworks */,
-				6950F5211FAB2AEC009B7B01 /* Alamofire.framework in Frameworks */,
+				692BD33B1FAC055700AAA518 /* Alamofire.framework in Frameworks */,
 				D8E70A851D82510800629AD7 /* libopencore-amrwb.a in Frameworks */,
 				04EA1DDC1E091E1100AFCEB6 /* WechatConnector.framework in Frameworks */,
-				6950F5231FAB2AEC009B7B01 /* Moya.framework in Frameworks */,
+				692BD33D1FAC055700AAA518 /* Moya.framework in Frameworks */,
 				04EA1DD31E091E1100AFCEB6 /* ShareSDK.framework in Frameworks */,
 				04F145FF1ECB002C00E65B32 /* libcrypto.a in Frameworks */,
 				00B437A41B85955500BDF364 /* CoreLocation.framework in Frameworks */,
@@ -4734,6 +4737,7 @@
 				0420A23D1F5FC5B3008EA925 /* HyphenateLite.framework in Frameworks */,
 				04EA1DE41E091E1100AFCEB6 /* MOBFoundation.framework in Frameworks */,
 				2AB358431DE5880B00C73758 /* CrashReporter.framework in Frameworks */,
+				692BD33F1FAC055700AAA518 /* RxCocoa.framework in Frameworks */,
 				69D0BF821B27FD6A0090ECD7 /* Security.framework in Frameworks */,
 				69438BF01B16F205007D6C12 /* CoreGraphics.framework in Frameworks */,
 				04F145FB1ECB002C00E65B32 /* BaiduMapAPI_Radar.framework in Frameworks */,
@@ -4742,7 +4746,6 @@
 				695815181F4D773D006A9377 /* jcore-ios-1.1.5.a in Frameworks */,
 				04EA1DDA1E091E1100AFCEB6 /* SinaWeiboConnector.framework in Frameworks */,
 				69D0BF841B27FD740090ECD7 /* SystemConfiguration.framework in Frameworks */,
-				69D5C5DB1FAB5E8D003BCDF5 /* RxSwift.framework in Frameworks */,
 				04EA1DE11E091E1100AFCEB6 /* libWeChatSDK.a in Frameworks */,
 				04F145F81ECB002C00E65B32 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				84C2B1DC1B4F819100F43F83 /* OpenGLES.framework in Frameworks */,
@@ -4753,7 +4756,7 @@
 				69D00C9B1B2E8C4000130F8D /* Social.framework in Frameworks */,
 				69D00C961B2E828500130F8D /* MessageUI.framework in Frameworks */,
 				69438BEE1B16F1FB007D6C12 /* CoreFoundation.framework in Frameworks */,
-				6950F5221FAB2AEC009B7B01 /* HandyJSON.framework in Frameworks */,
+				692BD33C1FAC055700AAA518 /* HandyJSON.framework in Frameworks */,
 				04EA1DD41E091E1100AFCEB6 /* ShareSDKExtension.framework in Frameworks */,
 				69438BEA1B16F1AF007D6C12 /* UIKit.framework in Frameworks */,
 				04F145FA1ECB002C00E65B32 /* BaiduMapAPI_Map.framework in Frameworks */,
@@ -5738,6 +5741,27 @@
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
+		692BD32C1FAC055600AAA518 /* Swift-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				692BD32D1FAC055600AAA518 /* Common */,
+			);
+			path = "Swift-Framework";
+			sourceTree = "<group>";
+		};
+		692BD32D1FAC055600AAA518 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				692BD32E1FAC055600AAA518 /* Alamofire.framework */,
+				692BD32F1FAC055600AAA518 /* HandyJSON.framework */,
+				692BD3301FAC055600AAA518 /* Moya.framework */,
+				692BD3311FAC055600AAA518 /* Result.framework */,
+				692BD3321FAC055600AAA518 /* RxCocoa.framework */,
+				692BD3331FAC055600AAA518 /* RxSwift.framework */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		692E1CD41BFDA25700FD6A87 /* AFRequestView */ = {
 			isa = PBXGroup;
 			children = (
@@ -5817,7 +5841,6 @@
 		69438A611B16E12A007D6C12 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				695682EA1FAA020700B621A7 /* Swift-Framework */,
 				041B2B211EF132CF00EB9CAB /* SDWebImage */,
 				04EA1DA81E091E1100AFCEB6 /* ShareSDK */,
 				69DDD31E1DFEA712005A6723 /* EaseMob */,
@@ -6027,26 +6050,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6950F51A1FAB2AEC009B7B01 /* 通用框架 */ = {
-			isa = PBXGroup;
-			children = (
-				69D5C5DA1FAB5E8D003BCDF5 /* RxSwift.framework */,
-				6950F51B1FAB2AEC009B7B01 /* Alamofire.framework */,
-				6950F51C1FAB2AEC009B7B01 /* HandyJSON.framework */,
-				6950F51D1FAB2AEC009B7B01 /* Moya.framework */,
-				6950F51E1FAB2AEC009B7B01 /* Result.framework */,
-			);
-			path = "通用框架";
-			sourceTree = "<group>";
-		};
-		695682EA1FAA020700B621A7 /* Swift-Framework */ = {
-			isa = PBXGroup;
-			children = (
-				6950F51A1FAB2AEC009B7B01 /* 通用框架 */,
-			);
-			path = "Swift-Framework";
-			sourceTree = "<group>";
-		};
 		6960FBAC1B1D9E4B002F26D4 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -6234,7 +6237,6 @@
 			children = (
 				69C996C41FA3432500BDD07A /* PageModel.swift */,
 				696E85C81FA0330B00982DBD /* ResponseResult.swift */,
-				69341DEE1FAAA4930088EF32 /* DataListModel.swift */,
 				696E85CA1FA0331E00982DBD /* MoyaTargetType.swift */,
 				696E85CC1FA0563200982DBD /* MoyaTask.swift */,
 				696E85CE1FA05E8700982DBD /* MoyaCommon.swift */,
@@ -6482,6 +6484,7 @@
 				69F2011B1BD5D8B500B520DB /* HelpView */,
 				69A83BE31BD4D3DA00EB5C16 /* BaseViewController */,
 				6970747F1EE4EBC30063CF50 /* 楼盘下载管理 */,
+				692BD32C1FAC055600AAA518 /* Swift-Framework */,
 				6967D4BF1F9DE5E500BD101C /* Swift Classes */,
 				BA12AC4E1C03025B002885F2 /* Classes */,
 				69A883EA1B1579E000EDCF5E /* AppDelegate.h */,
@@ -11726,7 +11729,6 @@
 				64C7DA8B1D2A67C2002058FE /* CustomerShowVisitInfoView.m in Sources */,
 				2AB4FD9F1E1F42CA00189441 /* XTAlbumTitleView.m in Sources */,
 				BA7C2B8E1C1AC95A009C4174 /* XTUserScheduleViewController.m in Sources */,
-				69341DF11FAAA4940088EF32 /* DataListModel.swift in Sources */,
 				69982A341B33DB7400D6320A /* MessageData.m in Sources */,
 				692E1D031BFDA34E00FD6A87 /* AFSecurityPolicy.m in Sources */,
 				0468F07F1E5C2BEF0035DEB4 /* OverseasEstateViewController.m in Sources */,
@@ -12185,7 +12187,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12298,7 +12300,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12455,7 +12457,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12522,7 +12524,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12630,7 +12632,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12743,7 +12745,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12853,7 +12855,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"../Common/Swift-Framework/通用框架",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";

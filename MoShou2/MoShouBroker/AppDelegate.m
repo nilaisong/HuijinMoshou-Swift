@@ -126,13 +126,15 @@
     }
     //初始化和加载程序根视图控制器
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CustomTabBarController *tabBarController=[[CustomTabBarController alloc]init];
-    BaseNavigationController *navigationController=[[BaseNavigationController alloc]initWithRootViewController:tabBarController];
-    self.window.rootViewController = navigationController;
+//    CustomTabBarController *tabBarController=[[CustomTabBarController alloc]init];
+//    BaseNavigationController *navigationController=[[BaseNavigationController alloc]initWithRootViewController:tabBarController];
+    TestViewController* vc = [[TestViewController alloc] init];
+    self.window.rootViewController = vc;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
+    return YES;
+    
 //     添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
     [MoShouTopWindow show];
     //检测版本更新

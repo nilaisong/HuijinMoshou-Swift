@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 import Moya
-//扩展枚举类型
+//扩展枚举类型，实现一些属性和方法
 extension Task
 {
     //增加个静态方法，返回相关值带请求参数的枚举值
