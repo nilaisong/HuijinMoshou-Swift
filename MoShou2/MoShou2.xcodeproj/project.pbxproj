@@ -569,6 +569,18 @@
 		64F611E41D5B2CC6002695A4 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F611E31D5B2CC6002695A4 /* CarDetailViewController.m */; };
 		690022D71CA12300007E289A /* Info-test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690022D61CA12300007E289A /* Info-test.plist */; };
 		690B5ACA1D13F38B00DE3CE8 /* Info-ali.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690B5AC91D13F38B00DE3CE8 /* Info-ali.plist */; };
+		691131421FB32E42002694C4 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313C1FB32E41002694C4 /* Moya.framework */; };
+		691131431FB32E42002694C4 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313D1FB32E41002694C4 /* HandyJSON.framework */; };
+		691131441FB32E42002694C4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313E1FB32E41002694C4 /* RxSwift.framework */; };
+		691131451FB32E42002694C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313F1FB32E41002694C4 /* Result.framework */; };
+		691131461FB32E42002694C4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691131401FB32E42002694C4 /* Alamofire.framework */; };
+		691131471FB32E42002694C4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691131411FB32E42002694C4 /* RxCocoa.framework */; };
+		691131481FB32E56002694C4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 691131401FB32E42002694C4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		691131491FB32E56002694C4 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313D1FB32E41002694C4 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6911314A1FB32E56002694C4 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313C1FB32E41002694C4 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6911314B1FB32E56002694C4 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313F1FB32E41002694C4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6911314C1FB32E56002694C4 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 691131411FB32E42002694C4 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6911314D1FB32E56002694C4 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6911313E1FB32E41002694C4 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6915EE9D1B46333A00F46B54 /* InitialData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915EE9C1B46333A00F46B54 /* InitialData.m */; };
 		691D62F81BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F11BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.m */; };
 		691D62F91BB1472F00EB48F5 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F31BB1472F00EB48F5 /* TPKeyboardAvoidingScrollView.m */; };
@@ -714,18 +726,6 @@
 		69A83BEC1BD4D3DA00EB5C16 /* PLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A83BE91BD4D3DA00EB5C16 /* PLNavigationBar.m */; };
 		69A883E91B1579E000EDCF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A883E81B1579E000EDCF5E /* main.m */; };
 		69A883EC1B1579E000EDCF5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A883EB1B1579E000EDCF5E /* AppDelegate.m */; };
-		69AB89C51FB2F51D0048FFF0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89BF1FB2F51C0048FFF0 /* Result.framework */; };
-		69AB89C61FB2F51D0048FFF0 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */; };
-		69AB89C71FB2F51D0048FFF0 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C11FB2F51C0048FFF0 /* Moya.framework */; };
-		69AB89C81FB2F51D0048FFF0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */; };
-		69AB89C91FB2F51D0048FFF0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */; };
-		69AB89CA1FB2F51D0048FFF0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */; };
-		69AB89CB1FB2F5310048FFF0 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69AB89CC1FB2F5310048FFF0 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69AB89CD1FB2F5310048FFF0 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C11FB2F51C0048FFF0 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69AB89CE1FB2F5310048FFF0 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89BF1FB2F51C0048FFF0 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69AB89CF1FB2F5310048FFF0 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69AB89D01FB2F5310048FFF0 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69AC3EF81FAAC40100CB9EF7 /* CommonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC3EF61FAAC40000CB9EF7 /* CommonProvider.swift */; };
 		69AC3EF91FAAC40100CB9EF7 /* CommonServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */; };
 		69AFAF0A1B81E4A1004690CF /* MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AFAF091B81E4A1004690CF /* MyAlertView.m */; };
@@ -1851,12 +1851,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				69AB89CB1FB2F5310048FFF0 /* Alamofire.framework in Embed Frameworks */,
-				69AB89CC1FB2F5310048FFF0 /* HandyJSON.framework in Embed Frameworks */,
-				69AB89CD1FB2F5310048FFF0 /* Moya.framework in Embed Frameworks */,
-				69AB89CE1FB2F5310048FFF0 /* Result.framework in Embed Frameworks */,
-				69AB89CF1FB2F5310048FFF0 /* RxCocoa.framework in Embed Frameworks */,
-				69AB89D01FB2F5310048FFF0 /* RxSwift.framework in Embed Frameworks */,
+				691131481FB32E56002694C4 /* Alamofire.framework in Embed Frameworks */,
+				691131491FB32E56002694C4 /* HandyJSON.framework in Embed Frameworks */,
+				6911314A1FB32E56002694C4 /* Moya.framework in Embed Frameworks */,
+				6911314B1FB32E56002694C4 /* Result.framework in Embed Frameworks */,
+				6911314C1FB32E56002694C4 /* RxCocoa.framework in Embed Frameworks */,
+				6911314D1FB32E56002694C4 /* RxSwift.framework in Embed Frameworks */,
 				0420A23E1F5FC5B3008EA925 /* HyphenateLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -2626,6 +2626,12 @@
 		64F611E31D5B2CC6002695A4 /* CarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDetailViewController.m; sourceTree = "<group>"; };
 		690022D61CA12300007E289A /* Info-test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-test.plist"; sourceTree = "<group>"; };
 		690B5AC91D13F38B00DE3CE8 /* Info-ali.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-ali.plist"; sourceTree = "<group>"; };
+		6911313C1FB32E41002694C4 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = 4.0/Common/Moya.framework; sourceTree = "<group>"; };
+		6911313D1FB32E41002694C4 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyJSON.framework; path = 4.0/Common/HandyJSON.framework; sourceTree = "<group>"; };
+		6911313E1FB32E41002694C4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = 4.0/Common/RxSwift.framework; sourceTree = "<group>"; };
+		6911313F1FB32E41002694C4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = 4.0/Common/Result.framework; sourceTree = "<group>"; };
+		691131401FB32E42002694C4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = 4.0/Common/Alamofire.framework; sourceTree = "<group>"; };
+		691131411FB32E42002694C4 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = 4.0/Common/RxCocoa.framework; sourceTree = "<group>"; };
 		6915EE9B1B46333A00F46B54 /* InitialData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialData.h; sourceTree = "<group>"; };
 		6915EE9C1B46333A00F46B54 /* InitialData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialData.m; sourceTree = "<group>"; };
 		691D62F01BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -2901,12 +2907,6 @@
 		69A883E81B1579E000EDCF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A883EA1B1579E000EDCF5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69A883EB1B1579E000EDCF5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		69AB89BF1FB2F51C0048FFF0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = 4.0/Store/Result.framework; sourceTree = "<group>"; };
-		69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyJSON.framework; path = 4.0/Store/HandyJSON.framework; sourceTree = "<group>"; };
-		69AB89C11FB2F51C0048FFF0 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = 4.0/Store/Moya.framework; sourceTree = "<group>"; };
-		69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = 4.0/Store/RxCocoa.framework; sourceTree = "<group>"; };
-		69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = 4.0/Store/Alamofire.framework; sourceTree = "<group>"; };
-		69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = 4.0/Store/RxSwift.framework; sourceTree = "<group>"; };
 		69AC3EF61FAAC40000CB9EF7 /* CommonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonProvider.swift; sourceTree = "<group>"; };
 		69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonServiceType.swift; sourceTree = "<group>"; };
 		69AFAF081B81E4A1004690CF /* MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAlertView.h; sourceTree = "<group>"; };
@@ -4701,7 +4701,8 @@
 				D8E709541D7E5EA300629AD7 /* libiconv.tbd in Frameworks */,
 				04EA1DD91E091E1100AFCEB6 /* QQConnector.framework in Frameworks */,
 				D8E709521D7E5E9400629AD7 /* MobileCoreServices.framework in Frameworks */,
-				69AB89C91FB2F51D0048FFF0 /* Alamofire.framework in Frameworks */,
+				691131461FB32E42002694C4 /* Alamofire.framework in Frameworks */,
+				691131451FB32E42002694C4 /* Result.framework in Frameworks */,
 				D8E709501D7E5E8100629AD7 /* CoreMedia.framework in Frameworks */,
 				04F145FD1ECB002C00E65B32 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D8E7094E1D7E5E7700629AD7 /* AudioToolbox.framework in Frameworks */,
@@ -4719,21 +4720,19 @@
 				04F145F91ECB002C00E65B32 /* BaiduMapAPI_Location.framework in Frameworks */,
 				695269F11BFB32A3003EA0A0 /* libxml2.tbd in Frameworks */,
 				695269EF1BFB328C003EA0A0 /* libicucore.tbd in Frameworks */,
-				69AB89CA1FB2F51D0048FFF0 /* RxSwift.framework in Frameworks */,
 				04EA1DDB1E091E1100AFCEB6 /* SMSConnector.framework in Frameworks */,
 				695269ED1BFB3279003EA0A0 /* libz.1.2.5.tbd in Frameworks */,
 				695269EB1BFB3270003EA0A0 /* libsqlite3.0.tbd in Frameworks */,
 				04EA1DD71E091E1100AFCEB6 /* ShareSDKUI.framework in Frameworks */,
-				69AB89C81FB2F51D0048FFF0 /* RxCocoa.framework in Frameworks */,
 				696C58F41D223B6A00BACC52 /* UMMobClick.framework in Frameworks */,
 				D8E70A851D82510800629AD7 /* libopencore-amrwb.a in Frameworks */,
 				04EA1DDC1E091E1100AFCEB6 /* WechatConnector.framework in Frameworks */,
 				04EA1DD31E091E1100AFCEB6 /* ShareSDK.framework in Frameworks */,
-				69AB89C71FB2F51D0048FFF0 /* Moya.framework in Frameworks */,
 				04F145FF1ECB002C00E65B32 /* libcrypto.a in Frameworks */,
 				00B437A41B85955500BDF364 /* CoreLocation.framework in Frameworks */,
 				04EA1DD81E091E1100AFCEB6 /* MailConnector.framework in Frameworks */,
 				D840A5371B70775A0075F5E3 /* MapKit.framework in Frameworks */,
+				691131441FB32E42002694C4 /* RxSwift.framework in Frameworks */,
 				0420A23D1F5FC5B3008EA925 /* HyphenateLite.framework in Frameworks */,
 				04EA1DE41E091E1100AFCEB6 /* MOBFoundation.framework in Frameworks */,
 				2AB358431DE5880B00C73758 /* CrashReporter.framework in Frameworks */,
@@ -4743,7 +4742,6 @@
 				04EA1DD51E091E1100AFCEB6 /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				D8E70A841D82510600629AD7 /* libopencore-amrnb.a in Frameworks */,
 				695815181F4D773D006A9377 /* jcore-ios-1.1.5.a in Frameworks */,
-				69AB89C51FB2F51D0048FFF0 /* Result.framework in Frameworks */,
 				04EA1DDA1E091E1100AFCEB6 /* SinaWeiboConnector.framework in Frameworks */,
 				69D0BF841B27FD740090ECD7 /* SystemConfiguration.framework in Frameworks */,
 				04EA1DE11E091E1100AFCEB6 /* libWeChatSDK.a in Frameworks */,
@@ -4756,10 +4754,12 @@
 				69D00C9B1B2E8C4000130F8D /* Social.framework in Frameworks */,
 				69D00C961B2E828500130F8D /* MessageUI.framework in Frameworks */,
 				69438BEE1B16F1FB007D6C12 /* CoreFoundation.framework in Frameworks */,
-				69AB89C61FB2F51D0048FFF0 /* HandyJSON.framework in Frameworks */,
+				691131471FB32E42002694C4 /* RxCocoa.framework in Frameworks */,
 				04EA1DD41E091E1100AFCEB6 /* ShareSDKExtension.framework in Frameworks */,
+				691131431FB32E42002694C4 /* HandyJSON.framework in Frameworks */,
 				69438BEA1B16F1AF007D6C12 /* UIKit.framework in Frameworks */,
 				04F145FA1ECB002C00E65B32 /* BaiduMapAPI_Map.framework in Frameworks */,
+				691131421FB32E42002694C4 /* Moya.framework in Frameworks */,
 				69438BCC1B16E904007D6C12 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5744,12 +5744,12 @@
 		692BD32C1FAC055600AAA518 /* Swift-Framework */ = {
 			isa = PBXGroup;
 			children = (
-				69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */,
-				69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */,
-				69AB89C11FB2F51C0048FFF0 /* Moya.framework */,
-				69AB89BF1FB2F51C0048FFF0 /* Result.framework */,
-				69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */,
-				69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */,
+				691131401FB32E42002694C4 /* Alamofire.framework */,
+				6911313D1FB32E41002694C4 /* HandyJSON.framework */,
+				6911313C1FB32E41002694C4 /* Moya.framework */,
+				6911313F1FB32E41002694C4 /* Result.framework */,
+				691131411FB32E42002694C4 /* RxCocoa.framework */,
+				6911313E1FB32E41002694C4 /* RxSwift.framework */,
 			);
 			path = "Swift-Framework";
 			sourceTree = "<group>";
@@ -12179,7 +12179,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12292,7 +12292,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12449,7 +12449,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12516,7 +12516,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12624,7 +12624,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12737,7 +12737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12847,7 +12847,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Common",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
