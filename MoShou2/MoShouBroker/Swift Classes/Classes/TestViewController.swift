@@ -20,7 +20,7 @@ class TestViewController: UIViewController {
         self.view.frame = frame
         self.view.backgroundColor = UIColor.white
         
-        let button:UIButton = UIButton.init(frame:CGRect.init(x: 0, y: 0, width: 100, height: 30))
+        let button:UIButton = UIButton.init(frame:CGRect.init(x: 20, y: 20, width: 100, height: 30))
         button.backgroundColor = UIColor.red
         button.titleLabel?.text = "button"
         self.view.addSubview(button)

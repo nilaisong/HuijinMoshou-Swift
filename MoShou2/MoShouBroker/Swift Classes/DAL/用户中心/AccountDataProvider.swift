@@ -12,7 +12,7 @@ import HandyJSON
 
 class AccountDataProvider:NSObject
 {
-    static let sharedInstance = AccountDataProvider()
+    @objc static let sharedInstance = AccountDataProvider()
     
     private  let provider = MoyaProvider<AccountDataType>()
     
@@ -21,7 +21,7 @@ class AccountDataProvider:NSObject
         
     }
     //
-    func getPointsList(pageIndex:String,completionClosure:@escaping RequestCompletionClosure)
+    @objc func getPointsList(pageIndex:String,completionClosure:@escaping RequestCompletionClosure)
     {
         provider.request(.pointsList(pageIndex: pageIndex, pageSize: kPageSize))
         { result in

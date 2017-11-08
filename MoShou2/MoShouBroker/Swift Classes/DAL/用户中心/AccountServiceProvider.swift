@@ -12,7 +12,7 @@ import HandyJSON
 
 class AccountServiceProvider:NSObject
 {
-    static let sharedInstance = AccountServiceProvider()
+    @objc static let sharedInstance = AccountServiceProvider()
     
     private  let provider = MoyaProvider<AccountServiceType>()
     
@@ -21,7 +21,7 @@ class AccountServiceProvider:NSObject
         
     }
     //@escaping，用以标记“逃逸闭包”（函数执行完还没被调用的闭包-在网络请求的异步处理响应结果中用到
-     func login(mobile:String,password:String,completionClosure:@escaping RequestCompletionClosure)
+     @objc func login(mobile:String,password:String,completionClosure:@escaping RequestCompletionClosure)
     {
         provider.request(.login(mobile: mobile, passWord: password))
         { result in
@@ -57,7 +57,7 @@ class AccountServiceProvider:NSObject
         }
     }
     //不专门指定的话，默认内部参数名就是外部参数名，“_”表示第一个外部参数名可省略
-    func getUserInfo(_ completionClosure:@escaping RequestCompletionClosure)
+    @objc func getUserInfo(_ completionClosure:@escaping RequestCompletionClosure)
     {
         provider.request(.userInfo)
         { result in
@@ -78,7 +78,7 @@ class AccountServiceProvider:NSObject
         
     }
     
-    func logout(_ completionClosure:@escaping RequestCompletionClosure)
+    @objc func logout(_ completionClosure:@escaping RequestCompletionClosure)
     {
         provider.request(.logout)
         { result in
@@ -91,7 +91,7 @@ class AccountServiceProvider:NSObject
         }
     }
     
-    func updateAvatar(_ avatar:UIImage,completionClosure:@escaping RequestCompletionClosure)
+    @objc func updateAvatar(_ avatar:UIImage,completionClosure:@escaping RequestCompletionClosure)
     {
         provider.request(.updateAvatar(avatar))
         { result in
@@ -106,7 +106,7 @@ class AccountServiceProvider:NSObject
     }
     
     //只有可选类型才能赋值为nil，表示该参数可省略
-    func submitFeedback(content:String,imgArray:[UIImage]? = nil,completionClosure:@escaping RequestCompletionClosure)
+    @objc func submitFeedback(content:String,imgArray:[UIImage]? = nil,completionClosure:@escaping RequestCompletionClosure)
     {
         var images:[UIImage]
         if imgArray != nil

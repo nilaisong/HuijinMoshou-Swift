@@ -20,7 +20,7 @@ class UserInfo:NSObject,HandyJSON
         {
             userId = _userId
         }
-        if let _userName = Tool.getCache("userName") as? String
+        if let _userName = Tool.getCache("userName") as? NSString
         {
             userName = _userName
         }
@@ -102,49 +102,50 @@ class UserInfo:NSObject,HandyJSON
     //杀死进程重启后（在线状态）需要用到但又无法及时获取到信息的字段，需要文件存储以便重启后有值用，
     //其他需要在个人信息用到的字段则会在调用接口时重新获取而不必存下来
     private var id:String = ""
-    var userId:String = ""//用户编号，可用作极光推送的别名alias
+    @objc var userId:String = ""//用户编号，可用作极光推送的别名alias
     {//需要在mapping方法里认为指定映射的字段，不能再添加观察器或作为计算属性，否则映射赋值失败
         didSet{
              Tool.setCache("newUserId",value:userId)
         }
     }
-    private var nickname:String = ""
-    var userName:String = ""//用户名
+    private var nickname:NSString = ""
+    
+    @objc var userName:NSString = ""//用户名
     {
         didSet{
             Tool.setCache("userName",value:userName)
         }
     }
-    var storeId:String = ""//门店编号  唯一码
+    @objc var storeId:String = ""//门店编号  唯一码
     private var storeNumber:String = ""
-    var storeNum:String = ""//门店编号  唯一码
+    @objc var storeNum:String = ""//门店编号  唯一码
     {
         didSet{
             Tool.setCache("storeNum",value:storeNum)
         }
     }
-    var storeName:String = ""//店面名称
-    var gender:String = ""//性别
+    @objc var storeName:String = ""//店面名称
+    @objc var gender:String = ""//性别
     {//不需要在mapping方法里人为指定映射的字段，可以作为计算属性或添加属性观察期，能自动映射赋值成功
         didSet{
             Tool.setCache("gender",value:gender)
         }
     }
-    var mobile:String = ""//手机号
+    @objc var mobile:String = ""//手机号
     {
         didSet{
             Tool.setCache("mobile",value:mobile)
         }
     }
-    var employeeNo:String = ""//员工编号
+    @objc var employeeNo:String = ""//员工编号
     {
         didSet{
             Tool.setCache("employeeNo",value:employeeNo)
         }
     }
-    var orgnizationName:String = ""//机构名称
+    @objc var orgnizationName:String = ""//机构名称
     private var headPic:String = ""
-    var avatar:String = ""//头像
+    @objc var avatar:String = ""//头像
     {
         didSet{
             Tool.setCache("avatar",value:self.avatar)
@@ -155,24 +156,24 @@ class UserInfo:NSObject,HandyJSON
         }
     }
     private var areaId:String = ""
-    var cityId:String = ""//门店所在城市  后台返回  绑定过门店才有
+    @objc var cityId:String = ""//门店所在城市  后台返回  绑定过门店才有
     {
         didSet{
             Tool.setCache("cityId",value:cityId)
         }
     }
     private var areaName:String = ""
-    var cityName:String = ""//门店所在城市  后台返回  绑定过门店才有
+    @objc var cityName:String = ""//门店所在城市  后台返回  绑定过门店才有
     {
         didSet{
              Tool.setCache("cityName",value:cityName)
         }
     }
-    var limitEmployeeNo:Bool = false//员工编号是否为必填项，0非必填  1为必填
+    @objc var limitEmployeeNo:Bool = false//员工编号是否为必填项，0非必填  1为必填
     
     private var _mobileVisable:Bool = false
     //客户手机号是否全部显示 （0全部显示，1部分显示）
-    var mobileVisable:Bool = false
+    @objc var mobileVisable:Bool = false
     {
         didSet{
             let _mobileVisable  =  NSNumber.init(value: mobileVisable)
@@ -180,32 +181,32 @@ class UserInfo:NSObject,HandyJSON
         }
     }
     private var _points:String = ""
-    var points:String = ""//积分
+    @objc var points:String = ""//积分
     {
         didSet{
              Tool.setCache("points",value:points)
         }
     }
     //是否有待审批的换店审请(新后台)
-    var isExchangeShop:Int = 0//0代表可以换店，1代表不能换店
-    var offlineMsgCount:String = ""//环信聊天离线消息个数
+    @objc var isExchangeShop:Int = 0//0代表可以换店，1代表不能换店
+    @objc var offlineMsgCount:String = ""//环信聊天离线消息个数
     {
         didSet{
             Tool.setCache("offlineMsgCount",value:offlineMsgCount)
         }
     }
     private var _shareRange:String = ""
-    var shareRange:String = ""//分享功能限制
+    @objc var shareRange:String = ""//分享功能限制
     {
         didSet{
             Tool.setCache("shareRange",value:shareRange)
         }
     }
     
-    var changeShopVerifyStatus:Int = 0
+    @objc var changeShopVerifyStatus:Int = 0
     
     private var _trystCarEnable:Bool = false
-    var trystCarEnable:Bool = false//是否展示约车信息，0为未开通，1为开通
+    @objc var trystCarEnable:Bool = false//是否展示约车信息，0为未开通，1为开通
     {
         didSet{
             let trystCarEnableNumber  =  NSNumber.init(value: trystCarEnable)
@@ -214,7 +215,7 @@ class UserInfo:NSObject,HandyJSON
     }
     
     private var isSign:Bool = false
-    var isSignIn:Bool = false//当天是否签到
+    @objc var isSignIn:Bool = false//当天是否签到
     {
         didSet{
             let _isSignIn  =  NSNumber.init(value: isSignIn)
@@ -222,25 +223,25 @@ class UserInfo:NSObject,HandyJSON
         }
     }
     //是否让确客看到   1:看到 0:看不到
-    var confirmShowTrack:Bool = false
+    @objc var confirmShowTrack:Bool = false
     //客户来源开关  0为不需填写，1为必须填写
-    var  customerSource:String = ""
+    @objc var  customerSource:String = ""
     
     private var  _maxRecommendCount:String = ""
-    var  maxRecommendCount:String = ""//最大报备数
+    @objc var  maxRecommendCount:String = ""//最大报备数
     {
         didSet{
             Tool.setCache("maxRecommendCount",value:maxRecommendCount)
         }
     }
     //获取当前城市的客服电话
-    var customerServiceTel:String = ""
+    @objc var customerServiceTel:String = ""
     //经纪人收货地址id，如果id为0此经纪人未添加收货地址
-    var addressId:String = ""
+    @objc var addressId:String = ""
 
-    var hxUserName:String = ""//环信登录账号
-    var hxNickName:String = ""//环信昵称
-    var hxPassword:String = ""//环信登录密码
+    @objc var hxUserName:String = ""//环信登录账号
+    @objc var hxNickName:String = ""//环信昵称
+    @objc var hxPassword:String = ""//环信登录密码
     
     func mapping(mapper: HelpingMapper)
     {

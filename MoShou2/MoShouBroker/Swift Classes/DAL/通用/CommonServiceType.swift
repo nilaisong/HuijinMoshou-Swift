@@ -24,7 +24,7 @@ enum CommonServiceType {
 //public修饰的类型，在引入他们的模块中不能被继承；public修饰的方法和属性不能在引入他们的模块中的子类重写
 //而open修饰的类型、方法和属性，在引入他们的模块中可以被继承以及重写
 extension CommonServiceType:TargetType {
-    
+    //重写扩展协议里的method属性
     var method: Moya.Method {
         switch self
         {
@@ -34,7 +34,7 @@ extension CommonServiceType:TargetType {
             break
         }
     }
-
+    //重写扩展协议里的baseURL属性
     var baseURL: URL {
         switch self
         {

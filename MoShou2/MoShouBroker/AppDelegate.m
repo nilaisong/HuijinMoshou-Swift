@@ -126,10 +126,10 @@
     }
     //初始化和加载程序根视图控制器
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    CustomTabBarController *tabBarController=[[CustomTabBarController alloc]init];
-//    BaseNavigationController *navigationController=[[BaseNavigationController alloc]initWithRootViewController:tabBarController];
+    CustomTabBarController *tabBarController=[[CustomTabBarController alloc]init];
+    BaseNavigationController *navigationController=[[BaseNavigationController alloc]initWithRootViewController:tabBarController];
     TestViewController* vc = [[TestViewController alloc] init];
-    self.window.rootViewController = vc;
+    self.window.rootViewController = navigationController;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

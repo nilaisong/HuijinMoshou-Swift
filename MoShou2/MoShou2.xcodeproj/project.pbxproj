@@ -568,12 +568,6 @@
 		64F611E11D59B420002695A4 /* SeeAboutTheCarObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F611E01D59B420002695A4 /* SeeAboutTheCarObject.m */; };
 		64F611E41D5B2CC6002695A4 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F611E31D5B2CC6002695A4 /* CarDetailViewController.m */; };
 		690022D71CA12300007E289A /* Info-test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690022D61CA12300007E289A /* Info-test.plist */; };
-		69028BB41FAC166E00153F7B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32E1FAC055600AAA518 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69028BB51FAC166E00153F7B /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32F1FAC055600AAA518 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69028BB61FAC166E00153F7B /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3301FAC055600AAA518 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69028BB71FAC166E00153F7B /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3311FAC055600AAA518 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69028BB81FAC166E00153F7B /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3321FAC055600AAA518 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69028BB91FAC166E00153F7B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3331FAC055600AAA518 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		690B5ACA1D13F38B00DE3CE8 /* Info-ali.plist in Resources */ = {isa = PBXBuildFile; fileRef = 690B5AC91D13F38B00DE3CE8 /* Info-ali.plist */; };
 		6915EE9D1B46333A00F46B54 /* InitialData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915EE9C1B46333A00F46B54 /* InitialData.m */; };
 		691D62F81BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F11BB1472F00EB48F5 /* TPKeyboardAvoidingCollectionView.m */; };
@@ -581,12 +575,6 @@
 		691D62FA1BB1472F00EB48F5 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F51BB1472F00EB48F5 /* TPKeyboardAvoidingTableView.m */; };
 		691D62FB1BB1472F00EB48F5 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 691D62F71BB1472F00EB48F5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		692240541C34C2130071580A /* DataFactory+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 692240531C34C2130071580A /* DataFactory+Main.m */; };
-		692BD33B1FAC055700AAA518 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32E1FAC055600AAA518 /* Alamofire.framework */; };
-		692BD33C1FAC055700AAA518 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD32F1FAC055600AAA518 /* HandyJSON.framework */; };
-		692BD33D1FAC055700AAA518 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3301FAC055600AAA518 /* Moya.framework */; };
-		692BD33E1FAC055700AAA518 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3311FAC055600AAA518 /* Result.framework */; };
-		692BD33F1FAC055700AAA518 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3321FAC055600AAA518 /* RxCocoa.framework */; };
-		692BD3401FAC055700AAA518 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692BD3331FAC055600AAA518 /* RxSwift.framework */; };
 		692E1CD71BFDA25700FD6A87 /* AsyncRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1CD61BFDA25700FD6A87 /* AsyncRequestView.m */; };
 		692E1D011BFDA34E00FD6A87 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1CF51BFDA34E00FD6A87 /* AFHTTPSessionManager.m */; };
 		692E1D021BFDA34E00FD6A87 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 692E1CF81BFDA34E00FD6A87 /* AFNetworkReachabilityManager.m */; };
@@ -726,6 +714,18 @@
 		69A83BEC1BD4D3DA00EB5C16 /* PLNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A83BE91BD4D3DA00EB5C16 /* PLNavigationBar.m */; };
 		69A883E91B1579E000EDCF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A883E81B1579E000EDCF5E /* main.m */; };
 		69A883EC1B1579E000EDCF5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A883EB1B1579E000EDCF5E /* AppDelegate.m */; };
+		69AB89C51FB2F51D0048FFF0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89BF1FB2F51C0048FFF0 /* Result.framework */; };
+		69AB89C61FB2F51D0048FFF0 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */; };
+		69AB89C71FB2F51D0048FFF0 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C11FB2F51C0048FFF0 /* Moya.framework */; };
+		69AB89C81FB2F51D0048FFF0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */; };
+		69AB89C91FB2F51D0048FFF0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */; };
+		69AB89CA1FB2F51D0048FFF0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */; };
+		69AB89CB1FB2F5310048FFF0 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69AB89CC1FB2F5310048FFF0 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69AB89CD1FB2F5310048FFF0 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C11FB2F51C0048FFF0 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69AB89CE1FB2F5310048FFF0 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89BF1FB2F51C0048FFF0 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69AB89CF1FB2F5310048FFF0 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69AB89D01FB2F5310048FFF0 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69AC3EF81FAAC40100CB9EF7 /* CommonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC3EF61FAAC40000CB9EF7 /* CommonProvider.swift */; };
 		69AC3EF91FAAC40100CB9EF7 /* CommonServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */; };
 		69AFAF0A1B81E4A1004690CF /* MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AFAF091B81E4A1004690CF /* MyAlertView.m */; };
@@ -1851,13 +1851,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				69AB89CB1FB2F5310048FFF0 /* Alamofire.framework in Embed Frameworks */,
+				69AB89CC1FB2F5310048FFF0 /* HandyJSON.framework in Embed Frameworks */,
+				69AB89CD1FB2F5310048FFF0 /* Moya.framework in Embed Frameworks */,
+				69AB89CE1FB2F5310048FFF0 /* Result.framework in Embed Frameworks */,
+				69AB89CF1FB2F5310048FFF0 /* RxCocoa.framework in Embed Frameworks */,
+				69AB89D01FB2F5310048FFF0 /* RxSwift.framework in Embed Frameworks */,
 				0420A23E1F5FC5B3008EA925 /* HyphenateLite.framework in Embed Frameworks */,
-				69028BB41FAC166E00153F7B /* Alamofire.framework in Embed Frameworks */,
-				69028BB51FAC166E00153F7B /* HandyJSON.framework in Embed Frameworks */,
-				69028BB61FAC166E00153F7B /* Moya.framework in Embed Frameworks */,
-				69028BB71FAC166E00153F7B /* Result.framework in Embed Frameworks */,
-				69028BB81FAC166E00153F7B /* RxCocoa.framework in Embed Frameworks */,
-				69028BB91FAC166E00153F7B /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2638,12 +2638,6 @@
 		691D62F71BB1472F00EB48F5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		692240521C34C2130071580A /* DataFactory+Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DataFactory+Main.h"; sourceTree = "<group>"; };
 		692240531C34C2130071580A /* DataFactory+Main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DataFactory+Main.m"; sourceTree = "<group>"; };
-		692BD32E1FAC055600AAA518 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		692BD32F1FAC055600AAA518 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
-		692BD3301FAC055600AAA518 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
-		692BD3311FAC055600AAA518 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		692BD3321FAC055600AAA518 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
-		692BD3331FAC055600AAA518 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		692E1CD51BFDA25700FD6A87 /* AsyncRequestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncRequestView.h; sourceTree = "<group>"; };
 		692E1CD61BFDA25700FD6A87 /* AsyncRequestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncRequestView.m; sourceTree = "<group>"; };
 		692E1CF41BFDA34E00FD6A87 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -2907,6 +2901,12 @@
 		69A883E81B1579E000EDCF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69A883EA1B1579E000EDCF5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69A883EB1B1579E000EDCF5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		69AB89BF1FB2F51C0048FFF0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = 4.0/Store/Result.framework; sourceTree = "<group>"; };
+		69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyJSON.framework; path = 4.0/Store/HandyJSON.framework; sourceTree = "<group>"; };
+		69AB89C11FB2F51C0048FFF0 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = 4.0/Store/Moya.framework; sourceTree = "<group>"; };
+		69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = 4.0/Store/RxCocoa.framework; sourceTree = "<group>"; };
+		69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = 4.0/Store/Alamofire.framework; sourceTree = "<group>"; };
+		69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = 4.0/Store/RxSwift.framework; sourceTree = "<group>"; };
 		69AC3EF61FAAC40000CB9EF7 /* CommonProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonProvider.swift; sourceTree = "<group>"; };
 		69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonServiceType.swift; sourceTree = "<group>"; };
 		69AFAF081B81E4A1004690CF /* MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAlertView.h; sourceTree = "<group>"; };
@@ -4701,7 +4701,7 @@
 				D8E709541D7E5EA300629AD7 /* libiconv.tbd in Frameworks */,
 				04EA1DD91E091E1100AFCEB6 /* QQConnector.framework in Frameworks */,
 				D8E709521D7E5E9400629AD7 /* MobileCoreServices.framework in Frameworks */,
-				692BD33E1FAC055700AAA518 /* Result.framework in Frameworks */,
+				69AB89C91FB2F51D0048FFF0 /* Alamofire.framework in Frameworks */,
 				D8E709501D7E5E8100629AD7 /* CoreMedia.framework in Frameworks */,
 				04F145FD1ECB002C00E65B32 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D8E7094E1D7E5E7700629AD7 /* AudioToolbox.framework in Frameworks */,
@@ -4719,17 +4719,17 @@
 				04F145F91ECB002C00E65B32 /* BaiduMapAPI_Location.framework in Frameworks */,
 				695269F11BFB32A3003EA0A0 /* libxml2.tbd in Frameworks */,
 				695269EF1BFB328C003EA0A0 /* libicucore.tbd in Frameworks */,
-				692BD3401FAC055700AAA518 /* RxSwift.framework in Frameworks */,
+				69AB89CA1FB2F51D0048FFF0 /* RxSwift.framework in Frameworks */,
 				04EA1DDB1E091E1100AFCEB6 /* SMSConnector.framework in Frameworks */,
 				695269ED1BFB3279003EA0A0 /* libz.1.2.5.tbd in Frameworks */,
 				695269EB1BFB3270003EA0A0 /* libsqlite3.0.tbd in Frameworks */,
 				04EA1DD71E091E1100AFCEB6 /* ShareSDKUI.framework in Frameworks */,
+				69AB89C81FB2F51D0048FFF0 /* RxCocoa.framework in Frameworks */,
 				696C58F41D223B6A00BACC52 /* UMMobClick.framework in Frameworks */,
-				692BD33B1FAC055700AAA518 /* Alamofire.framework in Frameworks */,
 				D8E70A851D82510800629AD7 /* libopencore-amrwb.a in Frameworks */,
 				04EA1DDC1E091E1100AFCEB6 /* WechatConnector.framework in Frameworks */,
-				692BD33D1FAC055700AAA518 /* Moya.framework in Frameworks */,
 				04EA1DD31E091E1100AFCEB6 /* ShareSDK.framework in Frameworks */,
+				69AB89C71FB2F51D0048FFF0 /* Moya.framework in Frameworks */,
 				04F145FF1ECB002C00E65B32 /* libcrypto.a in Frameworks */,
 				00B437A41B85955500BDF364 /* CoreLocation.framework in Frameworks */,
 				04EA1DD81E091E1100AFCEB6 /* MailConnector.framework in Frameworks */,
@@ -4737,13 +4737,13 @@
 				0420A23D1F5FC5B3008EA925 /* HyphenateLite.framework in Frameworks */,
 				04EA1DE41E091E1100AFCEB6 /* MOBFoundation.framework in Frameworks */,
 				2AB358431DE5880B00C73758 /* CrashReporter.framework in Frameworks */,
-				692BD33F1FAC055700AAA518 /* RxCocoa.framework in Frameworks */,
 				69D0BF821B27FD6A0090ECD7 /* Security.framework in Frameworks */,
 				69438BF01B16F205007D6C12 /* CoreGraphics.framework in Frameworks */,
 				04F145FB1ECB002C00E65B32 /* BaiduMapAPI_Radar.framework in Frameworks */,
 				04EA1DD51E091E1100AFCEB6 /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				D8E70A841D82510600629AD7 /* libopencore-amrnb.a in Frameworks */,
 				695815181F4D773D006A9377 /* jcore-ios-1.1.5.a in Frameworks */,
+				69AB89C51FB2F51D0048FFF0 /* Result.framework in Frameworks */,
 				04EA1DDA1E091E1100AFCEB6 /* SinaWeiboConnector.framework in Frameworks */,
 				69D0BF841B27FD740090ECD7 /* SystemConfiguration.framework in Frameworks */,
 				04EA1DE11E091E1100AFCEB6 /* libWeChatSDK.a in Frameworks */,
@@ -4756,7 +4756,7 @@
 				69D00C9B1B2E8C4000130F8D /* Social.framework in Frameworks */,
 				69D00C961B2E828500130F8D /* MessageUI.framework in Frameworks */,
 				69438BEE1B16F1FB007D6C12 /* CoreFoundation.framework in Frameworks */,
-				692BD33C1FAC055700AAA518 /* HandyJSON.framework in Frameworks */,
+				69AB89C61FB2F51D0048FFF0 /* HandyJSON.framework in Frameworks */,
 				04EA1DD41E091E1100AFCEB6 /* ShareSDKExtension.framework in Frameworks */,
 				69438BEA1B16F1AF007D6C12 /* UIKit.framework in Frameworks */,
 				04F145FA1ECB002C00E65B32 /* BaiduMapAPI_Map.framework in Frameworks */,
@@ -5744,22 +5744,14 @@
 		692BD32C1FAC055600AAA518 /* Swift-Framework */ = {
 			isa = PBXGroup;
 			children = (
-				692BD32D1FAC055600AAA518 /* Common */,
+				69AB89C31FB2F51D0048FFF0 /* Alamofire.framework */,
+				69AB89C01FB2F51C0048FFF0 /* HandyJSON.framework */,
+				69AB89C11FB2F51C0048FFF0 /* Moya.framework */,
+				69AB89BF1FB2F51C0048FFF0 /* Result.framework */,
+				69AB89C21FB2F51D0048FFF0 /* RxCocoa.framework */,
+				69AB89C41FB2F51D0048FFF0 /* RxSwift.framework */,
 			);
 			path = "Swift-Framework";
-			sourceTree = "<group>";
-		};
-		692BD32D1FAC055600AAA518 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				692BD32E1FAC055600AAA518 /* Alamofire.framework */,
-				692BD32F1FAC055600AAA518 /* HandyJSON.framework */,
-				692BD3301FAC055600AAA518 /* Moya.framework */,
-				692BD3311FAC055600AAA518 /* Result.framework */,
-				692BD3321FAC055600AAA518 /* RxCocoa.framework */,
-				692BD3331FAC055600AAA518 /* RxSwift.framework */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		692E1CD41BFDA25700FD6A87 /* AFRequestView */ = {
@@ -12187,7 +12179,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12226,7 +12218,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12300,7 +12292,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12339,7 +12331,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12457,7 +12449,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12496,7 +12488,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12524,7 +12516,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12558,7 +12550,7 @@
 				SKIP_INSTALL = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12632,7 +12624,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12671,7 +12663,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12745,7 +12737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12784,7 +12776,7 @@
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12855,7 +12847,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/MoShouBroker",
-					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/Common",
+					"$(PROJECT_DIR)/MoShouBroker/Swift-Framework/4.0/Store",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "MoShouBroker/MoShou2-Prefix.pch";
@@ -12890,7 +12882,7 @@
 				SKIP_INSTALL = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MoShouBroker/MoShouBroker-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}";
 				VALID_ARCHS = "armv7 armv7s arm64";

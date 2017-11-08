@@ -11,7 +11,7 @@ import Moya
 
 class CommonProvider:NSObject
 {
-    static let sharedInstance = CommonProvider()
+    @objc static let sharedInstance = CommonProvider()
     
     let provider = MoyaProvider<CommonServiceType>()
     
@@ -19,8 +19,8 @@ class CommonProvider:NSObject
     {
         
     }
-    
-    func downloadFile(urlString:String,savePath:String,completionClosure:@escaping RequestCompletionClosure){
+    //从swift3.0升级到4.0时，需要暴露给OC代码的方法和属性必须添加@objc关键字说明
+    @objc func downloadFile(urlString:String,savePath:String,completionClosure:@escaping RequestCompletionClosure){
         provider.request(.downloadFile(urlString: urlString, savePath: savePath)) {result in
             let resResult:ResponseResult =  ResponseResult()
             switch result {
