@@ -25,23 +25,23 @@
 @synthesize imageFrame;
 @synthesize zoomingView;
 
--(void)dealloc
-{
-    if (requetView) {
-        [self removeObserver:requetView forKeyPath:@"frame"];
-    }
-    self.delegate=nil;
-    requetView.delegate=nil;
-    [requetView cancelDownload];
-    [self.layer removeFromSuperlayer];
-    [imagePath release];
-    [requetView release];
-    
-    [super dealloc];
-        
-   [_image release];
-//    NSLog(@"dealloc");
-}
+//-(void)dealloc
+//{
+//    if (requetView) {
+//        [self removeObserver:requetView forKeyPath:@"frame"];
+//    }
+//    self.delegate=nil;
+//    requetView.delegate=nil;
+//    [requetView cancelDownload];
+//    [self.layer removeFromSuperlayer];
+//    [imagePath release];
+//    [requetView release];
+//
+//    [super dealloc];
+//
+//   [_image release];
+////    NSLog(@"dealloc");
+//}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -112,7 +112,7 @@
     {
         if (!requetView)
         {
-            self.requetView = [[[AsyncRequestView alloc] initWithFrame:self.bounds] autorelease];
+            self.requetView = [[AsyncRequestView alloc] initWithFrame:self.bounds] ;
             requetView.delegate=self;
             requetView.indicatorStyle = kDialIndicatorStyle;
             [self addObserver:requetView
@@ -174,9 +174,9 @@
 {
     if (_image!=image) 
     {
-        [_image release];
+//        [_image release];
         _image=nil;
-        _image= [image retain];
+        _image= image;
         //放大到原图大小
         if (zoomingView)
         {

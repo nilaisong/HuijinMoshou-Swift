@@ -11,12 +11,12 @@
 @implementation MyWebView
 @synthesize  showIndicator=_showIndicator;
 
-
--(void)dealloc
-{
-    [HUDIndicator release];
-    [super dealloc];
-}
+//
+//-(void)dealloc
+//{
+//    [HUDIndicator release];
+//    [super dealloc];
+//}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,7 +26,7 @@
         if (HUDIndicator)
         {
             [HUDIndicator removeFromSuperview];
-            [HUDIndicator release];
+//            [HUDIndicator release];
         }
         HUDIndicator = [[MBProgressHUD alloc] initWithView:self];
         HUDIndicator.frame = CGRectMake(0, 0, 200, 160);

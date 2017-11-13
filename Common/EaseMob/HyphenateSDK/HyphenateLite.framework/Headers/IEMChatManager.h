@@ -346,6 +346,8 @@
 
 /**
  *  \~chinese
+ *  从服务器获取指定会话的历史消息
+ *
  *  @param  aConversationId     要获取漫游消息的Conversation id
  *  @param  aConversationType   要获取漫游消息的Conversation type
  *  @param  aStartMessageId     参考起始消息的ID
@@ -375,6 +377,7 @@
 
 /**
  *  \~chinese
+ *  从服务器获取指定会话的历史消息
  *
  *  异步方法
  *
@@ -398,7 +401,7 @@
                            conversationType:(EMConversationType)aConversationType
                              startMessageId:(NSString *)aStartMessageId
                                    pageSize:(int)aPageSize
-                                 complation:(void (^)(EMCursorResult *aResult, EMError *aError))aCompletionBlock;
+                                 completion:(void (^)(EMCursorResult *aResult, EMError *aError))aCompletionBlock;
 
 #pragma mark - EM_DEPRECATED_IOS 3.2.3
 

@@ -113,38 +113,6 @@
             endingLineNumber = "949"
             landmarkName = "-getPointDataWithPage:andCallBack:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DataFactory(User) getPointDataWithPage:andCallBack:]"
-                  moduleName = "MoShou2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilaisong/Desktop/HuijinMoshou-Swift/MoShou2/MoShouBroker/DAL/DataFactory+User.m"
-                  timestampString = "531828630.626386"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "949"
-                  endingLineNumber = "949"
-                  offsetFromSymbolStart = "356">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__54-[DataFactory(User) getPointDataWithPage:andCallBack:]_block_invoke"
-                  moduleName = "MoShou2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nilaisong/Desktop/HuijinMoshou-Swift/MoShou2/MoShouBroker/DAL/DataFactory+User.m"
-                  timestampString = "531828630.62767"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "950"
-                  endingLineNumber = "950"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

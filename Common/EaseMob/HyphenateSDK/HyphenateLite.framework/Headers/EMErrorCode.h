@@ -36,12 +36,12 @@ typedef enum{
     EMErrorUpdateApnsConfigsFailed,          /*! \~chinese 更新推送设置失败 \~english Update Apple Push Notification configurations failed */
     EMErrorUserPermissionDenied,             /*! \~chinese 用户没有权限做该操作 \~english User has no operation permission */
     EMErrorUserBindDeviceTokenFailed,        /*! \~chinese 绑定device token失败  \~english Bind device token failed */
-    EMErrorUserUnbindDeviceTokenFailed,     /*! \~chinese 解除device token失败 \~english Unbind device token failed */
-    EMErrorUserBindAnotherDevice,           /*! \~chinese 已经在其他设备上绑定了，不允许自动登录 \~english already bound to other device and auto login is not allowed*/
-    EMErrorUserLoginTooManyDevices,         /*! \~chinese 登录的设备数达到了上限 \~english User login on too many devices */
-    EMErrorUserMuted,                       /*! \~chinese 用户在群组或聊天室中被禁言 \~english User is muted in group or chatroom */
-    EMErrorUserKickedByChangePassword,      /*! \~chinese 用户已经修改了密码 \~english User has changed the password */
-    EMErrorUserKickedByOtherDevice,         /*! \~chinese 被其他设备踢掉了 \~english User was kicked out from other device */
+    EMErrorUserUnbindDeviceTokenFailed,      /*! \~chinese 解除device token失败 \~english Unbind device token failed */
+    EMErrorUserBindAnotherDevice,            /*! \~chinese 已经在其他设备上绑定了，不允许自动登录 \~english already bound to other device and auto login is not allowed*/
+    EMErrorUserLoginTooManyDevices,          /*! \~chinese 登录的设备数达到了上限 \~english User login on too many devices */
+    EMErrorUserMuted,                        /*! \~chinese 用户在群组或聊天室中被禁言 \~english User is muted in group or chatroom */
+    EMErrorUserKickedByChangePassword,       /*! \~chinese 用户已经修改了密码 \~english User has changed the password */
+    EMErrorUserKickedByOtherDevice,          /*! \~chinese 被其他设备踢掉了 \~english User was kicked out from other device */
     
     EMErrorServerNotReachable = 300,         /*! \~chinese 服务器未连接 \~english Server is not reachable */
     EMErrorServerTimeout,                    /*! \~chinese 服务器超时 \~english Server response timeout */
@@ -58,7 +58,7 @@ typedef enum{
     EMErrorFileTooLarge,                     /*! \~chinese 文件体积过大 \~english File too large */
     
     EMErrorMessageInvalid = 500,             /*! \~chinese 消息无效 \~english Message is invalid */
-    EMErrorMessageIncludeIllegalContent,      /*! \~chinese 消息内容包含不合法信息 \~english Message contains invalid content */
+    EMErrorMessageIncludeIllegalContent,     /*! \~chinese 消息内容包含不合法信息 \~english Message contains invalid content */
     EMErrorMessageTrafficLimit,              /*! \~chinese 单位时间发送消息超过上限 \~english Unit time to send messages over the upper limit */
     EMErrorMessageEncryption,                /*! \~chinese 加密错误 \~english Encryption error */
     EMErrorMessageRecallTimeLimit,           /*! \~chinese 消息撤回超过时间限制 \~english Unit time to send recall for message over the time limit */
@@ -82,5 +82,17 @@ typedef enum{
     EMErrorCallBusy,                         /*! \~chinese 已经在进行实时通话了 \~english User is busy */
     EMErrorCallRemoteOffline,                /*! \~chinese 对方不在线 \~english Callee is offline */
     EMErrorCallConnectFailed,                /*! \~chinese 实时通话建立连接失败 \~english Establish connection failure */
+    EMErrorCallCreateFailed,                 /*! \~chinese 创建实时通话失败 \~english Create a real-time call failed */
+    EMErrorCallCancel,                       /*! \~chinese 取消实时通话 \~english Cancel a real-time call */
+    EMErrorCallAlreadyJoined,                /*! \~chinese 已经加入了实时通话 \~english Has joined the real-time call */
+    EMErrorCallAlreadyPub,                   /*! \~chinese 已经上传了本地数据流 \~english The local data stream has been uploaded */
+    EMErrorCallAlreadySub,                   /*! \~chinese 已经订阅了该数据流 \~english The data stream has been subscribed */
+    EMErrorCallNotExist,                     /*! \~chinese 实时通话不存在 \~english The real-time do not exist */
+    EMErrorCallNoPublish,                    /*! \~chinese 实时通话没有已经上传的数据流 \~english Real-time calls have no data streams that have been uploaded */
+    EMErrorCallNoSubscribe,                  /*! \~chinese 实时通话没有可以订阅的数据流 \~english Real-time calls have no data streams that can be subscribed */
+    EMErrorCallNoStream,                     /*! \~chinese 实时通话没有数据流 \~english There is no data stream in the real-time call */
+    EMErrorCallInvalidTicket,                /*! \~chinese 无效的ticket \~english Invalid ticket */
+    EMErrorCallTicketExpired,                /*! \~chinese ticket已过期 \~english Ticket has expired */
+    EMErrorCallSessionExpired,               /*! \~chinese 实时通话已过期 \~english The real-time call has expired */
 
 }EMErrorCode;

@@ -69,4 +69,17 @@
  */
 @property (nonatomic, copy) NSString *restServer;
 
+/*!
+ *  \~chinese
+ *  DNS URL 地址
+ *
+ *  enableDnsConfig为YES时生效，只能在[EMClient initializeSDKWithOptions:]中设置，不能在程序运行过程中动态修改
+ *
+ *  \~english
+ *  DNS url
+ *
+ *  dnsURL Only effective when isDNSEnabled is YES. Can only be set when initializing the SDK with [EMClient initializeSDKWithOptions:], cannot be altered in runtime
+ */
+@property (nonatomic, copy) NSString *dnsURL;
+
 @end
