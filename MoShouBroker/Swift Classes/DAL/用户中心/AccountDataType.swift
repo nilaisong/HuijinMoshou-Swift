@@ -30,8 +30,7 @@ extension AccountDataType:TargetType
         switch self{
         case .pointsList(let pageIndex,let pageSize)://使用let从枚举里取出相关值
                 return .postParameters(["pageNo": pageIndex, "pageSize": pageSize])
-        default:
-            break
+
         }
     }
 }

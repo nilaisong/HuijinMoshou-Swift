@@ -18,7 +18,7 @@ import RxSwift
 
 
 enum CommonServiceType {
-    case downloadFile(urlString:String,savePath:String)
+    case downloadFile(urlString:String,savePath:String)//文件下载
 
 }
 //public修饰的类型，在引入他们的模块中不能被继承；public修饰的方法和属性不能在引入他们的模块中的子类重写

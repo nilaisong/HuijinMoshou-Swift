@@ -722,18 +722,6 @@
 		6974D52D1FB98A0700122E94 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D0971FB98A0500122E94 /* MOBFoundation.framework */; };
 		6974D52E1FB98A0700122E94 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6974D0981FB98A0500122E94 /* ShareSDK.bundle */; };
 		6974D52F1FB98A0700122E94 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D0991FB98A0500122E94 /* ShareSDKConnector.framework */; };
-		6974D6731FB98A0900122E94 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D20B1FB98A0500122E94 /* Alamofire.framework */; };
-		6974D6741FB98A0900122E94 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D20C1FB98A0500122E94 /* HandyJSON.framework */; };
-		6974D6751FB98A0900122E94 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D20D1FB98A0500122E94 /* Moya.framework */; };
-		6974D6761FB98A0900122E94 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D20E1FB98A0500122E94 /* Result.framework */; };
-		6974D6771FB98A0900122E94 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D20F1FB98A0500122E94 /* RxCocoa.framework */; };
-		6974D6781FB98A0900122E94 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2101FB98A0500122E94 /* RxSwift.framework */; };
-		6974D6791FB98A0900122E94 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2121FB98A0500122E94 /* Alamofire.framework */; };
-		6974D67A1FB98A0900122E94 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2131FB98A0500122E94 /* HandyJSON.framework */; };
-		6974D67B1FB98A0900122E94 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2141FB98A0500122E94 /* Moya.framework */; };
-		6974D67C1FB98A0900122E94 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2151FB98A0500122E94 /* Result.framework */; };
-		6974D67D1FB98A0900122E94 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2161FB98A0500122E94 /* RxCocoa.framework */; };
-		6974D67E1FB98A0900122E94 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2171FB98A0500122E94 /* RxSwift.framework */; };
 		6974D67F1FB98A0900122E94 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D21A1FB98A0500122E94 /* Alamofire.framework */; };
 		6974D6801FB98A0900122E94 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D21B1FB98A0500122E94 /* HandyJSON.framework */; };
 		6974D6811FB98A0900122E94 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D21C1FB98A0500122E94 /* Kingfisher.framework */; };
@@ -742,14 +730,6 @@
 		6974D6841FB98A0900122E94 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D21F1FB98A0500122E94 /* RxCocoa.framework */; };
 		6974D6851FB98A0900122E94 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2201FB98A0500122E94 /* RxSwift.framework */; };
 		6974D6861FB98A0900122E94 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2211FB98A0500122E94 /* SnapKit.framework */; };
-		6974D6871FB98A0900122E94 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2231FB98A0500122E94 /* Alamofire.framework */; };
-		6974D6881FB98A0900122E94 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2241FB98A0500122E94 /* HandyJSON.framework */; };
-		6974D6891FB98A0900122E94 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2251FB98A0500122E94 /* Kingfisher.framework */; };
-		6974D68A1FB98A0900122E94 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2261FB98A0500122E94 /* Moya.framework */; };
-		6974D68B1FB98A0900122E94 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2271FB98A0500122E94 /* Result.framework */; };
-		6974D68C1FB98A0900122E94 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2281FB98A0500122E94 /* RxCocoa.framework */; };
-		6974D68D1FB98A0900122E94 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2291FB98A0500122E94 /* RxSwift.framework */; };
-		6974D68E1FB98A0900122E94 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D22A1FB98A0500122E94 /* SnapKit.framework */; };
 		6974D68F1FB98A0900122E94 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6974D22D1FB98A0500122E94 /* NSMutableArray+SWUtilityButtons.m */; };
 		6974D6901FB98A0900122E94 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6974D22F1FB98A0500122E94 /* SWCellScrollView.m */; };
 		6974D6911FB98A0900122E94 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6974D2311FB98A0500122E94 /* SWLongPressGestureRecognizer.m */; };
@@ -2958,18 +2938,6 @@
 		6974D0971FB98A0500122E94 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 		6974D0981FB98A0500122E94 /* ShareSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDK.bundle; sourceTree = "<group>"; };
 		6974D0991FB98A0500122E94 /* ShareSDKConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKConnector.framework; sourceTree = "<group>"; };
-		6974D20B1FB98A0500122E94 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		6974D20C1FB98A0500122E94 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
-		6974D20D1FB98A0500122E94 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
-		6974D20E1FB98A0500122E94 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		6974D20F1FB98A0500122E94 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
-		6974D2101FB98A0500122E94 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
-		6974D2121FB98A0500122E94 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		6974D2131FB98A0500122E94 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
-		6974D2141FB98A0500122E94 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
-		6974D2151FB98A0500122E94 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		6974D2161FB98A0500122E94 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
-		6974D2171FB98A0500122E94 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		6974D21A1FB98A0500122E94 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		6974D21B1FB98A0500122E94 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
 		6974D21C1FB98A0500122E94 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -2978,14 +2946,6 @@
 		6974D21F1FB98A0500122E94 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 		6974D2201FB98A0500122E94 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		6974D2211FB98A0500122E94 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
-		6974D2231FB98A0500122E94 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		6974D2241FB98A0500122E94 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = "<group>"; };
-		6974D2251FB98A0500122E94 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
-		6974D2261FB98A0500122E94 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moya.framework; sourceTree = "<group>"; };
-		6974D2271FB98A0500122E94 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
-		6974D2281FB98A0500122E94 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
-		6974D2291FB98A0500122E94 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
-		6974D22A1FB98A0500122E94 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 		6974D22C1FB98A0500122E94 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		6974D22D1FB98A0500122E94 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		6974D22E1FB98A0500122E94 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
@@ -4806,17 +4766,12 @@
 				6974D48C1FB98A0600122E94 /* BaiduMapAPI_Base.framework in Frameworks */,
 				6974D5221FB98A0700122E94 /* QQConnector.framework in Frameworks */,
 				6974D4951FB98A0600122E94 /* libssl.a in Frameworks */,
-				6974D68B1FB98A0900122E94 /* Result.framework in Frameworks */,
-				6974D6891FB98A0900122E94 /* Kingfisher.framework in Frameworks */,
 				2A71BEE51E2C747100B139A1 /* UserNotifications.framework in Frameworks */,
 				6949B2611DEFD0B600FAE11C /* libresolv.tbd in Frameworks */,
 				6974D52F1FB98A0700122E94 /* ShareSDKConnector.framework in Frameworks */,
-				6974D6871FB98A0900122E94 /* Alamofire.framework in Frameworks */,
 				D8E709541D7E5EA300629AD7 /* libiconv.tbd in Frameworks */,
 				D8E709521D7E5E9400629AD7 /* MobileCoreServices.framework in Frameworks */,
 				D8E709501D7E5E8100629AD7 /* CoreMedia.framework in Frameworks */,
-				6974D6761FB98A0900122E94 /* Result.framework in Frameworks */,
-				6974D6741FB98A0900122E94 /* HandyJSON.framework in Frameworks */,
 				6974D5281FB98A0700122E94 /* libWeiboSDK.a in Frameworks */,
 				6974D6801FB98A0900122E94 /* HandyJSON.framework in Frameworks */,
 				D8E7094E1D7E5E7700629AD7 /* AudioToolbox.framework in Frameworks */,
@@ -4825,7 +4780,6 @@
 				D80CCB041D5C4843009AC063 /* AdSupport.framework in Frameworks */,
 				D80CCB021D5C4816009AC063 /* ImageIO.framework in Frameworks */,
 				D80CCB001D5C470C009AC063 /* JavaScriptCore.framework in Frameworks */,
-				6974D67E1FB98A0900122E94 /* RxSwift.framework in Frameworks */,
 				6974D51E1FB98A0700122E94 /* ShareSDKInterfaceAdapter.framework in Frameworks */,
 				69D0BF861B27FD8C0090ECD7 /* CoreTelephony.framework in Frameworks */,
 				6974D4901FB98A0600122E94 /* BaiduMapAPI_Radar.framework in Frameworks */,
@@ -4834,14 +4788,10 @@
 				6974D51C1FB98A0700122E94 /* ShareSDK.framework in Frameworks */,
 				695269F11BFB32A3003EA0A0 /* libxml2.tbd in Frameworks */,
 				695269EF1BFB328C003EA0A0 /* libicucore.tbd in Frameworks */,
-				6974D68D1FB98A0900122E94 /* RxSwift.framework in Frameworks */,
-				6974D6771FB98A0900122E94 /* RxCocoa.framework in Frameworks */,
 				6974D48F1FB98A0600122E94 /* BaiduMapAPI_Map.framework in Frameworks */,
 				695269ED1BFB3279003EA0A0 /* libz.1.2.5.tbd in Frameworks */,
-				6974D67B1FB98A0900122E94 /* Moya.framework in Frameworks */,
 				695269EB1BFB3270003EA0A0 /* libsqlite3.0.tbd in Frameworks */,
 				6974D5241FB98A0700122E94 /* SMSConnector.framework in Frameworks */,
-				6974D67A1FB98A0900122E94 /* HandyJSON.framework in Frameworks */,
 				6974D6861FB98A0900122E94 /* SnapKit.framework in Frameworks */,
 				6974D4AF1FB98A0600122E94 /* HyphenateLite.framework in Frameworks */,
 				6974D48E1FB98A0600122E94 /* BaiduMapAPI_Location.framework in Frameworks */,
@@ -4852,27 +4802,18 @@
 				6974D5261FB98A0700122E94 /* TencentOpenAPI.framework in Frameworks */,
 				00B437A41B85955500BDF364 /* CoreLocation.framework in Frameworks */,
 				6974D4C61FB98A0600122E94 /* jcore-ios-1.1.5.a in Frameworks */,
-				6974D68C1FB98A0900122E94 /* RxCocoa.framework in Frameworks */,
 				D840A5371B70775A0075F5E3 /* MapKit.framework in Frameworks */,
 				6974D52A1FB98A0700122E94 /* libWeChatSDK.a in Frameworks */,
 				6974D48D1FB98A0600122E94 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				69D0BF821B27FD6A0090ECD7 /* Security.framework in Frameworks */,
-				6974D67D1FB98A0900122E94 /* RxCocoa.framework in Frameworks */,
-				6974D6751FB98A0900122E94 /* Moya.framework in Frameworks */,
 				6974D6841FB98A0900122E94 /* RxCocoa.framework in Frameworks */,
 				6974D4921FB98A0600122E94 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				6974D5201FB98A0700122E94 /* ShareSDKUI.framework in Frameworks */,
-				6974D6881FB98A0900122E94 /* HandyJSON.framework in Frameworks */,
 				6974D5211FB98A0700122E94 /* MailConnector.framework in Frameworks */,
-				6974D6731FB98A0900122E94 /* Alamofire.framework in Frameworks */,
-				6974D6781FB98A0900122E94 /* RxSwift.framework in Frameworks */,
-				6974D68A1FB98A0900122E94 /* Moya.framework in Frameworks */,
-				6974D6791FB98A0900122E94 /* Alamofire.framework in Frameworks */,
 				69438BF01B16F205007D6C12 /* CoreGraphics.framework in Frameworks */,
 				6974D6851FB98A0900122E94 /* RxSwift.framework in Frameworks */,
 				D8E70A841D82510600629AD7 /* libopencore-amrnb.a in Frameworks */,
 				69D0BF841B27FD740090ECD7 /* SystemConfiguration.framework in Frameworks */,
-				6974D67C1FB98A0900122E94 /* Result.framework in Frameworks */,
 				84C2B1DC1B4F819100F43F83 /* OpenGLES.framework in Frameworks */,
 				6974D6821FB98A0900122E94 /* Moya.framework in Frameworks */,
 				6974D6B91FB98A0900122E94 /* UMMobClick.framework in Frameworks */,
@@ -4887,7 +4828,6 @@
 				69438BEA1B16F1AF007D6C12 /* UIKit.framework in Frameworks */,
 				69438BCC1B16E904007D6C12 /* CFNetwork.framework in Frameworks */,
 				6974D52D1FB98A0700122E94 /* MOBFoundation.framework in Frameworks */,
-				6974D68E1FB98A0900122E94 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5930,7 +5870,6 @@
 			isa = PBXGroup;
 			children = (
 				6974CF171FB98A0500122E94 /* AFNetworking */,
-				6974CF251FB98A0500122E94 /* ASIHttpRequest */,
 				6974CF281FB98A0500122E94 /* AsyncRequestView */,
 				6974CF3C1FB98A0500122E94 /* BaiduMap */,
 				6974CF481FB98A0500122E94 /* CrashReporter */,
@@ -5950,7 +5889,6 @@
 				6974CFD61FB98A0500122E94 /* MJRefresh */,
 				6974CFF21FB98A0500122E94 /* MMDrawerController */,
 				6974CFFC1FB98A0500122E94 /* MyUIKit */,
-				6974D00B1FB98A0500122E94 /* MyViewController */,
 				6974D00C1FB98A0500122E94 /* NetWork */,
 				6974D0201FB98A0500122E94 /* NSStringExtras */,
 				6974D0231FB98A0500122E94 /* PathCover */,
@@ -5990,29 +5928,6 @@
 				6974CF241FB98A0500122E94 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		6974CF251FB98A0500122E94 /* ASIHttpRequest */ = {
-			isa = PBXGroup;
-			children = (
-				6974CF261FB98A0500122E94 /* ASIWebPageRequest */,
-				6974CF271FB98A0500122E94 /* Reachability */,
-			);
-			path = ASIHttpRequest;
-			sourceTree = "<group>";
-		};
-		6974CF261FB98A0500122E94 /* ASIWebPageRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ASIWebPageRequest;
-			sourceTree = "<group>";
-		};
-		6974CF271FB98A0500122E94 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 		6974CF281FB98A0500122E94 /* AsyncRequestView */ = {
@@ -6399,13 +6314,6 @@
 			path = MyUIKit;
 			sourceTree = "<group>";
 		};
-		6974D00B1FB98A0500122E94 /* MyViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyViewController;
-			sourceTree = "<group>";
-		};
 		6974D00C1FB98A0500122E94 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -6666,52 +6574,15 @@
 		6974D2081FB98A0500122E94 /* Swift-Framework */ = {
 			isa = PBXGroup;
 			children = (
-				6974D2091FB98A0500122E94 /* 3.2 */,
 				6974D2181FB98A0500122E94 /* 4.0 */,
 			);
 			path = "Swift-Framework";
-			sourceTree = "<group>";
-		};
-		6974D2091FB98A0500122E94 /* 3.2 */ = {
-			isa = PBXGroup;
-			children = (
-				6974D20A1FB98A0500122E94 /* Common */,
-				6974D2111FB98A0500122E94 /* Store */,
-			);
-			path = 3.2;
-			sourceTree = "<group>";
-		};
-		6974D20A1FB98A0500122E94 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				6974D20B1FB98A0500122E94 /* Alamofire.framework */,
-				6974D20C1FB98A0500122E94 /* HandyJSON.framework */,
-				6974D20D1FB98A0500122E94 /* Moya.framework */,
-				6974D20E1FB98A0500122E94 /* Result.framework */,
-				6974D20F1FB98A0500122E94 /* RxCocoa.framework */,
-				6974D2101FB98A0500122E94 /* RxSwift.framework */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		6974D2111FB98A0500122E94 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				6974D2121FB98A0500122E94 /* Alamofire.framework */,
-				6974D2131FB98A0500122E94 /* HandyJSON.framework */,
-				6974D2141FB98A0500122E94 /* Moya.framework */,
-				6974D2151FB98A0500122E94 /* Result.framework */,
-				6974D2161FB98A0500122E94 /* RxCocoa.framework */,
-				6974D2171FB98A0500122E94 /* RxSwift.framework */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		6974D2181FB98A0500122E94 /* 4.0 */ = {
 			isa = PBXGroup;
 			children = (
 				6974D2191FB98A0500122E94 /* Common */,
-				6974D2221FB98A0500122E94 /* Store */,
 			);
 			path = 4.0;
 			sourceTree = "<group>";
@@ -6729,21 +6600,6 @@
 				6974D2211FB98A0500122E94 /* SnapKit.framework */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		6974D2221FB98A0500122E94 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				6974D2231FB98A0500122E94 /* Alamofire.framework */,
-				6974D2241FB98A0500122E94 /* HandyJSON.framework */,
-				6974D2251FB98A0500122E94 /* Kingfisher.framework */,
-				6974D2261FB98A0500122E94 /* Moya.framework */,
-				6974D2271FB98A0500122E94 /* Result.framework */,
-				6974D2281FB98A0500122E94 /* RxCocoa.framework */,
-				6974D2291FB98A0500122E94 /* RxSwift.framework */,
-				6974D22A1FB98A0500122E94 /* SnapKit.framework */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		6974D22B1FB98A0500122E94 /* SWTableViewCell */ = {
