@@ -23,20 +23,106 @@ class TestViewController: UIViewController {
         self.view.frame = frame
         self.view.backgroundColor = UIColor.white
 
-        testSnapKit2()
+        testRxSwift0()
         
-//        func testDeferNormal() {
-//            print("testDefer begin")
-//            defer {//代码块结束后必被调用
-//                print("testDefer exit")
-//            }
-//
-//            print("testDefer end")
-//        }
+
 //        testDeferNormal()
     }
-
-    func testRxCocoa()  {
+    
+    func testRxSwift0()
+    {//创建一个整数的被观察对象，并订阅其数值
+        let observableA: Observable = Observable.of([1,2,3,4,5])//序列
+        let observableB: Observable = Observable.of([6,7,8,9,10])//序列
+        observableA.concat(observableB).subscribe({ (event) in
+            switch event
+            {
+            case .next(let num):
+                print("\(num)")
+            case .completed:
+                print("completed!")
+            case .error(let error):
+                print("error:\(error.localizedDescription)")
+            }
+            //            print(event)
+            
+            //当disposeBag生命周期结束时，即便subscribe没有收到.completed或.error事件，observable sequence也将会被终止，--这种情况很少出现
+        }).disposed(by: DisposeBag())
+        
+        let subject = PublishSubject<String>()
+        subject.onNext("Is anyone listening?")
+        subject.subscribe { (event) in
+            print(event)
+        }
+    }
+    
+    func testRxSwift1()
+    {//创建一个整数的被观察对象，并订阅其数值
+        let observable: Observable<Int> = Observable<Int>.from([1,2,3,4,5])
+        //把小于5的过滤掉，然后再订阅；这个方法一般适用于数组和字典等类型的被观察者
+        observable.filter({ (i) -> Bool in
+            if i < 5{
+                return false //会被过滤掉
+            }
+            else
+            {
+                return true
+            }
+        }).subscribe({ (event) in
+            switch event
+            {
+            case .next(let num):
+                print("\(num)")
+            case .completed:
+                print("completed!")
+            case .error(let error):
+                print("error:\(error.localizedDescription)")
+            }
+//            print(event)
+            
+            //当disposeBag生命周期结束时，即便subscribe没有收到.completed或.error事件，observable sequence也将会被终止，--这种情况很少出现
+        }).disposed(by: DisposeBag())
+    }
+    
+    func testRxSwift2()
+    {
+        enum MyError: Error { case anError }
+        //创建一个字符串类型的被观察对象，并设定向观察者提供的事件和内容
+        let observable = Observable<String>.create({ (observer) -> Disposable in
+            //把每次累加结果发送给观察者
+            var sum:Int = 0
+            for i in 1...3
+            {
+                sum = sum + i
+                observer.onNext("\(sum)")
+            }
+            //如果大于5则表示成功，否则按失败出来
+            if sum > 5
+            {
+                observer.onCompleted()//
+            }
+            else
+            {
+                observer.onError(MyError.anError)
+            }
+            return Disposables.create()
+        })
+        //先对结果进行映射，让后再订阅其事件结果
+        observable.map({ (str) -> Int in
+//            return "sum:\(str)"
+            if let i =  Int(str)
+            {
+                return i
+            }
+            else
+            {
+                return 0
+            }
+        }).toArray().subscribe({ (event) in
+            print(event) }).disposed(by: DisposeBag())
+    }
+    
+    func testRxCocoa()
+    {//rxSwift在Cocoa中的实际应用
         let button:UIButton = UIButton.init(frame:CGRect.init(x: 20, y: 20, width: 100, height: 30))
         button.backgroundColor = UIColor.red
         button.titleLabel?.text = "button"
@@ -131,6 +217,15 @@ class TestViewController: UIViewController {
             make.right.equalTo(-10)
             make.bottom.equalTo(-10)
         }
+    }
+    
+    func testDeferNormal() {
+        print("testDefer begin")
+        defer {//代码块结束后必被调用
+            print("testDefer exit")
+        }
+        
+        print("testDefer end")
     }
     
     override func didReceiveMemoryWarning() {
