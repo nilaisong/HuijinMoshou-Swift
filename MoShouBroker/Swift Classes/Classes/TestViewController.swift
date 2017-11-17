@@ -56,11 +56,11 @@ class TestViewController: UIViewController {
             //当disposeBag生命周期结束时，即便subscribe没有收到.completed或.error事件，observable sequence也将会被终止，--这种情况很少出现
         }).disposed(by: DisposeBag())
         
-        let subject = PublishSubject<String>()
-        subject.onNext("Is anyone listening?")
-        subject.subscribe { (event) in
-            print(event)
-        }
+//        let subject = PublishSubject<String>()
+//        subject.onNext("Is anyone listening?")
+//        subject.subscribe { (event) in
+//            print(event)
+//        }
     }
     
     func testRxSwift1()
