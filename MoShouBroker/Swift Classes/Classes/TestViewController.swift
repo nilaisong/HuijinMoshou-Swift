@@ -27,7 +27,10 @@ class TestViewController: UIViewController {
         {
             print("有网络")
         }
-        
+        else
+        {
+            print("无网络")
+        }
         testRxSwift0()
         
 
