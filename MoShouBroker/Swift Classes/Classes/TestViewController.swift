@@ -23,6 +23,11 @@ class TestViewController: UIViewController {
         self.view.frame = frame
         self.view.backgroundColor = UIColor.white
 
+        if NetworkStatus.shareInstance.isConnected
+        {
+            print("有网络")
+        }
+        
         testRxSwift0()
         
 

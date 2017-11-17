@@ -23,20 +23,23 @@ class AccountDataProvider:NSObject
     //
     @objc func getPointsList(pageIndex:String,completionClosure:@escaping RequestCompletionClosure)
     {
-        provider.request(.pointsList(pageIndex: pageIndex, pageSize: kPageSize))
-        { result in
-            let resResult = getResultModel(result: result);
-            if resResult.success{
-            
-                if let data:[Any] = resResult.data as? [Any]
-                {
-                    if let dataArray = JSONDeserializer<PointsModel>.deserializeModelArrayFrom(array:data)
+        if NetworkStatus.shareInstance.isConnected
+        {
+            provider.request(.pointsList(pageIndex: pageIndex, pageSize: kPageSize))
+            { result in
+                let resResult = getResultModel(result: result);
+                if resResult.success{
+                
+                    if let data:[Any] = resResult.data as? [Any]
                     {
-                        resResult.data = dataArray
+                        if let dataArray = JSONDeserializer<PointsModel>.deserializeModelArrayFrom(array:data)
+                        {
+                            resResult.data = dataArray
+                        }
                     }
                 }
+                completionClosure(resResult)
             }
-            completionClosure(resResult)
         }
     }
 }
