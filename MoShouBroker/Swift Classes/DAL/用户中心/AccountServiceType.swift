@@ -52,8 +52,8 @@ extension AccountServiceType:TargetType
             {
                 let imageName = uniquePicName(typeName:"jpg")
                 let provider = MultipartFormData.FormDataProvider.data(imageData)
-                let multipartImages = MultipartFormData.init(provider:provider , name: "img", fileName: imageName, mimeType: "image/jpeg/png")
-                return .uploadMultipart([multipartImages])
+                let multipartImage = MultipartFormData.init(provider:provider , name: "img", fileName: imageName, mimeType: "image/jpeg/png")
+                return .uploadMultipart([multipartImage])
             }
             else
             {
@@ -69,6 +69,7 @@ extension AccountServiceType:TargetType
                     let strNum = "\(index)"
                     let imageName = uniquePicName(strNum,typeName:"jpg")
                     let provider = MultipartFormData.FormDataProvider.data(imageData)
+                    //要上传的图片文件
                     let multipartImage = Moya.MultipartFormData.init(provider:provider , name: "img\(index)", fileName: imageName, mimeType: "image/jpeg/png")
                     formDataArray.append(multipartImage)
                 }
