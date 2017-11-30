@@ -1005,6 +1005,11 @@
 		6974D79F1FB9902300122E94 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2201FB98A0500122E94 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6974D7A01FB9902300122E94 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6974D2211FB98A0500122E94 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6977066E1F9F2CEA0043D99C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6977066D1F9F2CEA0043D99C /* Constant.swift */; };
+		69791E3C1FCFAB870044E7E8 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69791E3A1FCFAB870044E7E8 /* SQLTable.swift */; };
+		69791E3D1FCFAB870044E7E8 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69791E3B1FCFAB870044E7E8 /* SQLiteDB.swift */; };
+		69791E421FCFB44F0044E7E8 /* SQLiteDBMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69791E411FCFB44F0044E7E8 /* SQLiteDBMgr.swift */; };
+		69791E441FCFB5150044E7E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69791E431FCFB5150044E7E8 /* User.swift */; };
+		69791E461FCFBE0E0044E7E8 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 69791E451FCFBE0E0044E7E8 /* data.db */; };
 		6989BE881FA8C00D005C83A3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989BE871FA8C00D005C83A3 /* TestViewController.swift */; };
 		69982A251B33B8F600D6320A /* RoomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 69982A241B33B8F600D6320A /* RoomLayout.m */; };
 		69982A281B33BCDE00D6320A /* AlbumData.m in Sources */ = {isa = PBXBuildFile; fileRef = 69982A271B33BCDE00D6320A /* AlbumData.m */; };
@@ -3494,6 +3499,11 @@
 		6974D47A1FB98A0600122E94 /* ZXMultiFormatWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMultiFormatWriter.h; sourceTree = "<group>"; };
 		6974D47B1FB98A0600122E94 /* ZXMultiFormatWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatWriter.m; sourceTree = "<group>"; };
 		6977066D1F9F2CEA0043D99C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		69791E3A1FCFAB870044E7E8 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
+		69791E3B1FCFAB870044E7E8 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDB.swift; sourceTree = "<group>"; };
+		69791E411FCFB44F0044E7E8 /* SQLiteDBMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteDBMgr.swift; sourceTree = "<group>"; };
+		69791E431FCFB5150044E7E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		69791E451FCFBE0E0044E7E8 /* data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.db; sourceTree = "<group>"; };
 		6989BE871FA8C00D005C83A3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		69982A231B33B8F600D6320A /* RoomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomLayout.h; sourceTree = "<group>"; };
 		69982A241B33B8F600D6320A /* RoomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomLayout.m; sourceTree = "<group>"; };
@@ -5823,6 +5833,7 @@
 		6967D4C01F9DE69C00BD101C /* DAL */ = {
 			isa = PBXGroup;
 			children = (
+				69791E401FCFB44F0044E7E8 /* 本地数据存取 */,
 				696E85C71FA0330B00982DBD /* 通用 */,
 				6967D4C11F9DE73C00BD101C /* 用户中心 */,
 			);
@@ -7526,6 +7537,25 @@
 			path = detector;
 			sourceTree = "<group>";
 		};
+		69791E391FCFAB870044E7E8 /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				69791E3A1FCFAB870044E7E8 /* SQLTable.swift */,
+				69791E3B1FCFAB870044E7E8 /* SQLiteDB.swift */,
+			);
+			path = SQLiteDB;
+			sourceTree = "<group>";
+		};
+		69791E401FCFB44F0044E7E8 /* 本地数据存取 */ = {
+			isa = PBXGroup;
+			children = (
+				69791E451FCFBE0E0044E7E8 /* data.db */,
+				69791E431FCFB5150044E7E8 /* User.swift */,
+				69791E411FCFB44F0044E7E8 /* SQLiteDBMgr.swift */,
+			);
+			path = "本地数据存取";
+			sourceTree = "<group>";
+		};
 		699A442B1B9EDA0E0046D8C0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -7611,6 +7641,7 @@
 		69B28FC11FBE9BFA000EF890 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				69791E391FCFAB870044E7E8 /* SQLiteDB */,
 				69B28FC21FBE9FB9000EF890 /* Network */,
 			);
 			path = Swift;
@@ -11255,6 +11286,7 @@
 				2AC834261DEFF26A00646689 /* home-refresh-normal@2x.png in Resources */,
 				6974D52C1FB98A0700122E94 /* README.txt in Resources */,
 				042576851E03D99A00A6D105 /* 优惠活动-拥有项@3x.png in Resources */,
+				69791E461FCFBE0E0044E7E8 /* data.db in Resources */,
 				64B3AF001E6E56D500C5279A /* icon_myevaluation@2x.png in Resources */,
 				D89713F81C4634A6007E540B /* icon-gongjiaohui@2x.png in Resources */,
 				D8BA2B571C0C31BC0002E733 /* iconfont-wodedingdan25.png in Resources */,
@@ -11448,8 +11480,10 @@
 				BA12AC751C03025B002885F2 /* MSTabBar.m in Sources */,
 				A73DF93E1C0D91E6004CFD7C /* FindViewController.m in Sources */,
 				64E471951C15254A00A403F1 /* AddGroupMebViewController.m in Sources */,
+				69791E3D1FCFAB870044E7E8 /* SQLiteDB.swift in Sources */,
 				69A883EC1B1579E000EDCF5E /* AppDelegate.m in Sources */,
 				2A5531D11DF14A7300E9F943 /* MyAnimatedAnnotationView.m in Sources */,
+				69791E441FCFB5150044E7E8 /* User.swift in Sources */,
 				640BC4151C1ACD3900932593 /* CustomerRangeSlider.m in Sources */,
 				A7FB46331C21515F003F0AE1 /* SettingViewController.m in Sources */,
 				2A98EA681DF6A70E002E1816 /* XTMapDistricDoc.m in Sources */,
@@ -11879,6 +11913,7 @@
 				BA2B16FD1C0451D7001F19C9 /* XTCollectBuildingTips.m in Sources */,
 				6974D6E91FB98A0900122E94 /* ZXVINResultParser.m in Sources */,
 				BAA661731D9CBB5D00E2EF3D /* XTRecdDescModelItem.m in Sources */,
+				69791E421FCFB44F0044E7E8 /* SQLiteDBMgr.swift in Sources */,
 				6974D71F1FB98A0A00122E94 /* ZXDataMatrixHighLevelEncoder.m in Sources */,
 				6974D4FB1FB98A0700122E94 /* XHPathCover.m in Sources */,
 				6974D7511FB98A0A00122E94 /* ZXEAN13Writer.m in Sources */,
@@ -12301,6 +12336,7 @@
 				D8E70AB61D82510800629AD7 /* PSTCollectionViewCell.m in Sources */,
 				6974D7141FB98A0A00122E94 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				2A98EA821DF6BB83002E1816 /* XTMapBuildGroupModel.m in Sources */,
+				69791E3C1FCFAB870044E7E8 /* SQLTable.swift in Sources */,
 				6974D4DB1FB98A0600122E94 /* MJRefreshHeader.m in Sources */,
 				BAFCEB741C054B3F00F8F1CE /* RecommendationRecordListView.m in Sources */,
 				64E6A8271DB9EA770034EFBE /* CustomerEvaluationTableViewCell.m in Sources */,

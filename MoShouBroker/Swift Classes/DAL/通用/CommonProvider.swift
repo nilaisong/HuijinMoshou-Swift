@@ -13,7 +13,7 @@ class CommonProvider:NSObject
 {
     @objc static let sharedInstance = CommonProvider()
     
-    let provider = MoyaProvider<CommonServiceType>()
+    private let provider = MoyaProvider<CommonServiceType>()
     
     override init()
     {

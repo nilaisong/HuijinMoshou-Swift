@@ -19,10 +19,13 @@ class TestViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         let frame = CGRect.init(x: 0, y: 0, width: 400, height: 400)
-//            CGRectFromString("{0,0},{400,400}")
+
         self.view.frame = frame
         self.view.backgroundColor = UIColor.white
 
+        SQLiteDBMgr.shared.test()
+        
+        
         if NetworkStatus.shareInstance.isConnected
         {
             print("有网络")
@@ -31,9 +34,8 @@ class TestViewController: UIViewController {
         {
             print("无网络")
         }
-        testRxSwift0()
+//        testRxSwift0()
         
-
 //        testDeferNormal()
     }
     
