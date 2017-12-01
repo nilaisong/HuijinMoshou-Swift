@@ -16,7 +16,7 @@ enum AccountDataType {
 
 }
 //通过继承协议来扩展枚举类型，实现继承下来的属性和方法
-extension AccountDataType:TargetType
+extension AccountDataType:MoShouTargetType
 {
     //根据自身枚举类型设置对应数据接口path属性
     var path: String {

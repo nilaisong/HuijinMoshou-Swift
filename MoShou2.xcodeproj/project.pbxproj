@@ -1060,6 +1060,7 @@
 		69F201211BD5D8B600B520DB /* InstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F2011F1BD5D8B600B520DB /* InstructionView.m */; };
 		69F2012B1BD638EF00B520DB /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 69F201281BD638EF00B520DB /* MJRefresh.bundle */; };
 		69F2012C1BD638EF00B520DB /* RotationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F2012A1BD638EF00B520DB /* RotationImageView.m */; };
+		69F6481A1FD1150300CD4746 /* MoShouTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F648191FD1150300CD4746 /* MoShouTargetType.swift */; };
 		69F6C4901FA331390027969C /* AccountDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C48F1FA331390027969C /* AccountDataType.swift */; };
 		69F6C4921FA332840027969C /* AccountDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F6C4911FA332840027969C /* AccountDataProvider.swift */; };
 		84C2B1DC1B4F819100F43F83 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C2B1DB1B4F819100F43F83 /* OpenGLES.framework */; };
@@ -3591,6 +3592,7 @@
 		69F201281BD638EF00B520DB /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		69F201291BD638EF00B520DB /* RotationImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationImageView.h; sourceTree = "<group>"; };
 		69F2012A1BD638EF00B520DB /* RotationImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationImageView.m; sourceTree = "<group>"; };
+		69F648191FD1150300CD4746 /* MoShouTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoShouTargetType.swift; sourceTree = "<group>"; };
 		69F6C48F1FA331390027969C /* AccountDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataType.swift; sourceTree = "<group>"; };
 		69F6C4911FA332840027969C /* AccountDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataProvider.swift; sourceTree = "<group>"; };
 		84C2B1D91B4F818000F43F83 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -5858,6 +5860,7 @@
 				69C996C41FA3432500BDD07A /* PageModel.swift */,
 				696E85C81FA0330B00982DBD /* ResponseResult.swift */,
 				696E85CA1FA0331E00982DBD /* MoyaTargetType.swift */,
+				69F648191FD1150300CD4746 /* MoShouTargetType.swift */,
 				696E85CC1FA0563200982DBD /* MoyaTask.swift */,
 				696E85CE1FA05E8700982DBD /* MoyaCommon.swift */,
 				69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */,
@@ -11707,6 +11710,7 @@
 				64B3AEF81E6D439800C5279A /* MyEvaluationViewController.m in Sources */,
 				BAE36A6D1D5ACD5D001B8AB2 /* XTAppointmentCarView.m in Sources */,
 				BA5A33E41C33E53200D78A75 /* CustomerCountByStatusModel.m in Sources */,
+				69F6481A1FD1150300CD4746 /* MoShouTargetType.swift in Sources */,
 				6974D7821FB98A0A00122E94 /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
 				BA5B29581C0FC3F0004A83C6 /* JTCalendarWeekDayView.m in Sources */,
 				6974D7381FB98A0A00122E94 /* ZXRSSExpandedCurrentParsingState.m in Sources */,

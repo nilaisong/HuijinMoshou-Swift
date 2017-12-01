@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-let kBaseUrl:String = LocalFileSystem.sharedManager().baseURL
-
 let kAppVersion  =   LocalFileSystem.sharedManager().versionName
 
 let kVersionCode  =  LocalFileSystem.sharedManager().versionCode

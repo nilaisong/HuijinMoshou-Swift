@@ -38,11 +38,6 @@ extension TargetType {
         return dic
     }
     
-    var baseURL: URL {
-        
-        return URL(string: kBaseUrl)!
-    }
-    
     var sampleData: Data {
         return "".data(using: .utf8)!
     }

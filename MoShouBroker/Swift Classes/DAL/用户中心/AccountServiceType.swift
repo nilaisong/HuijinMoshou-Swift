@@ -19,7 +19,7 @@ enum AccountServiceType {
     case submitFeedback(content:String,imgArray:[UIImage])//意见反馈
 }
 //通过集成协议扩展枚举类型
-extension AccountServiceType:TargetType
+extension AccountServiceType:MoShouTargetType
 {
     //根据自身枚举类型设置对应数据接口path属性
     var path: String {
