@@ -5865,9 +5865,9 @@
 				69F648191FD1150300CD4746 /* MoShouTargetType.swift */,
 				696E85CC1FA0563200982DBD /* MoyaTask.swift */,
 				696E85CE1FA05E8700982DBD /* MoyaCommon.swift */,
+				69D04E4820609652003CA4DC /* RxMoyaProvider.swift */,
 				69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */,
 				69AC3EF61FAAC40000CB9EF7 /* CommonProvider.swift */,
-				69D04E4820609652003CA4DC /* RxMoyaProvider.swift */,
 			);
 			path = "通用";
 			sourceTree = "<group>";
@@ -7617,7 +7617,6 @@
 				6970747F1EE4EBC30063CF50 /* 楼盘下载管理 */,
 				6967D4BF1F9DE5E500BD101C /* Swift Classes */,
 				BA12AC4E1C03025B002885F2 /* Classes */,
-				69A883EA1B1579E000EDCF5E /* AppDelegate.h */,
 				69A883EB1B1579E000EDCF5E /* AppDelegate.m */,
 				69ED144D1BA6BEFB006C8ACA /* Constant.h */,
 				69D230AE1B2919940064B028 /* Images.xcassets */,
@@ -8057,6 +8056,7 @@
 		BA12AC4E1C03025B002885F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				69A883EA1B1579E000EDCF5E /* AppDelegate.h */,
 				D8BC1C711DADDC0000D14DEE /* 环信相关 */,
 				D8E709551D8250FB00629AD7 /* EaseUI */,
 				A73DF92E1C0D91E6004CFD7C /* 登录注册 */,

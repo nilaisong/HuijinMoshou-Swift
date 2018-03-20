@@ -68,45 +68,36 @@ class AccountServiceProvider:NSObject
     {
         let subject = self.getUserInfo()
         
-        let disposable = subject.subscribe(onNext: { (resResult) in
+        let  _ = subject.subscribe(onNext: { (resResult) in
             completionClosure(resResult)
             print("getUserInfo complete")
         })
-        disposable.dispose()
+//        disposable.dispose()//释放掉，就不会再执行订阅的事件了
     }
     //
     func getUserInfo()->PublishSubject<ResponseResult>
     {
-        let subject = PublishSubject<ResponseResult>()
-        if NetworkStatus.shareInstance.isConnected
-        {
-            let subject = provider.rxRequest(.userInfo)
-            { result -> ResponseResult in
-                let resResult = getResultModel(result: result);
-                if resResult.success
+        let subject = provider.rxRequest(.userInfo)
+        { result -> ResponseResult in
+            let resResult = getResultModel(result: result);
+            if resResult.success
+            {
+                let data: [String:Any] = resResult.data as! [String:Any]
+                let user: [String:Any] = data["user"] as! [String:Any]
+                if let userInfo: UserInfo = JSONDeserializer<UserInfo>.deserializeFrom(dict:user)
                 {
-                    let data: [String:Any] = resResult.data as! [String:Any]
-                    let user: [String:Any] = data["user"] as! [String:Any]
-                    if let userInfo: UserInfo = JSONDeserializer<UserInfo>.deserializeFrom(dict:user)
+                    userInfo.initialize()
+                    if let userDic = userInfo.toJSON()
                     {
-                        userInfo.initialize()
-                        if let userDic = userInfo.toJSON()
-                        {
-                            print(userDic)
-                        }
-//                        print("\(userInfo.userName),\(userInfo.storeNum)")
-                        resResult.data = userInfo;
+                        print(userDic)
                     }
+//                        print("\(userInfo.userName),\(userInfo.storeNum)")
+                    resResult.data = userInfo;
                 }
-               return resResult //返回解析后的数据模型
             }
-            return subject //返回带数据的可订阅对象
+           return resResult //返回解析后的数据模型
         }
-        else
-        {
-            subject.onCompleted()
-            return subject //无网络时，返回空对象
-        }
+        return subject //返回带数据的可订阅对象
     }
     
     @objc func logout(_ completionClosure:@escaping RequestCompletionClosure)

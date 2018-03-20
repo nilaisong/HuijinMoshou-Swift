@@ -18,17 +18,25 @@ extension MoyaProvider
         func rxRequest(_ target: Target, completion: @escaping RxMoyaCompletion) -> PublishSubject<ResponseResult>
         {
             let subject = PublishSubject<ResponseResult>()
-//            let observable = Observable.create{(sbuscribe:AnyObserver<ResponseResult>) -> Disposable in
-                let provider = MoyaProvider<Target>()
-                provider.request(target)
-                    { result in
-                        let resResult = completion(result)
-                        subject.onNext(resResult)
-                        subject.onCompleted()
-                    }
+            if NetworkStatus.shareInstance.isConnected
+            {
+    //            let observable = Observable.create{(sbuscribe:AnyObserver<ResponseResult>) -> Disposable in
+                    let provider = MoyaProvider<Target>()
+                    provider.request(target)
+                        { result in
+                            let resResult = completion(result)
+                            subject.onNext(resResult)
+                            subject.onCompleted()
+                        }
                 
-//                return Disposables.create()
-//            }
-            return subject
+    //                return Disposables.create()
+    //            }
+                return subject
+            }
+            else
+            {
+                subject.onCompleted()
+                return subject
+            }
         }
 }
