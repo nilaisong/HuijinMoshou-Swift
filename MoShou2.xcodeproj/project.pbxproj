@@ -1050,6 +1050,7 @@
 		69D00C961B2E828500130F8D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D00C951B2E828500130F8D /* MessageUI.framework */; };
 		69D00C9B1B2E8C4000130F8D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D00C9A1B2E8C4000130F8D /* Social.framework */; };
 		69D00C9D1B2E8C4A00130F8D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D00C9C1B2E8C4A00130F8D /* Accounts.framework */; };
+		69D04E4920609652003CA4DC /* RxMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D04E4820609652003CA4DC /* RxMoyaProvider.swift */; };
 		69D0BF821B27FD6A0090ECD7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0BF811B27FD6A0090ECD7 /* Security.framework */; };
 		69D0BF841B27FD740090ECD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0BF831B27FD740090ECD7 /* SystemConfiguration.framework */; };
 		69D0BF861B27FD8C0090ECD7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D0BF851B27FD8C0090ECD7 /* CoreTelephony.framework */; };
@@ -3573,6 +3574,7 @@
 		69D00C951B2E828500130F8D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		69D00C9A1B2E8C4000130F8D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		69D00C9C1B2E8C4A00130F8D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		69D04E4820609652003CA4DC /* RxMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMoyaProvider.swift; sourceTree = "<group>"; };
 		69D0BF811B27FD6A0090ECD7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		69D0BF831B27FD740090ECD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		69D0BF851B27FD8C0090ECD7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -5865,6 +5867,7 @@
 				696E85CE1FA05E8700982DBD /* MoyaCommon.swift */,
 				69AC3EF71FAAC40100CB9EF7 /* CommonServiceType.swift */,
 				69AC3EF61FAAC40000CB9EF7 /* CommonProvider.swift */,
+				69D04E4820609652003CA4DC /* RxMoyaProvider.swift */,
 			);
 			path = "通用";
 			sourceTree = "<group>";
@@ -12236,6 +12239,7 @@
 				BA5B29531C0FC3F0004A83C6 /* JTCalendarDelegateManager.m in Sources */,
 				D872E1461D54512300E3E58D /* CustomIOSAlertView.m in Sources */,
 				6974D70D1FB98A0A00122E94 /* ZXLuminanceSource.m in Sources */,
+				69D04E4920609652003CA4DC /* RxMoyaProvider.swift in Sources */,
 				BA5B29571C0FC3F0004A83C6 /* JTCalendarPageView.m in Sources */,
 				6974D6AB1FB98A0900122E94 /* UICountingLabel.m in Sources */,
 				2A98EA741DF6A989002E1816 /* XTMapDistricGroupModel.m in Sources */,

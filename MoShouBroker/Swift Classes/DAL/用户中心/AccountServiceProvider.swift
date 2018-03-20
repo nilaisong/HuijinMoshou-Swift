@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 import HandyJSON
+import RxSwift
 
 class AccountServiceProvider:NSObject
 {
@@ -49,8 +50,11 @@ class AccountServiceProvider:NSObject
                     {
                         resResult.success = true
                         let token = data["token"]
-                        Tool.setCache("user_token",value:token);
-                        self.getUserInfo(completionClosure);
+                        Tool.setCache("user_token",value:token)
+                        
+                        self.getUserInfo{ (resResult) in
+                            completionClosure(resResult)
+                        }
                     }
                 }
                 else{
@@ -62,10 +66,22 @@ class AccountServiceProvider:NSObject
     //不专门指定的话，默认内部参数名就是外部参数名，“_”表示第一个外部参数名可省略
     @objc func getUserInfo(_ completionClosure:@escaping RequestCompletionClosure)
     {
+        let subject = self.getUserInfo()
+        
+        let disposable = subject.subscribe(onNext: { (resResult) in
+            completionClosure(resResult)
+            print("getUserInfo complete")
+        })
+        disposable.dispose()
+    }
+    //
+    func getUserInfo()->PublishSubject<ResponseResult>
+    {
+        let subject = PublishSubject<ResponseResult>()
         if NetworkStatus.shareInstance.isConnected
         {
-            provider.request(.userInfo)
-            { result in
+            let subject = provider.rxRequest(.userInfo)
+            { result -> ResponseResult in
                 let resResult = getResultModel(result: result);
                 if resResult.success
                 {
@@ -74,12 +90,22 @@ class AccountServiceProvider:NSObject
                     if let userInfo: UserInfo = JSONDeserializer<UserInfo>.deserializeFrom(dict:user)
                     {
                         userInfo.initialize()
-                        print("\(userInfo.userName),\(userInfo.storeNum)")
+                        if let userDic = userInfo.toJSON()
+                        {
+                            print(userDic)
+                        }
+//                        print("\(userInfo.userName),\(userInfo.storeNum)")
                         resResult.data = userInfo;
                     }
                 }
-                completionClosure(resResult)
+               return resResult //返回解析后的数据模型
             }
+            return subject //返回带数据的可订阅对象
+        }
+        else
+        {
+            subject.onCompleted()
+            return subject //无网络时，返回空对象
         }
     }
     
